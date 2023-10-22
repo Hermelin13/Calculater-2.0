@@ -19,7 +19,30 @@ namespace Calculater
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            standard1.Visible = true;
+            prevodnik1.Visible = false;
+            binary1.Visible = false;
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            standard1.Visible = true;
+            prevodnik1.Visible = false;
+            binary1.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            standard1.Visible = false;
+            prevodnik1.Visible = true;
+            binary1.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            standard1.Visible = false;
+            prevodnik1.Visible = false;
+            binary1.Visible = true;
         }
     }
 }
