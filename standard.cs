@@ -16,5 +16,30 @@ namespace Calculater
         {
             InitializeComponent();
         }
+
+        private void standard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

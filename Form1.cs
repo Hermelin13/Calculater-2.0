@@ -44,5 +44,10 @@ namespace Calculater
             prevodnik1.Visible = false;
             binary1.Visible = true;
         }
+
+        private void binary1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

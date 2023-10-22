@@ -57,6 +57,7 @@ namespace Calculater
             this.binary1.Name = "binary1";
             this.binary1.Size = new System.Drawing.Size(663, 450);
             this.binary1.TabIndex = 26;
+            this.binary1.Load += new System.EventHandler(this.binary1_Load);
             // 
             // button1
             // 
