@@ -38,29 +38,29 @@ namespace Calculater
             button7 = new System.Windows.Forms.Button();
             button8 = new System.Windows.Forms.Button();
             button9 = new System.Windows.Forms.Button();
-            button10 = new System.Windows.Forms.Button();
+            button0 = new System.Windows.Forms.Button();
             button11 = new System.Windows.Forms.Button();
-            button12 = new System.Windows.Forms.Button();
-            button13 = new System.Windows.Forms.Button();
-            button14 = new System.Windows.Forms.Button();
-            button15 = new System.Windows.Forms.Button();
-            button16 = new System.Windows.Forms.Button();
-            button17 = new System.Windows.Forms.Button();
-            button18 = new System.Windows.Forms.Button();
-            button19 = new System.Windows.Forms.Button();
-            button20 = new System.Windows.Forms.Button();
-            button21 = new System.Windows.Forms.Button();
-            button22 = new System.Windows.Forms.Button();
-            button23 = new System.Windows.Forms.Button();
-            button24 = new System.Windows.Forms.Button();
-            button25 = new System.Windows.Forms.Button();
-            button26 = new System.Windows.Forms.Button();
+            buttonPI = new System.Windows.Forms.Button();
+            buttonEULER = new System.Windows.Forms.Button();
+            buttonMULTI = new System.Windows.Forms.Button();
+            buttonDIV = new System.Windows.Forms.Button();
+            buttonCOS = new System.Windows.Forms.Button();
+            buttonSQRT = new System.Windows.Forms.Button();
+            buttonROOT = new System.Windows.Forms.Button();
+            buttonTAN = new System.Windows.Forms.Button();
+            buttonLOG = new System.Windows.Forms.Button();
+            buttonMOD = new System.Windows.Forms.Button();
+            buttonFACT = new System.Windows.Forms.Button();
+            buttonEQ = new System.Windows.Forms.Button();
+            buttonPLUS = new System.Windows.Forms.Button();
+            buttonMINUS = new System.Windows.Forms.Button();
+            buttonSIN = new System.Windows.Forms.Button();
             button27 = new System.Windows.Forms.Button();
             button28 = new System.Windows.Forms.Button();
-            button29 = new System.Windows.Forms.Button();
-            button30 = new System.Windows.Forms.Button();
-            button31 = new System.Windows.Forms.Button();
-            textBox1 = new System.Windows.Forms.TextBox();
+            buttonDEL = new System.Windows.Forms.Button();
+            buttonSQRT3 = new System.Windows.Forms.Button();
+            buttonCLEAR = new System.Windows.Forms.Button();
+            inputMath = new System.Windows.Forms.TextBox();
             textBox2 = new System.Windows.Forms.TextBox();
             SuspendLayout();
             // 
@@ -145,14 +145,14 @@ namespace Calculater
             button9.Text = "9";
             button9.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // button0
             // 
-            button10.Location = new System.Drawing.Point(325, 410);
-            button10.Name = "button10";
-            button10.Size = new System.Drawing.Size(60, 60);
-            button10.TabIndex = 9;
-            button10.Text = "0";
-            button10.UseVisualStyleBackColor = true;
+            button0.Location = new System.Drawing.Point(325, 410);
+            button0.Name = "button0";
+            button0.Size = new System.Drawing.Size(60, 60);
+            button0.TabIndex = 9;
+            button0.Text = "0";
+            button0.UseVisualStyleBackColor = true;
             // 
             // button11
             // 
@@ -163,140 +163,140 @@ namespace Calculater
             button11.Text = ".";
             button11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // buttonPI
             // 
-            button12.Location = new System.Drawing.Point(58, 410);
-            button12.Name = "button12";
-            button12.Size = new System.Drawing.Size(60, 60);
-            button12.TabIndex = 21;
-            button12.Text = "π";
-            button12.UseVisualStyleBackColor = true;
+            buttonPI.Location = new System.Drawing.Point(58, 410);
+            buttonPI.Name = "buttonPI";
+            buttonPI.Size = new System.Drawing.Size(60, 60);
+            buttonPI.TabIndex = 21;
+            buttonPI.Text = "π";
+            buttonPI.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // buttonEULER
             // 
-            button13.Location = new System.Drawing.Point(124, 410);
-            button13.Name = "button13";
-            button13.Size = new System.Drawing.Size(60, 60);
-            button13.TabIndex = 20;
-            button13.Text = "e";
-            button13.UseVisualStyleBackColor = true;
+            buttonEULER.Location = new System.Drawing.Point(124, 410);
+            buttonEULER.Name = "buttonEULER";
+            buttonEULER.Size = new System.Drawing.Size(60, 60);
+            buttonEULER.TabIndex = 20;
+            buttonEULER.Text = "e";
+            buttonEULER.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // buttonMULTI
             // 
-            button14.Location = new System.Drawing.Point(58, 212);
-            button14.Name = "button14";
-            button14.Size = new System.Drawing.Size(60, 60);
-            button14.TabIndex = 19;
-            button14.Text = "x";
-            button14.UseVisualStyleBackColor = true;
+            buttonMULTI.Location = new System.Drawing.Point(58, 212);
+            buttonMULTI.Name = "buttonMULTI";
+            buttonMULTI.Size = new System.Drawing.Size(60, 60);
+            buttonMULTI.TabIndex = 19;
+            buttonMULTI.Text = "x";
+            buttonMULTI.UseVisualStyleBackColor = true;
             // 
-            // button15
+            // buttonDIV
             // 
-            button15.Location = new System.Drawing.Point(124, 212);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(60, 60);
-            button15.TabIndex = 18;
-            button15.Text = "/";
-            button15.UseVisualStyleBackColor = true;
+            buttonDIV.Location = new System.Drawing.Point(124, 212);
+            buttonDIV.Name = "buttonDIV";
+            buttonDIV.Size = new System.Drawing.Size(60, 60);
+            buttonDIV.TabIndex = 18;
+            buttonDIV.Text = "/";
+            buttonDIV.UseVisualStyleBackColor = true;
             // 
-            // button16
+            // buttonCOS
             // 
-            button16.Location = new System.Drawing.Point(190, 212);
-            button16.Name = "button16";
-            button16.Size = new System.Drawing.Size(60, 60);
-            button16.TabIndex = 17;
-            button16.Text = "cos";
-            button16.UseVisualStyleBackColor = true;
+            buttonCOS.Location = new System.Drawing.Point(190, 212);
+            buttonCOS.Name = "buttonCOS";
+            buttonCOS.Size = new System.Drawing.Size(60, 60);
+            buttonCOS.TabIndex = 17;
+            buttonCOS.Text = "cos";
+            buttonCOS.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // buttonSQRT
             // 
-            button17.Location = new System.Drawing.Point(58, 278);
-            button17.Name = "button17";
-            button17.Size = new System.Drawing.Size(60, 60);
-            button17.TabIndex = 16;
-            button17.Text = "x²";
-            button17.UseVisualStyleBackColor = true;
+            buttonSQRT.Location = new System.Drawing.Point(58, 278);
+            buttonSQRT.Name = "buttonSQRT";
+            buttonSQRT.Size = new System.Drawing.Size(60, 60);
+            buttonSQRT.TabIndex = 16;
+            buttonSQRT.Text = "x²";
+            buttonSQRT.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // buttonROOT
             // 
-            button18.Location = new System.Drawing.Point(124, 278);
-            button18.Name = "button18";
-            button18.Size = new System.Drawing.Size(60, 60);
-            button18.TabIndex = 15;
-            button18.Text = "√x";
-            button18.UseVisualStyleBackColor = true;
+            buttonROOT.Location = new System.Drawing.Point(124, 278);
+            buttonROOT.Name = "buttonROOT";
+            buttonROOT.Size = new System.Drawing.Size(60, 60);
+            buttonROOT.TabIndex = 15;
+            buttonROOT.Text = "√x";
+            buttonROOT.UseVisualStyleBackColor = true;
             // 
-            // button19
+            // buttonTAN
             // 
-            button19.Location = new System.Drawing.Point(190, 278);
-            button19.Name = "button19";
-            button19.Size = new System.Drawing.Size(60, 60);
-            button19.TabIndex = 14;
-            button19.Text = "tan";
-            button19.UseVisualStyleBackColor = true;
+            buttonTAN.Location = new System.Drawing.Point(190, 278);
+            buttonTAN.Name = "buttonTAN";
+            buttonTAN.Size = new System.Drawing.Size(60, 60);
+            buttonTAN.TabIndex = 14;
+            buttonTAN.Text = "tan";
+            buttonTAN.UseVisualStyleBackColor = true;
             // 
-            // button20
+            // buttonLOG
             // 
-            button20.Location = new System.Drawing.Point(190, 410);
-            button20.Name = "button20";
-            button20.Size = new System.Drawing.Size(60, 60);
-            button20.TabIndex = 13;
-            button20.Text = "log";
-            button20.UseVisualStyleBackColor = true;
+            buttonLOG.Location = new System.Drawing.Point(190, 410);
+            buttonLOG.Name = "buttonLOG";
+            buttonLOG.Size = new System.Drawing.Size(60, 60);
+            buttonLOG.TabIndex = 13;
+            buttonLOG.Text = "log";
+            buttonLOG.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // buttonMOD
             // 
-            button21.Location = new System.Drawing.Point(190, 344);
-            button21.Name = "button21";
-            button21.Size = new System.Drawing.Size(60, 60);
-            button21.TabIndex = 12;
-            button21.Text = "mod";
-            button21.UseVisualStyleBackColor = true;
+            buttonMOD.Location = new System.Drawing.Point(190, 344);
+            buttonMOD.Name = "buttonMOD";
+            buttonMOD.Size = new System.Drawing.Size(60, 60);
+            buttonMOD.TabIndex = 12;
+            buttonMOD.Text = "mod";
+            buttonMOD.UseVisualStyleBackColor = true;
             // 
-            // button22
+            // buttonFACT
             // 
-            button22.Location = new System.Drawing.Point(124, 344);
-            button22.Name = "button22";
-            button22.Size = new System.Drawing.Size(60, 60);
-            button22.TabIndex = 11;
-            button22.Text = "x!";
-            button22.UseVisualStyleBackColor = true;
+            buttonFACT.Location = new System.Drawing.Point(124, 344);
+            buttonFACT.Name = "buttonFACT";
+            buttonFACT.Size = new System.Drawing.Size(60, 60);
+            buttonFACT.TabIndex = 11;
+            buttonFACT.Text = "x!";
+            buttonFACT.UseVisualStyleBackColor = true;
             // 
-            // button23
+            // buttonEQ
             // 
-            button23.Location = new System.Drawing.Point(190, 476);
-            button23.Name = "button23";
-            button23.Size = new System.Drawing.Size(129, 60);
-            button23.TabIndex = 22;
-            button23.Text = "=";
-            button23.UseVisualStyleBackColor = true;
+            buttonEQ.Location = new System.Drawing.Point(190, 476);
+            buttonEQ.Name = "buttonEQ";
+            buttonEQ.Size = new System.Drawing.Size(129, 60);
+            buttonEQ.TabIndex = 22;
+            buttonEQ.Text = "=";
+            buttonEQ.UseVisualStyleBackColor = true;
             // 
-            // button24
+            // buttonPLUS
             // 
-            button24.Location = new System.Drawing.Point(58, 146);
-            button24.Name = "button24";
-            button24.Size = new System.Drawing.Size(60, 60);
-            button24.TabIndex = 28;
-            button24.Text = "+";
-            button24.UseVisualStyleBackColor = true;
+            buttonPLUS.Location = new System.Drawing.Point(58, 146);
+            buttonPLUS.Name = "buttonPLUS";
+            buttonPLUS.Size = new System.Drawing.Size(60, 60);
+            buttonPLUS.TabIndex = 28;
+            buttonPLUS.Text = "+";
+            buttonPLUS.UseVisualStyleBackColor = true;
             // 
-            // button25
+            // buttonMINUS
             // 
-            button25.Location = new System.Drawing.Point(124, 146);
-            button25.Name = "button25";
-            button25.Size = new System.Drawing.Size(60, 60);
-            button25.TabIndex = 27;
-            button25.Text = "-";
-            button25.UseVisualStyleBackColor = true;
+            buttonMINUS.Location = new System.Drawing.Point(124, 146);
+            buttonMINUS.Name = "buttonMINUS";
+            buttonMINUS.Size = new System.Drawing.Size(60, 60);
+            buttonMINUS.TabIndex = 27;
+            buttonMINUS.Text = "-";
+            buttonMINUS.UseVisualStyleBackColor = true;
             // 
-            // button26
+            // buttonSIN
             // 
-            button26.Location = new System.Drawing.Point(190, 146);
-            button26.Name = "button26";
-            button26.Size = new System.Drawing.Size(60, 60);
-            button26.TabIndex = 26;
-            button26.Text = "sin";
-            button26.UseVisualStyleBackColor = true;
+            buttonSIN.Location = new System.Drawing.Point(190, 146);
+            buttonSIN.Name = "buttonSIN";
+            buttonSIN.Size = new System.Drawing.Size(60, 60);
+            buttonSIN.TabIndex = 26;
+            buttonSIN.Text = "sin";
+            buttonSIN.UseVisualStyleBackColor = true;
             // 
             // button27
             // 
@@ -316,46 +316,46 @@ namespace Calculater
             button28.Text = ")";
             button28.UseVisualStyleBackColor = true;
             // 
-            // button29
+            // buttonDEL
             // 
-            button29.Location = new System.Drawing.Point(391, 410);
-            button29.Name = "button29";
-            button29.Size = new System.Drawing.Size(60, 60);
-            button29.TabIndex = 23;
-            button29.Text = "DEL";
-            button29.UseVisualStyleBackColor = true;
+            buttonDEL.Location = new System.Drawing.Point(391, 410);
+            buttonDEL.Name = "buttonDEL";
+            buttonDEL.Size = new System.Drawing.Size(60, 60);
+            buttonDEL.TabIndex = 23;
+            buttonDEL.Text = "DEL";
+            buttonDEL.UseVisualStyleBackColor = true;
             // 
-            // button30
+            // buttonSQRT3
             // 
-            button30.Location = new System.Drawing.Point(58, 344);
-            button30.Name = "button30";
-            button30.Size = new System.Drawing.Size(60, 60);
-            button30.TabIndex = 29;
-            button30.Text = "x³";
-            button30.UseVisualStyleBackColor = true;
-            button30.Click += button30_Click;
+            buttonSQRT3.Location = new System.Drawing.Point(58, 344);
+            buttonSQRT3.Name = "buttonSQRT3";
+            buttonSQRT3.Size = new System.Drawing.Size(60, 60);
+            buttonSQRT3.TabIndex = 29;
+            buttonSQRT3.Text = "x³";
+            buttonSQRT3.UseVisualStyleBackColor = true;
+            buttonSQRT3.Click += button30_Click;
             // 
-            // button31
+            // buttonCLEAR
             // 
-            button31.Location = new System.Drawing.Point(259, 410);
-            button31.Name = "button31";
-            button31.Size = new System.Drawing.Size(60, 60);
-            button31.TabIndex = 30;
-            button31.Text = "AC";
-            button31.UseVisualStyleBackColor = true;
-            button31.Click += button31_Click;
+            buttonCLEAR.Location = new System.Drawing.Point(259, 410);
+            buttonCLEAR.Name = "buttonCLEAR";
+            buttonCLEAR.Size = new System.Drawing.Size(60, 60);
+            buttonCLEAR.TabIndex = 30;
+            buttonCLEAR.Text = "AC";
+            buttonCLEAR.UseVisualStyleBackColor = true;
+            buttonCLEAR.Click += button31_Click;
             // 
-            // textBox1
+            // inputMath
             // 
-            textBox1.Location = new System.Drawing.Point(520, 95);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new System.Drawing.Size(326, 93);
-            textBox1.TabIndex = 31;
+            inputMath.Location = new System.Drawing.Point(520, 146);
+            inputMath.Multiline = true;
+            inputMath.Name = "inputMath";
+            inputMath.Size = new System.Drawing.Size(326, 93);
+            inputMath.TabIndex = 31;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(520, 245);
+            textBox2.Location = new System.Drawing.Point(520, 311);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new System.Drawing.Size(326, 93);
@@ -366,29 +366,29 @@ namespace Calculater
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button31);
-            Controls.Add(button30);
-            Controls.Add(button24);
-            Controls.Add(button25);
-            Controls.Add(button26);
+            Controls.Add(inputMath);
+            Controls.Add(buttonCLEAR);
+            Controls.Add(buttonSQRT3);
+            Controls.Add(buttonPLUS);
+            Controls.Add(buttonMINUS);
+            Controls.Add(buttonSIN);
             Controls.Add(button27);
             Controls.Add(button28);
-            Controls.Add(button29);
-            Controls.Add(button23);
-            Controls.Add(button12);
-            Controls.Add(button13);
-            Controls.Add(button14);
-            Controls.Add(button15);
-            Controls.Add(button16);
-            Controls.Add(button17);
-            Controls.Add(button18);
-            Controls.Add(button19);
-            Controls.Add(button20);
-            Controls.Add(button21);
-            Controls.Add(button22);
+            Controls.Add(buttonDEL);
+            Controls.Add(buttonEQ);
+            Controls.Add(buttonPI);
+            Controls.Add(buttonEULER);
+            Controls.Add(buttonMULTI);
+            Controls.Add(buttonDIV);
+            Controls.Add(buttonCOS);
+            Controls.Add(buttonSQRT);
+            Controls.Add(buttonROOT);
+            Controls.Add(buttonTAN);
+            Controls.Add(buttonLOG);
+            Controls.Add(buttonMOD);
+            Controls.Add(buttonFACT);
             Controls.Add(button11);
-            Controls.Add(button10);
+            Controls.Add(button0);
             Controls.Add(button7);
             Controls.Add(button8);
             Controls.Add(button9);
@@ -416,29 +416,29 @@ namespace Calculater
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button buttonPI;
+        private System.Windows.Forms.Button buttonEULER;
+        private System.Windows.Forms.Button buttonMULTI;
+        private System.Windows.Forms.Button buttonDIV;
+        private System.Windows.Forms.Button buttonCOS;
+        private System.Windows.Forms.Button buttonSQRT;
+        private System.Windows.Forms.Button buttonROOT;
+        private System.Windows.Forms.Button buttonTAN;
+        private System.Windows.Forms.Button buttonLOG;
+        private System.Windows.Forms.Button buttonMOD;
+        private System.Windows.Forms.Button buttonFACT;
+        private System.Windows.Forms.Button buttonEQ;
+        private System.Windows.Forms.Button buttonPLUS;
+        private System.Windows.Forms.Button buttonMINUS;
+        private System.Windows.Forms.Button buttonSIN;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonDEL;
+        private System.Windows.Forms.Button buttonSQRT3;
+        private System.Windows.Forms.Button buttonCLEAR;
+        private System.Windows.Forms.TextBox inputMath;
         private System.Windows.Forms.TextBox textBox2;
     }
 }
