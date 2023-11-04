@@ -246,7 +246,7 @@ namespace Calculater
             // 
             // button21
             // 
-            button21.Location = new System.Drawing.Point(193, 344);
+            button21.Location = new System.Drawing.Point(190, 344);
             button21.Name = "button21";
             button21.Size = new System.Drawing.Size(60, 60);
             button21.TabIndex = 12;
