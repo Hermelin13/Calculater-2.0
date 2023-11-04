@@ -61,7 +61,7 @@ namespace Calculater
             buttonSQRT3 = new System.Windows.Forms.Button();
             buttonCLEAR = new System.Windows.Forms.Button();
             inputMath = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
+            history = new System.Windows.Forms.TextBox();
             SuspendLayout();
             // 
             // button1
@@ -135,6 +135,7 @@ namespace Calculater
             button8.TabIndex = 7;
             button8.Text = "8";
             button8.UseVisualStyleBackColor = true;
+            button8.Click += clickButton;
             // 
             // button9
             // 
@@ -153,6 +154,7 @@ namespace Calculater
             button0.TabIndex = 9;
             button0.Text = "0";
             button0.UseVisualStyleBackColor = true;
+            button0.Click += clickButton;
             // 
             // button11
             // 
@@ -279,6 +281,7 @@ namespace Calculater
             buttonPLUS.TabIndex = 28;
             buttonPLUS.Text = "+";
             buttonPLUS.UseVisualStyleBackColor = true;
+            buttonPLUS.Click += clickButton;
             // 
             // buttonMINUS
             // 
@@ -324,6 +327,7 @@ namespace Calculater
             buttonDEL.TabIndex = 23;
             buttonDEL.Text = "DEL";
             buttonDEL.UseVisualStyleBackColor = true;
+            buttonDEL.Click += clickButton;
             // 
             // buttonSQRT3
             // 
@@ -333,7 +337,6 @@ namespace Calculater
             buttonSQRT3.TabIndex = 29;
             buttonSQRT3.Text = "x³";
             buttonSQRT3.UseVisualStyleBackColor = true;
-            buttonSQRT3.Click += button30_Click;
             // 
             // buttonCLEAR
             // 
@@ -343,7 +346,7 @@ namespace Calculater
             buttonCLEAR.TabIndex = 30;
             buttonCLEAR.Text = "AC";
             buttonCLEAR.UseVisualStyleBackColor = true;
-            buttonCLEAR.Click += button31_Click;
+            buttonCLEAR.Click += clickButton;
             // 
             // inputMath
             // 
@@ -353,19 +356,19 @@ namespace Calculater
             inputMath.Size = new System.Drawing.Size(326, 93);
             inputMath.TabIndex = 31;
             // 
-            // textBox2
+            // history
             // 
-            textBox2.Location = new System.Drawing.Point(520, 311);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new System.Drawing.Size(326, 93);
-            textBox2.TabIndex = 32;
+            history.Location = new System.Drawing.Point(520, 311);
+            history.Multiline = true;
+            history.Name = "history";
+            history.Size = new System.Drawing.Size(326, 93);
+            history.TabIndex = 32;
             // 
             // standard
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            Controls.Add(textBox2);
+            Controls.Add(history);
             Controls.Add(inputMath);
             Controls.Add(buttonCLEAR);
             Controls.Add(buttonSQRT3);
@@ -439,6 +442,6 @@ namespace Calculater
         private System.Windows.Forms.Button buttonSQRT3;
         private System.Windows.Forms.Button buttonCLEAR;
         private System.Windows.Forms.TextBox inputMath;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox history;
     }
 }

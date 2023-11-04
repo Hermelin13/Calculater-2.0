@@ -22,34 +22,27 @@ namespace Calculater
 
         }
 
-        private void button29_Click(object sender, EventArgs e)
+        private void clickButton(object sender, EventArgs e)
         {
+            Button buttonPRESSED = sender as Button;
 
+            switch (buttonPRESSED.Name)
+            {
+                case "buttonDEL":
+                    if (inputMath.Text.Length > 0)
+                    {
+                        inputMath.Text = inputMath.Text.Substring(0, inputMath.Text.Length - 1);
+                    }
+                    break;
+                case "buttonCLEAR":
+                    inputMath.Text = "";
+                    break;
+                default:
+                    inputMath.Text = inputMath.Text + buttonPRESSED.Text;
+                    break;
+
+            }
         }
 
-        private void button22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button31_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
