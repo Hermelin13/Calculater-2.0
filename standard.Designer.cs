@@ -58,11 +58,15 @@ namespace Calculater
             button27 = new System.Windows.Forms.Button();
             button28 = new System.Windows.Forms.Button();
             button29 = new System.Windows.Forms.Button();
+            button30 = new System.Windows.Forms.Button();
+            button31 = new System.Windows.Forms.Button();
+            textBox1 = new System.Windows.Forms.TextBox();
+            textBox2 = new System.Windows.Forms.TextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(292, 247);
+            button1.Location = new System.Drawing.Point(259, 344);
             button1.Name = "button1";
             button1.Size = new System.Drawing.Size(60, 60);
             button1.TabIndex = 0;
@@ -71,7 +75,7 @@ namespace Calculater
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(358, 247);
+            button2.Location = new System.Drawing.Point(325, 344);
             button2.Name = "button2";
             button2.Size = new System.Drawing.Size(60, 60);
             button2.TabIndex = 1;
@@ -80,7 +84,7 @@ namespace Calculater
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(424, 247);
+            button3.Location = new System.Drawing.Point(391, 344);
             button3.Name = "button3";
             button3.Size = new System.Drawing.Size(60, 60);
             button3.TabIndex = 2;
@@ -89,7 +93,7 @@ namespace Calculater
             // 
             // button4
             // 
-            button4.Location = new System.Drawing.Point(292, 181);
+            button4.Location = new System.Drawing.Point(259, 278);
             button4.Name = "button4";
             button4.Size = new System.Drawing.Size(60, 60);
             button4.TabIndex = 5;
@@ -98,7 +102,7 @@ namespace Calculater
             // 
             // button5
             // 
-            button5.Location = new System.Drawing.Point(358, 181);
+            button5.Location = new System.Drawing.Point(325, 278);
             button5.Name = "button5";
             button5.Size = new System.Drawing.Size(60, 60);
             button5.TabIndex = 4;
@@ -107,7 +111,7 @@ namespace Calculater
             // 
             // button6
             // 
-            button6.Location = new System.Drawing.Point(424, 181);
+            button6.Location = new System.Drawing.Point(391, 278);
             button6.Name = "button6";
             button6.Size = new System.Drawing.Size(60, 60);
             button6.TabIndex = 3;
@@ -116,7 +120,7 @@ namespace Calculater
             // 
             // button7
             // 
-            button7.Location = new System.Drawing.Point(292, 115);
+            button7.Location = new System.Drawing.Point(259, 212);
             button7.Name = "button7";
             button7.Size = new System.Drawing.Size(60, 60);
             button7.TabIndex = 8;
@@ -125,7 +129,7 @@ namespace Calculater
             // 
             // button8
             // 
-            button8.Location = new System.Drawing.Point(358, 115);
+            button8.Location = new System.Drawing.Point(325, 212);
             button8.Name = "button8";
             button8.Size = new System.Drawing.Size(60, 60);
             button8.TabIndex = 7;
@@ -134,7 +138,7 @@ namespace Calculater
             // 
             // button9
             // 
-            button9.Location = new System.Drawing.Point(424, 115);
+            button9.Location = new System.Drawing.Point(391, 212);
             button9.Name = "button9";
             button9.Size = new System.Drawing.Size(60, 60);
             button9.TabIndex = 6;
@@ -143,7 +147,7 @@ namespace Calculater
             // 
             // button10
             // 
-            button10.Location = new System.Drawing.Point(358, 313);
+            button10.Location = new System.Drawing.Point(325, 410);
             button10.Name = "button10";
             button10.Size = new System.Drawing.Size(60, 60);
             button10.TabIndex = 9;
@@ -152,7 +156,7 @@ namespace Calculater
             // 
             // button11
             // 
-            button11.Location = new System.Drawing.Point(424, 313);
+            button11.Location = new System.Drawing.Point(391, 146);
             button11.Name = "button11";
             button11.Size = new System.Drawing.Size(60, 60);
             button11.TabIndex = 10;
@@ -161,7 +165,7 @@ namespace Calculater
             // 
             // button12
             // 
-            button12.Location = new System.Drawing.Point(91, 313);
+            button12.Location = new System.Drawing.Point(58, 410);
             button12.Name = "button12";
             button12.Size = new System.Drawing.Size(60, 60);
             button12.TabIndex = 21;
@@ -170,7 +174,7 @@ namespace Calculater
             // 
             // button13
             // 
-            button13.Location = new System.Drawing.Point(157, 313);
+            button13.Location = new System.Drawing.Point(124, 410);
             button13.Name = "button13";
             button13.Size = new System.Drawing.Size(60, 60);
             button13.TabIndex = 20;
@@ -179,7 +183,7 @@ namespace Calculater
             // 
             // button14
             // 
-            button14.Location = new System.Drawing.Point(91, 115);
+            button14.Location = new System.Drawing.Point(58, 212);
             button14.Name = "button14";
             button14.Size = new System.Drawing.Size(60, 60);
             button14.TabIndex = 19;
@@ -188,7 +192,7 @@ namespace Calculater
             // 
             // button15
             // 
-            button15.Location = new System.Drawing.Point(157, 115);
+            button15.Location = new System.Drawing.Point(124, 212);
             button15.Name = "button15";
             button15.Size = new System.Drawing.Size(60, 60);
             button15.TabIndex = 18;
@@ -197,7 +201,7 @@ namespace Calculater
             // 
             // button16
             // 
-            button16.Location = new System.Drawing.Point(223, 115);
+            button16.Location = new System.Drawing.Point(190, 212);
             button16.Name = "button16";
             button16.Size = new System.Drawing.Size(60, 60);
             button16.TabIndex = 17;
@@ -206,7 +210,7 @@ namespace Calculater
             // 
             // button17
             // 
-            button17.Location = new System.Drawing.Point(91, 181);
+            button17.Location = new System.Drawing.Point(58, 278);
             button17.Name = "button17";
             button17.Size = new System.Drawing.Size(60, 60);
             button17.TabIndex = 16;
@@ -215,7 +219,7 @@ namespace Calculater
             // 
             // button18
             // 
-            button18.Location = new System.Drawing.Point(157, 181);
+            button18.Location = new System.Drawing.Point(124, 278);
             button18.Name = "button18";
             button18.Size = new System.Drawing.Size(60, 60);
             button18.TabIndex = 15;
@@ -224,7 +228,7 @@ namespace Calculater
             // 
             // button19
             // 
-            button19.Location = new System.Drawing.Point(223, 181);
+            button19.Location = new System.Drawing.Point(190, 278);
             button19.Name = "button19";
             button19.Size = new System.Drawing.Size(60, 60);
             button19.TabIndex = 14;
@@ -233,7 +237,7 @@ namespace Calculater
             // 
             // button20
             // 
-            button20.Location = new System.Drawing.Point(223, 247);
+            button20.Location = new System.Drawing.Point(190, 410);
             button20.Name = "button20";
             button20.Size = new System.Drawing.Size(60, 60);
             button20.TabIndex = 13;
@@ -242,7 +246,7 @@ namespace Calculater
             // 
             // button21
             // 
-            button21.Location = new System.Drawing.Point(157, 247);
+            button21.Location = new System.Drawing.Point(193, 344);
             button21.Name = "button21";
             button21.Size = new System.Drawing.Size(60, 60);
             button21.TabIndex = 12;
@@ -251,7 +255,7 @@ namespace Calculater
             // 
             // button22
             // 
-            button22.Location = new System.Drawing.Point(91, 247);
+            button22.Location = new System.Drawing.Point(124, 344);
             button22.Name = "button22";
             button22.Size = new System.Drawing.Size(60, 60);
             button22.TabIndex = 11;
@@ -260,7 +264,7 @@ namespace Calculater
             // 
             // button23
             // 
-            button23.Location = new System.Drawing.Point(223, 313);
+            button23.Location = new System.Drawing.Point(190, 476);
             button23.Name = "button23";
             button23.Size = new System.Drawing.Size(129, 60);
             button23.TabIndex = 22;
@@ -269,7 +273,7 @@ namespace Calculater
             // 
             // button24
             // 
-            button24.Location = new System.Drawing.Point(91, 49);
+            button24.Location = new System.Drawing.Point(58, 146);
             button24.Name = "button24";
             button24.Size = new System.Drawing.Size(60, 60);
             button24.TabIndex = 28;
@@ -278,7 +282,7 @@ namespace Calculater
             // 
             // button25
             // 
-            button25.Location = new System.Drawing.Point(157, 49);
+            button25.Location = new System.Drawing.Point(124, 146);
             button25.Name = "button25";
             button25.Size = new System.Drawing.Size(60, 60);
             button25.TabIndex = 27;
@@ -287,7 +291,7 @@ namespace Calculater
             // 
             // button26
             // 
-            button26.Location = new System.Drawing.Point(223, 49);
+            button26.Location = new System.Drawing.Point(190, 146);
             button26.Name = "button26";
             button26.Size = new System.Drawing.Size(60, 60);
             button26.TabIndex = 26;
@@ -296,7 +300,7 @@ namespace Calculater
             // 
             // button27
             // 
-            button27.Location = new System.Drawing.Point(292, 49);
+            button27.Location = new System.Drawing.Point(259, 146);
             button27.Name = "button27";
             button27.Size = new System.Drawing.Size(60, 60);
             button27.TabIndex = 25;
@@ -305,7 +309,7 @@ namespace Calculater
             // 
             // button28
             // 
-            button28.Location = new System.Drawing.Point(358, 49);
+            button28.Location = new System.Drawing.Point(325, 146);
             button28.Name = "button28";
             button28.Size = new System.Drawing.Size(60, 60);
             button28.TabIndex = 24;
@@ -314,17 +318,57 @@ namespace Calculater
             // 
             // button29
             // 
-            button29.Location = new System.Drawing.Point(424, 49);
+            button29.Location = new System.Drawing.Point(391, 410);
             button29.Name = "button29";
             button29.Size = new System.Drawing.Size(60, 60);
             button29.TabIndex = 23;
             button29.Text = "DEL";
             button29.UseVisualStyleBackColor = true;
             // 
+            // button30
+            // 
+            button30.Location = new System.Drawing.Point(58, 344);
+            button30.Name = "button30";
+            button30.Size = new System.Drawing.Size(60, 60);
+            button30.TabIndex = 29;
+            button30.Text = "x³";
+            button30.UseVisualStyleBackColor = true;
+            button30.Click += button30_Click;
+            // 
+            // button31
+            // 
+            button31.Location = new System.Drawing.Point(259, 410);
+            button31.Name = "button31";
+            button31.Size = new System.Drawing.Size(60, 60);
+            button31.TabIndex = 30;
+            button31.Text = "AC";
+            button31.UseVisualStyleBackColor = true;
+            button31.Click += button31_Click;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new System.Drawing.Point(520, 95);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new System.Drawing.Size(326, 93);
+            textBox1.TabIndex = 31;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new System.Drawing.Point(520, 245);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new System.Drawing.Size(326, 93);
+            textBox2.TabIndex = 32;
+            // 
             // standard
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(button31);
+            Controls.Add(button30);
             Controls.Add(button24);
             Controls.Add(button25);
             Controls.Add(button26);
@@ -358,6 +402,7 @@ namespace Calculater
             Size = new System.Drawing.Size(950, 591);
             Load += standard_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -391,5 +436,9 @@ namespace Calculater
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
+        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button button31;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }

@@ -41,5 +41,15 @@ namespace Calculater
         {
 
         }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
