@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace Calculater
 {
     partial class standard
@@ -66,72 +68,72 @@ namespace Calculater
             // 
             // button1
             // 
-            button1.Location = new System.Drawing.Point(259, 344);
+            button1.Location = new Point(259, 344);
             button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(60, 60);
+            button1.Size = new Size(60, 60);
             button1.TabIndex = 0;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.Location = new System.Drawing.Point(325, 344);
+            button2.Location = new Point(325, 344);
             button2.Name = "button2";
-            button2.Size = new System.Drawing.Size(60, 60);
+            button2.Size = new Size(60, 60);
             button2.TabIndex = 1;
             button2.Text = "2";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new System.Drawing.Point(391, 344);
+            button3.Location = new Point(391, 344);
             button3.Name = "button3";
-            button3.Size = new System.Drawing.Size(60, 60);
+            button3.Size = new Size(60, 60);
             button3.TabIndex = 2;
             button3.Text = "3";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new System.Drawing.Point(259, 278);
+            button4.Location = new Point(259, 278);
             button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(60, 60);
+            button4.Size = new Size(60, 60);
             button4.TabIndex = 5;
             button4.Text = "4";
             button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            button5.Location = new System.Drawing.Point(325, 278);
+            button5.Location = new Point(325, 278);
             button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(60, 60);
+            button5.Size = new Size(60, 60);
             button5.TabIndex = 4;
             button5.Text = "5";
             button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            button6.Location = new System.Drawing.Point(391, 278);
+            button6.Location = new Point(391, 278);
             button6.Name = "button6";
-            button6.Size = new System.Drawing.Size(60, 60);
+            button6.Size = new Size(60, 60);
             button6.TabIndex = 3;
             button6.Text = "6";
             button6.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
-            button7.Location = new System.Drawing.Point(259, 212);
+            button7.Location = new Point(259, 212);
             button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(60, 60);
+            button7.Size = new Size(60, 60);
             button7.TabIndex = 8;
             button7.Text = "7";
             button7.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
-            button8.Location = new System.Drawing.Point(325, 212);
+            button8.Location = new Point(325, 212);
             button8.Name = "button8";
-            button8.Size = new System.Drawing.Size(60, 60);
+            button8.Size = new Size(60, 60);
             button8.TabIndex = 7;
             button8.Text = "8";
             button8.UseVisualStyleBackColor = true;
@@ -139,18 +141,18 @@ namespace Calculater
             // 
             // button9
             // 
-            button9.Location = new System.Drawing.Point(391, 212);
+            button9.Location = new Point(391, 212);
             button9.Name = "button9";
-            button9.Size = new System.Drawing.Size(60, 60);
+            button9.Size = new Size(60, 60);
             button9.TabIndex = 6;
             button9.Text = "9";
             button9.UseVisualStyleBackColor = true;
             // 
             // button0
             // 
-            button0.Location = new System.Drawing.Point(325, 410);
+            button0.Location = new Point(325, 410);
             button0.Name = "button0";
-            button0.Size = new System.Drawing.Size(60, 60);
+            button0.Size = new Size(60, 60);
             button0.TabIndex = 9;
             button0.Text = "0";
             button0.UseVisualStyleBackColor = true;
@@ -158,126 +160,126 @@ namespace Calculater
             // 
             // button11
             // 
-            button11.Location = new System.Drawing.Point(391, 146);
+            button11.Location = new Point(391, 146);
             button11.Name = "button11";
-            button11.Size = new System.Drawing.Size(60, 60);
+            button11.Size = new Size(60, 60);
             button11.TabIndex = 10;
             button11.Text = ".";
             button11.UseVisualStyleBackColor = true;
             // 
             // buttonPI
             // 
-            buttonPI.Location = new System.Drawing.Point(58, 410);
+            buttonPI.Location = new Point(58, 410);
             buttonPI.Name = "buttonPI";
-            buttonPI.Size = new System.Drawing.Size(60, 60);
+            buttonPI.Size = new Size(60, 60);
             buttonPI.TabIndex = 21;
             buttonPI.Text = "π";
             buttonPI.UseVisualStyleBackColor = true;
             // 
             // buttonEULER
             // 
-            buttonEULER.Location = new System.Drawing.Point(124, 410);
+            buttonEULER.Location = new Point(124, 410);
             buttonEULER.Name = "buttonEULER";
-            buttonEULER.Size = new System.Drawing.Size(60, 60);
+            buttonEULER.Size = new Size(60, 60);
             buttonEULER.TabIndex = 20;
             buttonEULER.Text = "e";
             buttonEULER.UseVisualStyleBackColor = true;
             // 
             // buttonMULTI
             // 
-            buttonMULTI.Location = new System.Drawing.Point(58, 212);
+            buttonMULTI.Location = new Point(58, 212);
             buttonMULTI.Name = "buttonMULTI";
-            buttonMULTI.Size = new System.Drawing.Size(60, 60);
+            buttonMULTI.Size = new Size(60, 60);
             buttonMULTI.TabIndex = 19;
             buttonMULTI.Text = "x";
             buttonMULTI.UseVisualStyleBackColor = true;
             // 
             // buttonDIV
             // 
-            buttonDIV.Location = new System.Drawing.Point(124, 212);
+            buttonDIV.Location = new Point(124, 212);
             buttonDIV.Name = "buttonDIV";
-            buttonDIV.Size = new System.Drawing.Size(60, 60);
+            buttonDIV.Size = new Size(60, 60);
             buttonDIV.TabIndex = 18;
             buttonDIV.Text = "/";
             buttonDIV.UseVisualStyleBackColor = true;
             // 
             // buttonCOS
             // 
-            buttonCOS.Location = new System.Drawing.Point(190, 212);
+            buttonCOS.Location = new Point(190, 212);
             buttonCOS.Name = "buttonCOS";
-            buttonCOS.Size = new System.Drawing.Size(60, 60);
+            buttonCOS.Size = new Size(60, 60);
             buttonCOS.TabIndex = 17;
             buttonCOS.Text = "cos";
             buttonCOS.UseVisualStyleBackColor = true;
             // 
             // buttonSQRT
             // 
-            buttonSQRT.Location = new System.Drawing.Point(58, 278);
+            buttonSQRT.Location = new Point(58, 278);
             buttonSQRT.Name = "buttonSQRT";
-            buttonSQRT.Size = new System.Drawing.Size(60, 60);
+            buttonSQRT.Size = new Size(60, 60);
             buttonSQRT.TabIndex = 16;
             buttonSQRT.Text = "x²";
             buttonSQRT.UseVisualStyleBackColor = true;
             // 
             // buttonROOT
             // 
-            buttonROOT.Location = new System.Drawing.Point(124, 278);
+            buttonROOT.Location = new Point(124, 278);
             buttonROOT.Name = "buttonROOT";
-            buttonROOT.Size = new System.Drawing.Size(60, 60);
+            buttonROOT.Size = new Size(60, 60);
             buttonROOT.TabIndex = 15;
             buttonROOT.Text = "√x";
             buttonROOT.UseVisualStyleBackColor = true;
             // 
             // buttonTAN
             // 
-            buttonTAN.Location = new System.Drawing.Point(190, 278);
+            buttonTAN.Location = new Point(190, 278);
             buttonTAN.Name = "buttonTAN";
-            buttonTAN.Size = new System.Drawing.Size(60, 60);
+            buttonTAN.Size = new Size(60, 60);
             buttonTAN.TabIndex = 14;
             buttonTAN.Text = "tan";
             buttonTAN.UseVisualStyleBackColor = true;
             // 
             // buttonLOG
             // 
-            buttonLOG.Location = new System.Drawing.Point(190, 410);
+            buttonLOG.Location = new Point(190, 410);
             buttonLOG.Name = "buttonLOG";
-            buttonLOG.Size = new System.Drawing.Size(60, 60);
+            buttonLOG.Size = new Size(60, 60);
             buttonLOG.TabIndex = 13;
             buttonLOG.Text = "log";
             buttonLOG.UseVisualStyleBackColor = true;
             // 
             // buttonMOD
             // 
-            buttonMOD.Location = new System.Drawing.Point(190, 344);
+            buttonMOD.Location = new Point(190, 344);
             buttonMOD.Name = "buttonMOD";
-            buttonMOD.Size = new System.Drawing.Size(60, 60);
+            buttonMOD.Size = new Size(60, 60);
             buttonMOD.TabIndex = 12;
             buttonMOD.Text = "mod";
             buttonMOD.UseVisualStyleBackColor = true;
             // 
             // buttonFACT
             // 
-            buttonFACT.Location = new System.Drawing.Point(124, 344);
+            buttonFACT.Location = new Point(124, 344);
             buttonFACT.Name = "buttonFACT";
-            buttonFACT.Size = new System.Drawing.Size(60, 60);
+            buttonFACT.Size = new Size(60, 60);
             buttonFACT.TabIndex = 11;
             buttonFACT.Text = "x!";
             buttonFACT.UseVisualStyleBackColor = true;
             // 
             // buttonEQ
             // 
-            buttonEQ.Location = new System.Drawing.Point(190, 476);
+            buttonEQ.Location = new Point(190, 476);
             buttonEQ.Name = "buttonEQ";
-            buttonEQ.Size = new System.Drawing.Size(129, 60);
+            buttonEQ.Size = new Size(129, 60);
             buttonEQ.TabIndex = 22;
             buttonEQ.Text = "=";
             buttonEQ.UseVisualStyleBackColor = true;
             // 
             // buttonPLUS
             // 
-            buttonPLUS.Location = new System.Drawing.Point(58, 146);
+            buttonPLUS.Location = new Point(58, 146);
             buttonPLUS.Name = "buttonPLUS";
-            buttonPLUS.Size = new System.Drawing.Size(60, 60);
+            buttonPLUS.Size = new Size(60, 60);
             buttonPLUS.TabIndex = 28;
             buttonPLUS.Text = "+";
             buttonPLUS.UseVisualStyleBackColor = true;
@@ -285,64 +287,65 @@ namespace Calculater
             // 
             // buttonMINUS
             // 
-            buttonMINUS.Location = new System.Drawing.Point(124, 146);
+            buttonMINUS.Location = new Point(124, 146);
             buttonMINUS.Name = "buttonMINUS";
-            buttonMINUS.Size = new System.Drawing.Size(60, 60);
+            buttonMINUS.Size = new Size(60, 60);
             buttonMINUS.TabIndex = 27;
             buttonMINUS.Text = "-";
             buttonMINUS.UseVisualStyleBackColor = true;
             // 
             // buttonSIN
             // 
-            buttonSIN.Location = new System.Drawing.Point(190, 146);
+            buttonSIN.Location = new Point(190, 146);
             buttonSIN.Name = "buttonSIN";
-            buttonSIN.Size = new System.Drawing.Size(60, 60);
+            buttonSIN.Size = new Size(60, 60);
             buttonSIN.TabIndex = 26;
             buttonSIN.Text = "sin";
             buttonSIN.UseVisualStyleBackColor = true;
             // 
             // button27
             // 
-            button27.Location = new System.Drawing.Point(259, 146);
+            button27.Location = new Point(259, 146);
             button27.Name = "button27";
-            button27.Size = new System.Drawing.Size(60, 60);
+            button27.Size = new Size(60, 60);
             button27.TabIndex = 25;
             button27.Text = "(";
             button27.UseVisualStyleBackColor = true;
             // 
             // button28
             // 
-            button28.Location = new System.Drawing.Point(325, 146);
+            button28.Location = new Point(325, 146);
             button28.Name = "button28";
-            button28.Size = new System.Drawing.Size(60, 60);
+            button28.Size = new Size(60, 60);
             button28.TabIndex = 24;
             button28.Text = ")";
             button28.UseVisualStyleBackColor = true;
             // 
             // buttonDEL
             // 
-            buttonDEL.Location = new System.Drawing.Point(391, 410);
+            buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
+            buttonDEL.Location = new Point(391, 410);
             buttonDEL.Name = "buttonDEL";
-            buttonDEL.Size = new System.Drawing.Size(60, 60);
+            buttonDEL.Size = new Size(60, 60);
             buttonDEL.TabIndex = 23;
             buttonDEL.Text = "DEL";
-            buttonDEL.UseVisualStyleBackColor = true;
+            buttonDEL.UseVisualStyleBackColor = false;
             buttonDEL.Click += clickButton;
             // 
             // buttonSQRT3
             // 
-            buttonSQRT3.Location = new System.Drawing.Point(58, 344);
+            buttonSQRT3.Location = new Point(58, 344);
             buttonSQRT3.Name = "buttonSQRT3";
-            buttonSQRT3.Size = new System.Drawing.Size(60, 60);
+            buttonSQRT3.Size = new Size(60, 60);
             buttonSQRT3.TabIndex = 29;
             buttonSQRT3.Text = "x³";
             buttonSQRT3.UseVisualStyleBackColor = true;
             // 
             // buttonCLEAR
             // 
-            buttonCLEAR.Location = new System.Drawing.Point(259, 410);
+            buttonCLEAR.Location = new Point(259, 410);
             buttonCLEAR.Name = "buttonCLEAR";
-            buttonCLEAR.Size = new System.Drawing.Size(60, 60);
+            buttonCLEAR.Size = new Size(60, 60);
             buttonCLEAR.TabIndex = 30;
             buttonCLEAR.Text = "AC";
             buttonCLEAR.UseVisualStyleBackColor = true;
@@ -350,23 +353,23 @@ namespace Calculater
             // 
             // inputMath
             // 
-            inputMath.Location = new System.Drawing.Point(520, 146);
+            inputMath.Location = new Point(520, 146);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
-            inputMath.Size = new System.Drawing.Size(326, 93);
+            inputMath.Size = new Size(326, 93);
             inputMath.TabIndex = 31;
             // 
             // history
             // 
-            history.Location = new System.Drawing.Point(520, 311);
+            history.Location = new Point(520, 311);
             history.Multiline = true;
             history.Name = "history";
-            history.Size = new System.Drawing.Size(326, 93);
+            history.Size = new Size(326, 93);
             history.TabIndex = 32;
             // 
             // standard
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             Controls.Add(history);
             Controls.Add(inputMath);
@@ -402,7 +405,7 @@ namespace Calculater
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "standard";
-            Size = new System.Drawing.Size(950, 591);
+            Size = new Size(950, 591);
             Load += standard_Load;
             ResumeLayout(false);
             PerformLayout();
