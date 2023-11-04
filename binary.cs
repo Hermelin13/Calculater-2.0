@@ -16,5 +16,11 @@ namespace Calculater
         {
             InitializeComponent();
         }
+
+        private void binary_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
