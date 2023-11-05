@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalcLib
+namespace Calculater
 {
-    public class mathematics
+    public class CalcLib
     {
 
     }
