@@ -505,10 +505,10 @@ namespace Calculater
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             inputMath.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            inputMath.Location = new Point(520, 146);
+            inputMath.Location = new Point(482, 0);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
-            inputMath.Size = new Size(326, 93);
+            inputMath.Size = new Size(468, 77);
             inputMath.TabIndex = 31;
             // 
             // history
@@ -516,10 +516,10 @@ namespace Calculater
             history.BackColor = Color.FromArgb(60, 80, 83);
             history.BorderStyle = System.Windows.Forms.BorderStyle.None;
             history.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            history.Location = new Point(520, 311);
+            history.Location = new Point(482, 83);
             history.Multiline = true;
             history.Name = "history";
-            history.Size = new Size(326, 93);
+            history.Size = new Size(468, 508);
             history.TabIndex = 32;
             // 
             // standard
