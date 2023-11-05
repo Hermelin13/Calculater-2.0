@@ -33,18 +33,12 @@ namespace Calculater
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            int borderRadius = 25;
-            float borderThickness = 0.0f;
+            int borderRadius = 35;
             base.OnPaint(e);
             RectangleF Rect = new RectangleF(0, 0, this.Width, this.Height);
             GraphicsPath GraphPath = GetRoundPath(Rect, borderRadius);
 
             this.Region = new Region(GraphPath);
-            using (Pen pen = new Pen(Color.Silver, borderThickness))
-            {
-                pen.Alignment = PenAlignment.Inset;
-                e.Graphics.DrawPath(pen, GraphPath);
-            }
         }
     }
 }
