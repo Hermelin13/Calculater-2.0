@@ -12,13 +12,13 @@ namespace Calculater
 {
     public partial class binary : UserControl
     {
+        bool number = false;
+        bool dot = false;
+
         public binary()
         {
             InitializeComponent();
         }
-
-        bool number = false;
-        bool dot = false;
 
         private void clickButton(object sender, EventArgs e)
         {
