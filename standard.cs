@@ -68,7 +68,8 @@ namespace Calculater
                     brackets = 0;
                     break;
                 case "buttonEQ":
-                    history.Text = inputMath.Text;
+                    history.Text = inputMath.Text + buttonPRESSED.Text + "564113181311634";
+                    inputMath.Text = "564113181311634";
                     break;
                 case "buttonDOT":
                     if (!nothing && number && !dot)
@@ -117,14 +118,6 @@ namespace Calculater
                     if (!nothing && !sqrt && !fact)
                     {
                         inputMath.Text = inputMath.Text + "^2";
-                        number = false;
-                        sqrt = true;
-                    }
-                    break;
-                case "buttonSQRT3":
-                    if (!nothing && !sqrt && !fact)
-                    {
-                        inputMath.Text = inputMath.Text + "^3";
                         number = false;
                         sqrt = true;
                     }
