@@ -569,7 +569,6 @@ namespace Calculater
         #endregion
         private System.Windows.Forms.TextBox inputMath;
         private System.Windows.Forms.TextBox history;
-        private RoundedButton roundedButton1;
         private RoundedButton button1;
         private RoundedButton button2;
         private RoundedButton button3;

@@ -195,6 +195,5 @@ namespace Calculater
                     break;
             }
         }
-
     }
 }
