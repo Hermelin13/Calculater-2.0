@@ -12,6 +12,7 @@ namespace Calculater
 {
     public partial class FITCalculator : Form
     {
+        bool sidebarExpansion;
         public FITCalculator()
         {
             InitializeComponent();
@@ -45,9 +46,31 @@ namespace Calculater
             binary1.Visible = true;
         }
 
-        private void binary1_Load(object sender, EventArgs e)
+        private void barTimer_Tick(object sender, EventArgs e)
         {
+            if (sidebarExpansion)
+            {
+                menuBar.Height -= 10;
+                if (menuBar.Height == menuBar.MinimumSize.Height)
+                {
+                    sidebarExpansion = false;
+                    barTimer.Stop();
+                }
+            }
+            else
+            {
+                menuBar.Height += 10;
+                if (menuBar.Height == menuBar.MaximumSize.Height)
+                {
+                    sidebarExpansion = true;
+                    barTimer.Stop();
+                }
+            }
+        }
 
+        private void menuButton_Click(object sender, EventArgs e)
+        {
+            barTimer.Start();
         }
     }
 }
