@@ -625,6 +625,7 @@ namespace Calculater
             inputMath.Location = new Point(410, 3);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
+            inputMath.ReadOnly = true;
             inputMath.Size = new Size(526, 120);
             inputMath.TabIndex = 43;
             // 
@@ -636,6 +637,7 @@ namespace Calculater
             history.Location = new Point(410, 129);
             history.Multiline = true;
             history.Name = "history";
+            history.ReadOnly = true;
             history.Size = new Size(526, 448);
             history.TabIndex = 44;
             // 
