@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using org.mariuszgromada.math.mxparser;
 
 namespace Calculater
 {
@@ -68,8 +69,9 @@ namespace Calculater
                     brackets = 0;
                     break;
                 case "buttonEQ":
-                    history.Text = inputMath.Text + buttonPRESSED.Text + "564113181311634";
-                    inputMath.Text = "564113181311634";
+                    Expression ex = new Expression(inputMath.Text);
+                    var result = ex.calculate();
+                    history.Text = result.ToString();
                     break;
                 case "buttonDOT":
                     if (!nothing && number && !dot)

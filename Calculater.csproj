@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Reference Include="MathParser.org-mXparser">
+      <HintPath>..\..\..\Downloads\MathParser.org-mXparser-v.5.2.1-dotnet-bin-only\MathParser.org-mXparser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
