@@ -39,9 +39,9 @@ namespace Calculater
             menuBar = new System.Windows.Forms.FlowLayoutPanel();
             panel2 = new System.Windows.Forms.Panel();
             menuButton = new System.Windows.Forms.PictureBox();
-            standardButton = new System.Windows.Forms.Button();
-            PrevodnikButton = new System.Windows.Forms.Button();
-            binaryButton = new System.Windows.Forms.Button();
+            standardButton = new RoundedButton();
+            PrevodnikButton = new RoundedButton();
+            binaryButton = new RoundedButton();
             barTimer = new System.Windows.Forms.Timer(components);
             menuBar.SuspendLayout();
             panel2.SuspendLayout();
@@ -141,7 +141,7 @@ namespace Calculater
             binaryButton.ForeColor = Color.White;
             binaryButton.Location = new Point(3, 159);
             binaryButton.Name = "binaryButton";
-            binaryButton.Size = new Size(160, 39);
+            binaryButton.Size = new Size(160, 41);
             binaryButton.TabIndex = 0;
             binaryButton.Text = "Programátorská";
             binaryButton.UseVisualStyleBackColor = false;
@@ -159,9 +159,6 @@ namespace Calculater
             BackColor = Color.FromArgb(3, 18, 14);
             ClientSize = new Size(949, 591);
             Controls.Add(menuBar);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(standard1);
             Controls.Add(binary1);
             Controls.Add(prevodnik1);
@@ -179,15 +176,12 @@ namespace Calculater
         private standard standard1;
         private prevodnik prevodnik1;
         private binary binary1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel menuBar;
-        private System.Windows.Forms.Button standardButton;
+        private RoundedButton standardButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Button PrevodnikButton;
-        private System.Windows.Forms.Button binaryButton;
+        private RoundedButton PrevodnikButton;
+        private RoundedButton binaryButton;
         private System.Windows.Forms.Timer barTimer;
     }
 }

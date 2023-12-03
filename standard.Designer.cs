@@ -257,7 +257,7 @@ namespace Calculater
             buttonMULTI.Name = "buttonMULTI";
             buttonMULTI.Size = new Size(60, 60);
             buttonMULTI.TabIndex = 19;
-            buttonMULTI.Text = "x";
+            buttonMULTI.Text = "*";
             buttonMULTI.UseVisualStyleBackColor = false;
             buttonMULTI.Click += clickButton;
             // 
