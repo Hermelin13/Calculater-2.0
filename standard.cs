@@ -190,5 +190,27 @@ namespace Calculater
                     break;
             }
         }
+
+        public void keyPressed(KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.NumPad0:
+                    button0.PerformClick();
+                    break;
+                case Keys.NumPad1:
+                    button1.PerformClick();
+                    break;
+                case Keys.NumPad2:
+                    button2.PerformClick();
+                    break;
+                case Keys.NumPad3:
+                    button3.PerformClick();
+                    break;
+                case Keys.NumPad4:
+                    button4.PerformClick();
+                    break;
+            }
+        }
     }
 }

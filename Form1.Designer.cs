@@ -164,9 +164,12 @@ namespace Calculater
             Controls.Add(prevodnik1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            KeyPreview = true;
+            MaximizeBox = false;
             Name = "FITCalculator";
             Text = "FITCalculator";
             Load += Form1_Load;
+            KeyDown += hello;
             menuBar.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();
