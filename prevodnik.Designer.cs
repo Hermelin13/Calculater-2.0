@@ -384,6 +384,7 @@ namespace Calculater
             inputMath.Location = new Point(3, 7);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
+            inputMath.ReadOnly = true;
             inputMath.Size = new Size(520, 60);
             inputMath.TabIndex = 43;
             // 
@@ -423,6 +424,7 @@ namespace Calculater
             roundedTextBox2.Location = new Point(3, 157);
             roundedTextBox2.Multiline = true;
             roundedTextBox2.Name = "roundedTextBox2";
+            roundedTextBox2.ReadOnly = true;
             roundedTextBox2.Size = new Size(520, 60);
             roundedTextBox2.TabIndex = 47;
             // 
@@ -466,6 +468,7 @@ namespace Calculater
             history.Location = new Point(410, 306);
             history.Multiline = true;
             history.Name = "history";
+            history.ReadOnly = true;
             history.Size = new Size(526, 271);
             history.TabIndex = 44;
             // 
