@@ -154,8 +154,10 @@ namespace Calculater
             // 
             // FITCalculator
             // 
+            AcceptButton = null;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             BackColor = Color.FromArgb(3, 18, 14);
             ClientSize = new Size(949, 591);
             Controls.Add(menuBar);
@@ -169,7 +171,7 @@ namespace Calculater
             Name = "FITCalculator";
             Text = "FITCalculator";
             Load += Form1_Load;
-            KeyDown += hello;
+            KeyDown += pressed;
             menuBar.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();

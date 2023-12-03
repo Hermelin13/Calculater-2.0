@@ -78,9 +78,9 @@ namespace Calculater
             barTimer.Start();
         }
 
-        private void hello(object sender, KeyEventArgs e)
+        private void pressed(object sender, KeyEventArgs e)
         {
-            if(standard1.Visible)
+            if (standard1.Visible)
             {
                 standard1.keyPressed(e);
             }
@@ -88,7 +88,7 @@ namespace Calculater
             {
                 binary1.keyPressed(e);
             }
-            else if (prevodnik1.Visible) 
+            else if (prevodnik1.Visible)
             {
                 prevodnik1.keyPressed(e);
             }
