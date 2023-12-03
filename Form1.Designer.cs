@@ -162,6 +162,7 @@ namespace Calculater
             Controls.Add(standard1);
             Controls.Add(binary1);
             Controls.Add(prevodnik1);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             Name = "FITCalculator";
             Text = "FITCalculator";
             Load += Form1_Load;
