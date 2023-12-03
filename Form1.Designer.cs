@@ -163,6 +163,7 @@ namespace Calculater
             Controls.Add(binary1);
             Controls.Add(prevodnik1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FITCalculator";
             Text = "FITCalculator";
             Load += Form1_Load;
