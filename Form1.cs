@@ -25,22 +25,25 @@ namespace Calculater
             binary1.Visible = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void standardButton_Click(object sender, EventArgs e)
         {
+            barTimer.Start();
             standard1.Visible = true;
             prevodnik1.Visible = false;
             binary1.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void PrevodnikButton_Click(object sender, EventArgs e)
         {
+            barTimer.Start();
             standard1.Visible = false;
             prevodnik1.Visible = true;
             binary1.Visible = false;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void binaryButton_Click(object sender, EventArgs e)
         {
+            barTimer.Start();
             standard1.Visible = false;
             prevodnik1.Visible = false;
             binary1.Visible = true;
@@ -51,7 +54,8 @@ namespace Calculater
             if (sidebarExpansion)
             {
                 menuBar.Height -= 10;
-                if (menuBar.Height == menuBar.MinimumSize.Height)
+                menuBar.Width -= 10;
+                if (menuBar.Height == menuBar.MinimumSize.Height && menuBar.Width == menuBar.MinimumSize.Width)
                 {
                     sidebarExpansion = false;
                     barTimer.Stop();
@@ -60,7 +64,8 @@ namespace Calculater
             else
             {
                 menuBar.Height += 10;
-                if (menuBar.Height == menuBar.MaximumSize.Height)
+                menuBar.Width += 10;
+                if (menuBar.Height == menuBar.MaximumSize.Height && menuBar.Width == menuBar.MaximumSize.Width)
                 {
                     sidebarExpansion = true;
                     barTimer.Stop();

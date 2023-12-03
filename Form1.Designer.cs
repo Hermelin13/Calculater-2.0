@@ -32,34 +32,26 @@ namespace Calculater
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FITCalculator));
             standard1 = new standard();
             prevodnik1 = new prevodnik();
             binary1 = new binary();
-            button1 = new System.Windows.Forms.Button();
-            button2 = new System.Windows.Forms.Button();
-            button3 = new System.Windows.Forms.Button();
             menuBar = new System.Windows.Forms.FlowLayoutPanel();
             panel2 = new System.Windows.Forms.Panel();
             menuButton = new System.Windows.Forms.PictureBox();
-            panel1 = new System.Windows.Forms.Panel();
             standardButton = new System.Windows.Forms.Button();
-            panel3 = new System.Windows.Forms.Panel();
             PrevodnikButton = new System.Windows.Forms.Button();
-            panel4 = new System.Windows.Forms.Panel();
             binaryButton = new System.Windows.Forms.Button();
             barTimer = new System.Windows.Forms.Timer(components);
             menuBar.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)menuButton).BeginInit();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // standard1
             // 
             standard1.BackColor = Color.FromArgb(3, 18, 14);
-            standard1.Location = new Point(134, 0);
+            standard1.Location = new Point(-1, 0);
             standard1.Name = "standard1";
             standard1.Size = new Size(950, 591);
             standard1.TabIndex = 24;
@@ -67,7 +59,7 @@ namespace Calculater
             // prevodnik1
             // 
             prevodnik1.BackColor = Color.FromArgb(3, 18, 14);
-            prevodnik1.Location = new Point(134, 0);
+            prevodnik1.Location = new Point(-1, 0);
             prevodnik1.Name = "prevodnik1";
             prevodnik1.Size = new Size(950, 591);
             prevodnik1.TabIndex = 25;
@@ -75,53 +67,23 @@ namespace Calculater
             // binary1
             // 
             binary1.BackColor = Color.FromArgb(3, 18, 14);
-            binary1.Location = new Point(134, 0);
+            binary1.Location = new Point(-1, 0);
             binary1.Name = "binary1";
             binary1.Size = new Size(950, 591);
             binary1.TabIndex = 26;
             // 
-            // button1
-            // 
-            button1.Location = new Point(523, 473);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 27;
-            button1.Text = "Standard";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(404, 529);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 28;
-            button2.Text = "Převodník";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(404, 489);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 29;
-            button3.Text = "Programátorská";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // menuBar
             // 
-            menuBar.BackColor = Color.Green;
+            menuBar.BackColor = Color.FromArgb(21, 42, 37);
             menuBar.Controls.Add(panel2);
-            menuBar.Controls.Add(panel1);
-            menuBar.Controls.Add(panel3);
-            menuBar.Controls.Add(panel4);
+            menuBar.Controls.Add(standardButton);
+            menuBar.Controls.Add(PrevodnikButton);
+            menuBar.Controls.Add(binaryButton);
             menuBar.Location = new Point(-1, 0);
-            menuBar.MaximumSize = new Size(200, 210);
+            menuBar.MaximumSize = new Size(170, 210);
             menuBar.MinimumSize = new Size(60, 60);
             menuBar.Name = "menuBar";
-            menuBar.Size = new Size(200, 60);
+            menuBar.Size = new Size(60, 60);
             menuBar.TabIndex = 30;
             // 
             // panel2
@@ -129,74 +91,61 @@ namespace Calculater
             panel2.Controls.Add(menuButton);
             panel2.Location = new Point(3, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(200, 56);
+            panel2.Size = new Size(167, 56);
             panel2.TabIndex = 1;
             // 
             // menuButton
             // 
-            menuButton.Location = new Point(3, 3);
+            menuButton.Image = (Image)resources.GetObject("menuButton.Image");
+            menuButton.Location = new Point(0, 3);
             menuButton.Name = "menuButton";
-            menuButton.Size = new Size(50, 50);
+            menuButton.Size = new Size(54, 50);
+            menuButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             menuButton.TabIndex = 0;
             menuButton.TabStop = false;
             menuButton.Click += menuButton_Click;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.LimeGreen;
-            panel1.Controls.Add(standardButton);
-            panel1.Location = new Point(3, 65);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(197, 43);
-            panel1.TabIndex = 0;
-            // 
             // standardButton
             // 
+            standardButton.BackColor = Color.FromArgb(50, 73, 60);
             standardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            standardButton.Location = new Point(-3, -11);
+            standardButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            standardButton.ForeColor = Color.White;
+            standardButton.Location = new Point(3, 65);
             standardButton.Name = "standardButton";
-            standardButton.Size = new Size(203, 67);
+            standardButton.Size = new Size(160, 41);
             standardButton.TabIndex = 0;
-            standardButton.Text = "button4";
-            standardButton.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.LimeGreen;
-            panel3.Controls.Add(PrevodnikButton);
-            panel3.Location = new Point(3, 114);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(197, 43);
-            panel3.TabIndex = 2;
+            standardButton.Text = "Standardní";
+            standardButton.UseVisualStyleBackColor = false;
+            standardButton.Click += standardButton_Click;
             // 
             // PrevodnikButton
             // 
+            PrevodnikButton.BackColor = Color.FromArgb(50, 73, 60);
             PrevodnikButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            PrevodnikButton.Location = new Point(-3, -11);
+            PrevodnikButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            PrevodnikButton.ForeColor = Color.White;
+            PrevodnikButton.Location = new Point(3, 112);
             PrevodnikButton.Name = "PrevodnikButton";
-            PrevodnikButton.Size = new Size(203, 67);
+            PrevodnikButton.Size = new Size(160, 41);
             PrevodnikButton.TabIndex = 0;
-            PrevodnikButton.Text = "button5";
-            PrevodnikButton.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.LimeGreen;
-            panel4.Controls.Add(binaryButton);
-            panel4.Location = new Point(3, 163);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(197, 43);
-            panel4.TabIndex = 3;
+            PrevodnikButton.Text = "Převodník";
+            PrevodnikButton.UseVisualStyleBackColor = false;
+            PrevodnikButton.Click += PrevodnikButton_Click;
             // 
             // binaryButton
             // 
+            binaryButton.BackColor = Color.FromArgb(50, 73, 60);
             binaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            binaryButton.Location = new Point(-3, -11);
+            binaryButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            binaryButton.ForeColor = Color.White;
+            binaryButton.Location = new Point(3, 159);
             binaryButton.Name = "binaryButton";
-            binaryButton.Size = new Size(203, 67);
+            binaryButton.Size = new Size(160, 39);
             binaryButton.TabIndex = 0;
-            binaryButton.Text = "button6";
-            binaryButton.UseVisualStyleBackColor = true;
+            binaryButton.Text = "Programátorská";
+            binaryButton.UseVisualStyleBackColor = false;
+            binaryButton.Click += binaryButton_Click;
             // 
             // barTimer
             // 
@@ -208,7 +157,7 @@ namespace Calculater
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            ClientSize = new Size(1084, 591);
+            ClientSize = new Size(949, 591);
             Controls.Add(menuBar);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -222,9 +171,6 @@ namespace Calculater
             menuBar.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel4.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -237,13 +183,10 @@ namespace Calculater
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.FlowLayoutPanel menuBar;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button standardButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox menuButton;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button PrevodnikButton;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button binaryButton;
         private System.Windows.Forms.Timer barTimer;
     }
