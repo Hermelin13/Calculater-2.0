@@ -621,6 +621,7 @@ namespace Calculater
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderRadius = 30;
             inputMath.BorderStyle = BorderStyle.None;
+            inputMath.Font = new Font("Arial", 14F, FontStyle.Regular, GraphicsUnit.Point);
             inputMath.Location = new Point(410, 3);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
