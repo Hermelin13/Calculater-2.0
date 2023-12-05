@@ -62,7 +62,7 @@ namespace Calculater
             buttonDEL = new RoundedButton();
             buttonCLEAR = new RoundedButton();
             inputMath = new System.Windows.Forms.TextBox();
-            history = new System.Windows.Forms.TextBox();
+            history1 = new System.Windows.Forms.TextBox();
             buttonMOD = new RoundedButton();
             buttonROOT3 = new RoundedButton();
             buttonROOT4 = new RoundedButton();
@@ -72,11 +72,11 @@ namespace Calculater
             buttonACOS = new RoundedButton();
             buttonANS = new RoundedButton();
             buttonHELP = new RoundedButton();
-            textBox1 = new System.Windows.Forms.TextBox();
-            textBox2 = new System.Windows.Forms.TextBox();
-            textBox3 = new System.Windows.Forms.TextBox();
-            textBox6 = new System.Windows.Forms.TextBox();
-            textBox7 = new System.Windows.Forms.TextBox();
+            history2 = new System.Windows.Forms.TextBox();
+            history4 = new System.Windows.Forms.TextBox();
+            history3 = new System.Windows.Forms.TextBox();
+            history6 = new System.Windows.Forms.TextBox();
+            history5 = new System.Windows.Forms.TextBox();
             label1 = new System.Windows.Forms.Label();
             SuspendLayout();
             // 
@@ -513,17 +513,17 @@ namespace Calculater
             inputMath.TabIndex = 31;
             inputMath.TabStop = false;
             // 
-            // history
+            // history1
             // 
-            history.BackColor = Color.FromArgb(60, 80, 83);
-            history.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history.Location = new Point(482, 132);
-            history.Multiline = true;
-            history.Name = "history";
-            history.ReadOnly = true;
-            history.Size = new Size(468, 70);
-            history.TabIndex = 32;
+            history1.BackColor = Color.FromArgb(60, 80, 83);
+            history1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history1.Location = new Point(482, 132);
+            history1.Multiline = true;
+            history1.Name = "history1";
+            history1.ReadOnly = true;
+            history1.Size = new Size(468, 70);
+            history1.TabIndex = 32;
             // 
             // buttonMOD
             // 
@@ -651,65 +651,65 @@ namespace Calculater
             buttonHELP.UseVisualStyleBackColor = false;
             buttonHELP.Click += clickButton;
             // 
-            // textBox1
+            // history2
             // 
-            textBox1.BackColor = Color.FromArgb(60, 80, 83);
-            textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(482, 208);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.Size = new Size(468, 70);
-            textBox1.TabIndex = 42;
+            history2.BackColor = Color.FromArgb(60, 80, 83);
+            history2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history2.Location = new Point(482, 208);
+            history2.Multiline = true;
+            history2.Name = "history2";
+            history2.ReadOnly = true;
+            history2.Size = new Size(468, 70);
+            history2.TabIndex = 42;
             // 
-            // textBox2
+            // history4
             // 
-            textBox2.BackColor = Color.FromArgb(60, 80, 83);
-            textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(482, 360);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(468, 70);
-            textBox2.TabIndex = 44;
+            history4.BackColor = Color.FromArgb(60, 80, 83);
+            history4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history4.Location = new Point(482, 360);
+            history4.Multiline = true;
+            history4.Name = "history4";
+            history4.ReadOnly = true;
+            history4.Size = new Size(468, 70);
+            history4.TabIndex = 44;
             // 
-            // textBox3
+            // history3
             // 
-            textBox3.BackColor = Color.FromArgb(60, 80, 83);
-            textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(482, 284);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(468, 70);
-            textBox3.TabIndex = 43;
+            history3.BackColor = Color.FromArgb(60, 80, 83);
+            history3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history3.Location = new Point(482, 284);
+            history3.Multiline = true;
+            history3.Name = "history3";
+            history3.ReadOnly = true;
+            history3.Size = new Size(468, 70);
+            history3.TabIndex = 43;
             // 
-            // textBox6
+            // history6
             // 
-            textBox6.BackColor = Color.FromArgb(60, 80, 83);
-            textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(482, 512);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(468, 70);
-            textBox6.TabIndex = 46;
+            history6.BackColor = Color.FromArgb(60, 80, 83);
+            history6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history6.Location = new Point(482, 512);
+            history6.Multiline = true;
+            history6.Name = "history6";
+            history6.ReadOnly = true;
+            history6.Size = new Size(468, 70);
+            history6.TabIndex = 46;
             // 
-            // textBox7
+            // history5
             // 
-            textBox7.BackColor = Color.FromArgb(60, 80, 83);
-            textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            textBox7.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(482, 436);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(468, 70);
-            textBox7.TabIndex = 45;
+            history5.BackColor = Color.FromArgb(60, 80, 83);
+            history5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            history5.Location = new Point(482, 436);
+            history5.Multiline = true;
+            history5.Name = "history5";
+            history5.ReadOnly = true;
+            history5.Size = new Size(468, 70);
+            history5.TabIndex = 45;
             // 
             // label1
             // 
@@ -728,11 +728,11 @@ namespace Calculater
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
             Controls.Add(label1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox7);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
-            Controls.Add(textBox1);
+            Controls.Add(history6);
+            Controls.Add(history5);
+            Controls.Add(history4);
+            Controls.Add(history3);
+            Controls.Add(history2);
             Controls.Add(buttonHELP);
             Controls.Add(buttonANS);
             Controls.Add(buttonACOS);
@@ -742,7 +742,7 @@ namespace Calculater
             Controls.Add(buttonROOT4);
             Controls.Add(buttonROOT3);
             Controls.Add(buttonMOD);
-            Controls.Add(history);
+            Controls.Add(history1);
             Controls.Add(inputMath);
             Controls.Add(buttonCLEAR);
             Controls.Add(buttonPLUS);
@@ -782,7 +782,7 @@ namespace Calculater
 
         #endregion
         private System.Windows.Forms.TextBox inputMath;
-        private System.Windows.Forms.TextBox history;
+        private System.Windows.Forms.TextBox history1;
         private RoundedButton button1;
         private RoundedButton button2;
         private RoundedButton button3;
@@ -822,11 +822,11 @@ namespace Calculater
         private RoundedButton buttonACOS;
         private RoundedButton buttonANS;
         private RoundedButton buttonHELP;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox history2;
+        private System.Windows.Forms.TextBox history4;
+        private System.Windows.Forms.TextBox history3;
+        private System.Windows.Forms.TextBox history6;
+        private System.Windows.Forms.TextBox history5;
         private System.Windows.Forms.Label label1;
     }
 }

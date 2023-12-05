@@ -72,8 +72,13 @@ namespace Calculater
                     break;
                 case "buttonEQ":
                     Expression ex = new Expression(inputMath.Text);
-                    var result = ex.calculate();
-                    history.Text = inputMath.Text + "=" + result.ToString();
+                    var result = ex.calculate(); 
+                    history6.Text = history5.Text;
+                    history5.Text = history4.Text;
+                    history4.Text = history3.Text;
+                    history3.Text = history2.Text;
+                    history2.Text = history1.Text;
+                    history1.Text = inputMath.Text + "=" + result.ToString();
                     const_ANS = result.ToString();
                     inputMath.Text = "";
                     break;
