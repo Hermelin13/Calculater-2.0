@@ -31,6 +31,19 @@ namespace Calculater
             InitializeComponent();
         }
 
+        private void nullFunc () {
+            number = false;
+            dot = false;
+            op = false;
+            konst = false;
+            nothing = true;
+            sqrt = false;
+            bracket = false;
+            root = false;
+            fact = false;
+            brackets = 0;
+        }
+
         private void clickButton(object sender, EventArgs e)
         {
             Button buttonPRESSED = sender as Button;
@@ -44,31 +57,13 @@ namespace Calculater
                         inputMath.Text = inputMath.Text.Substring(0, inputMath.Text.Length - 1);
                         if (inputMath.Text.Length == 0)
                         {
-                            number = false;
-                            dot = false;
-                            op = false;
-                            konst = false;
-                            nothing = true;
-                            sqrt = false;
-                            bracket = false;
-                            root = false;
-                            fact = false;
-                            brackets = 0;
+                            nullFunc();
                         }
                     }
                     break;
                 case "buttonCLEAR":
                     inputMath.Text = "";
-                    number = false;
-                    dot = false;
-                    op = false;
-                    konst = false;
-                    nothing = true;
-                    sqrt = false;
-                    bracket = false;
-                    root = false;
-                    fact = false;
-                    brackets = 0;
+                    nullFunc();
                     break;
                 case "buttonEQ":
                     Expression ex = new Expression(inputMath.Text);
@@ -81,6 +76,7 @@ namespace Calculater
                     history1.Text = inputMath.Text + "=" + result.ToString();
                     const_ANS = result.ToString();
                     inputMath.Text = "";
+                    nullFunc();
                     break;
                 case "buttonDOT":
                     if (!nothing && number && !dot)
@@ -114,6 +110,7 @@ namespace Calculater
                     break;
                 case "buttonMULTI":
                 case "buttonDIV":
+                case "buttonMOD":
                     if (!nothing)
                     {
                         inputMath.Text = inputMath.Text + buttonPRESSED.Text;
