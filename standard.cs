@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using org.mariuszgromada.math.mxparser;
 
 namespace Calculater
@@ -23,6 +24,7 @@ namespace Calculater
         bool root = false;
         bool fact = false;
         int brackets = 0;
+        string const_ANS;
 
         public standard()
         {
@@ -71,7 +73,9 @@ namespace Calculater
                 case "buttonEQ":
                     Expression ex = new Expression(inputMath.Text);
                     var result = ex.calculate();
-                    history.Text = result.ToString();
+                    history.Text = inputMath.Text + "=" + result.ToString();
+                    const_ANS = result.ToString();
+                    inputMath.Text = "";
                     break;
                 case "buttonDOT":
                     if (!nothing && number && !dot)
@@ -105,7 +109,6 @@ namespace Calculater
                     break;
                 case "buttonMULTI":
                 case "buttonDIV":
-                case "buttonMOD":
                     if (!nothing)
                     {
                         inputMath.Text = inputMath.Text + buttonPRESSED.Text;
@@ -116,7 +119,7 @@ namespace Calculater
                         fact = false;
                     }
                     break;
-                case "buttonSQRT":
+                case "buttonEXP2":
                     if (!nothing && !sqrt && !fact)
                     {
                         inputMath.Text = inputMath.Text + "^2";
@@ -124,10 +127,44 @@ namespace Calculater
                         sqrt = true;
                     }
                     break;
-                case "buttonROOT":
+                case "buttonEXP3":
+                    if (!nothing && !sqrt && !fact)
+                    {
+                        inputMath.Text = inputMath.Text + "^3";
+                        number = false;
+                        sqrt = true;
+                    }
+                    break;
+                case "buttonEXP4":
+                    if (!nothing && !sqrt && !fact)
+                    {
+                        inputMath.Text = inputMath.Text + "^4";
+                        number = false;
+                        sqrt = true;
+                    }
+                    break;
+                case "buttonROOT2":
                     if (nothing && !root)
                     {
                         inputMath.Text = inputMath.Text + "√";
+                        nothing = true;
+                        op = true;
+                        root = true;
+                    }
+                    break;
+                case "buttonROOT3":
+                    if (nothing && !root)
+                    {
+                        inputMath.Text = inputMath.Text + "∛";
+                        nothing = true;
+                        op = true;
+                        root = true;
+                    }
+                    break;
+                case "buttonROOT4":
+                    if (nothing && !root)
+                    {
+                        inputMath.Text = inputMath.Text + "∜";
                         nothing = true;
                         op = true;
                         root = true;
@@ -145,9 +182,12 @@ namespace Calculater
                     }
                     break;
                 case "buttonLOG":
+                case "buttonCOT":
                 case "buttonTAN":
                 case "buttonCOS":
                 case "buttonSIN":
+                case "buttonASIN":
+                case "buttonACOS":
                     if (nothing)
                     {
                         inputMath.Text = inputMath.Text + buttonPRESSED.Text + "(";
@@ -175,6 +215,17 @@ namespace Calculater
                         sqrt = false;
                         op = false;
                         bracket = true;
+                    }
+                    break;
+                case "buttonANS":
+                    if (nothing || (number && !bracket))
+                    {
+                        inputMath.Text = inputMath.Text + const_ANS;
+                        nothing = false;
+                        number = true;
+                        op = false;
+                        bracket = false;
+                        root = false;
                     }
                     break;
                 default:
@@ -269,6 +320,9 @@ namespace Calculater
                     break;
                 case Keys.E:
                     buttonEULER.PerformClick();
+                    break;
+                case Keys.H:
+                    buttonHELP.PerformClick();
                     break;
             }
         }
