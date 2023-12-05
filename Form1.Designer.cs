@@ -154,7 +154,6 @@ namespace Calculater
             // 
             // FITCalculator
             // 
-            AcceptButton = null;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
@@ -169,6 +168,7 @@ namespace Calculater
             KeyPreview = true;
             MaximizeBox = false;
             Name = "FITCalculator";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "FITCalculator";
             Load += Form1_Load;
             KeyDown += pressed;

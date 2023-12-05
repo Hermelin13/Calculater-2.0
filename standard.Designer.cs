@@ -258,7 +258,7 @@ namespace Calculater
             buttonEULER.Name = "buttonEULER";
             buttonEULER.Size = new Size(60, 60);
             buttonEULER.TabIndex = 20;
-            buttonEULER.Text = "e";
+            buttonEULER.Text = "ℯ";
             buttonEULER.UseVisualStyleBackColor = false;
             buttonEULER.Click += clickButton;
             // 

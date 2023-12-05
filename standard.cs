@@ -31,7 +31,8 @@ namespace Calculater
             InitializeComponent();
         }
 
-        private void nullFunc () {
+        private void nullFunc()
+        {
             number = false;
             dot = false;
             op = false;
@@ -67,7 +68,7 @@ namespace Calculater
                     break;
                 case "buttonEQ":
                     Expression ex = new Expression(inputMath.Text);
-                    var result = ex.calculate(); 
+                    var result = ex.calculate();
                     history6.Text = history5.Text;
                     history5.Text = history4.Text;
                     history4.Text = history3.Text;
