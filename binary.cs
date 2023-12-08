@@ -238,7 +238,7 @@ namespace Calculater
                     buttonF.Enabled = false;
                     break;
                 case "buttonBIN":
-                    if(dec == true)
+                    if (dec == true)
                     {
                         inputMath.Text = decimalToBinary(inputMath.Text);
                     }

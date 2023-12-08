@@ -57,16 +57,19 @@ namespace Calculater
                 menuBar.Width -= 10;
                 if (menuBar.Height == menuBar.MinimumSize.Height && menuBar.Width == menuBar.MinimumSize.Width)
                 {
+                    menuBar.BackColor = Color.FromArgb(3, 18, 14);
                     sidebarExpansion = false;
                     barTimer.Stop();
                 }
             }
             else
             {
+                menuBar.BackColor = Color.FromArgb(21, 42, 37);
                 menuBar.Height += 10;
                 menuBar.Width += 10;
                 if (menuBar.Height == menuBar.MaximumSize.Height && menuBar.Width == menuBar.MaximumSize.Width)
                 {
+
                     sidebarExpansion = true;
                     barTimer.Stop();
                 }

@@ -647,9 +647,9 @@ namespace Calculater
             roundedButton42.FlatStyle = FlatStyle.Popup;
             roundedButton42.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             roundedButton42.ForeColor = Color.White;
-            roundedButton42.Location = new Point(7, 3);
+            roundedButton42.Location = new Point(66, 3);
             roundedButton42.Name = "roundedButton42";
-            roundedButton42.Size = new Size(278, 60);
+            roundedButton42.Size = new Size(219, 60);
             roundedButton42.TabIndex = 45;
             roundedButton42.Text = "Programátorská";
             roundedButton42.UseVisualStyleBackColor = false;

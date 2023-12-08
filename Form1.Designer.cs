@@ -74,7 +74,7 @@ namespace Calculater
             // 
             // menuBar
             // 
-            menuBar.BackColor = Color.FromArgb(21, 42, 37);
+            menuBar.BackColor = Color.FromArgb(3, 18, 14);
             menuBar.Controls.Add(panel2);
             menuBar.Controls.Add(standardButton);
             menuBar.Controls.Add(PrevodnikButton);
