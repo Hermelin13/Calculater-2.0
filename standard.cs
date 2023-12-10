@@ -74,8 +74,8 @@ namespace Calculater
                     history4.Text = history3.Text;
                     history3.Text = history2.Text;
                     history2.Text = history1.Text;
-                    history1.Text = inputMath.Text + "=" + result.ToString();
-                    const_ANS = result.ToString();
+                    history1.Text = inputMath.Text + "=" + result.ToString().Replace(",", ".");
+                    const_ANS = result.ToString().Replace(",", ".");
                     inputMath.Text = "";
                     nullFunc();
                     break;
@@ -253,11 +253,11 @@ namespace Calculater
                 case "history1":
                     if (history1.Text != "")
                     {
-                        paneldel1.Visible = true;
+                        delButton1.Visible = true;
                     }
                     else
                     {
-                        paneldel1.Visible = false;
+                        delButton1.Visible = false;
                     }
                     break;
                 case "history2":
