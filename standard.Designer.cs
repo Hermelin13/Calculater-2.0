@@ -91,7 +91,6 @@ namespace Calculater
             panel4 = new System.Windows.Forms.Panel();
             panel5 = new System.Windows.Forms.Panel();
             panel6 = new System.Windows.Forms.Panel();
-            roundedTextBox1 = new RoundedTextBox();
             ((System.ComponentModel.ISupportInitialize)delButton2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)delButton3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)delButton1).BeginInit();
@@ -334,7 +333,7 @@ namespace Calculater
             // buttonCOS
             // 
             buttonCOS.BackColor = Color.FromArgb(50, 73, 60);
-            buttonCOS.Cursor = System.Windows.Forms.Cursors.No;
+            buttonCOS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonCOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonCOS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCOS.ForeColor = Color.White;
@@ -559,8 +558,7 @@ namespace Calculater
             // inputMath
             // 
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
-            inputMath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            inputMath.Cursor = System.Windows.Forms.Cursors.No;
+            inputMath.BorderStyle = System.Windows.Forms.BorderStyle.None;
             inputMath.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputMath.Location = new Point(482, 0);
             inputMath.Multiline = true;
@@ -574,7 +572,6 @@ namespace Calculater
             // 
             history1.BackColor = Color.FromArgb(60, 80, 83);
             history1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history1.Cursor = System.Windows.Forms.Cursors.Cross;
             history1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history1.Location = new Point(0, 0);
             history1.Multiline = true;
@@ -708,7 +705,6 @@ namespace Calculater
             // 
             history2.BackColor = Color.FromArgb(60, 80, 83);
             history2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history2.Cursor = System.Windows.Forms.Cursors.AppStarting;
             history2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history2.Location = new Point(0, 0);
             history2.Multiline = true;
@@ -722,7 +718,6 @@ namespace Calculater
             // 
             history4.BackColor = Color.FromArgb(60, 80, 83);
             history4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history4.Cursor = System.Windows.Forms.Cursors.No;
             history4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history4.Location = new Point(0, 0);
             history4.Multiline = true;
@@ -736,7 +731,6 @@ namespace Calculater
             // 
             history3.BackColor = Color.FromArgb(60, 80, 83);
             history3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history3.Cursor = System.Windows.Forms.Cursors.No;
             history3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history3.Location = new Point(0, 0);
             history3.Multiline = true;
@@ -750,7 +744,6 @@ namespace Calculater
             // 
             history6.BackColor = Color.FromArgb(60, 80, 83);
             history6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history6.Cursor = System.Windows.Forms.Cursors.No;
             history6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history6.Location = new Point(-1, 0);
             history6.Multiline = true;
@@ -928,21 +921,11 @@ namespace Calculater
             panel6.Size = new Size(470, 70);
             panel6.TabIndex = 57;
             // 
-            // roundedTextBox1
-            // 
-            roundedTextBox1.BorderRadius = 30;
-            roundedTextBox1.Location = new Point(435, 90);
-            roundedTextBox1.Multiline = true;
-            roundedTextBox1.Name = "roundedTextBox1";
-            roundedTextBox1.Size = new Size(361, 70);
-            roundedTextBox1.TabIndex = 58;
-            // 
             // standard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            Controls.Add(roundedTextBox1);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(panel4);
@@ -1072,6 +1055,5 @@ namespace Calculater
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private RoundedTextBox roundedTextBox1;
     }
 }
