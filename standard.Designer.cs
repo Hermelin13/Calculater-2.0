@@ -77,12 +77,37 @@ namespace Calculater
             history3 = new System.Windows.Forms.TextBox();
             history6 = new System.Windows.Forms.TextBox();
             history5 = new System.Windows.Forms.TextBox();
-            label1 = new System.Windows.Forms.Label();
+            labelhistory = new System.Windows.Forms.Label();
+            paneldel2 = new System.Windows.Forms.Panel();
+            delButton2 = new System.Windows.Forms.PictureBox();
+            paneldel3 = new System.Windows.Forms.Panel();
+            delButton3 = new System.Windows.Forms.PictureBox();
+            paneldel1 = new System.Windows.Forms.Panel();
+            delButton1 = new System.Windows.Forms.PictureBox();
+            paneldel4 = new System.Windows.Forms.Panel();
+            delButton4 = new System.Windows.Forms.PictureBox();
+            paneldel5 = new System.Windows.Forms.Panel();
+            delButton5 = new System.Windows.Forms.PictureBox();
+            paneldel6 = new System.Windows.Forms.Panel();
+            delButton6 = new System.Windows.Forms.PictureBox();
+            paneldel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton2).BeginInit();
+            paneldel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton3).BeginInit();
+            paneldel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton1).BeginInit();
+            paneldel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton4).BeginInit();
+            paneldel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton5).BeginInit();
+            paneldel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)delButton6).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(62, 80, 91);
+            button1.Cursor = System.Windows.Forms.Cursors.Hand;
             button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
@@ -97,6 +122,7 @@ namespace Calculater
             // button2
             // 
             button2.BackColor = Color.FromArgb(62, 80, 91);
+            button2.Cursor = System.Windows.Forms.Cursors.Hand;
             button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
@@ -111,6 +137,7 @@ namespace Calculater
             // button3
             // 
             button3.BackColor = Color.FromArgb(62, 80, 91);
+            button3.Cursor = System.Windows.Forms.Cursors.Hand;
             button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
@@ -125,6 +152,7 @@ namespace Calculater
             // button4
             // 
             button4.BackColor = Color.FromArgb(62, 80, 91);
+            button4.Cursor = System.Windows.Forms.Cursors.Hand;
             button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
@@ -139,6 +167,7 @@ namespace Calculater
             // button5
             // 
             button5.BackColor = Color.FromArgb(62, 80, 91);
+            button5.Cursor = System.Windows.Forms.Cursors.Hand;
             button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
@@ -153,6 +182,7 @@ namespace Calculater
             // button6
             // 
             button6.BackColor = Color.FromArgb(62, 80, 91);
+            button6.Cursor = System.Windows.Forms.Cursors.Hand;
             button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
@@ -167,6 +197,7 @@ namespace Calculater
             // button7
             // 
             button7.BackColor = Color.FromArgb(62, 80, 91);
+            button7.Cursor = System.Windows.Forms.Cursors.Hand;
             button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
@@ -181,6 +212,7 @@ namespace Calculater
             // button8
             // 
             button8.BackColor = Color.FromArgb(62, 80, 91);
+            button8.Cursor = System.Windows.Forms.Cursors.Hand;
             button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
@@ -195,6 +227,7 @@ namespace Calculater
             // button9
             // 
             button9.BackColor = Color.FromArgb(62, 80, 91);
+            button9.Cursor = System.Windows.Forms.Cursors.Hand;
             button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
@@ -209,6 +242,7 @@ namespace Calculater
             // button0
             // 
             button0.BackColor = Color.FromArgb(62, 80, 91);
+            button0.Cursor = System.Windows.Forms.Cursors.Hand;
             button0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             button0.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button0.ForeColor = Color.White;
@@ -223,6 +257,7 @@ namespace Calculater
             // buttonDOT
             // 
             buttonDOT.BackColor = Color.FromArgb(62, 80, 91);
+            buttonDOT.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonDOT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonDOT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDOT.ForeColor = Color.White;
@@ -237,6 +272,7 @@ namespace Calculater
             // buttonPI
             // 
             buttonPI.BackColor = Color.FromArgb(50, 73, 60);
+            buttonPI.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonPI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonPI.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPI.ForeColor = Color.White;
@@ -251,6 +287,7 @@ namespace Calculater
             // buttonEULER
             // 
             buttonEULER.BackColor = Color.FromArgb(50, 73, 60);
+            buttonEULER.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonEULER.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonEULER.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEULER.ForeColor = Color.White;
@@ -265,6 +302,7 @@ namespace Calculater
             // buttonMULTI
             // 
             buttonMULTI.BackColor = Color.FromArgb(50, 73, 60);
+            buttonMULTI.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonMULTI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonMULTI.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMULTI.ForeColor = Color.White;
@@ -279,6 +317,7 @@ namespace Calculater
             // buttonDIV
             // 
             buttonDIV.BackColor = Color.FromArgb(50, 73, 60);
+            buttonDIV.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonDIV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonDIV.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDIV.ForeColor = Color.White;
@@ -293,6 +332,7 @@ namespace Calculater
             // buttonCOS
             // 
             buttonCOS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonCOS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonCOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonCOS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCOS.ForeColor = Color.White;
@@ -307,6 +347,7 @@ namespace Calculater
             // buttonEXP2
             // 
             buttonEXP2.BackColor = Color.FromArgb(50, 73, 60);
+            buttonEXP2.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonEXP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonEXP2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP2.ForeColor = Color.White;
@@ -321,6 +362,7 @@ namespace Calculater
             // buttonROOT2
             // 
             buttonROOT2.BackColor = Color.FromArgb(50, 73, 60);
+            buttonROOT2.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonROOT2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonROOT2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT2.ForeColor = Color.White;
@@ -335,6 +377,7 @@ namespace Calculater
             // buttonTAN
             // 
             buttonTAN.BackColor = Color.FromArgb(50, 73, 60);
+            buttonTAN.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonTAN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonTAN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonTAN.ForeColor = Color.White;
@@ -349,6 +392,7 @@ namespace Calculater
             // buttonLOG
             // 
             buttonLOG.BackColor = Color.FromArgb(50, 73, 60);
+            buttonLOG.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonLOG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonLOG.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLOG.ForeColor = Color.White;
@@ -363,6 +407,7 @@ namespace Calculater
             // buttonCOT
             // 
             buttonCOT.BackColor = Color.FromArgb(50, 73, 60);
+            buttonCOT.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonCOT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonCOT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCOT.ForeColor = Color.White;
@@ -377,6 +422,7 @@ namespace Calculater
             // buttonFACT
             // 
             buttonFACT.BackColor = Color.FromArgb(50, 73, 60);
+            buttonFACT.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonFACT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonFACT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonFACT.ForeColor = Color.White;
@@ -391,6 +437,7 @@ namespace Calculater
             // buttonEQ
             // 
             buttonEQ.BackColor = Color.FromArgb(2, 101, 82);
+            buttonEQ.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonEQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonEQ.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEQ.ForeColor = Color.White;
@@ -405,6 +452,7 @@ namespace Calculater
             // buttonPLUS
             // 
             buttonPLUS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonPLUS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonPLUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonPLUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPLUS.ForeColor = Color.White;
@@ -419,6 +467,7 @@ namespace Calculater
             // buttonMINUS
             // 
             buttonMINUS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonMINUS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonMINUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonMINUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMINUS.ForeColor = Color.White;
@@ -433,6 +482,7 @@ namespace Calculater
             // buttonSIN
             // 
             buttonSIN.BackColor = Color.FromArgb(50, 73, 60);
+            buttonSIN.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonSIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonSIN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonSIN.ForeColor = Color.White;
@@ -447,6 +497,7 @@ namespace Calculater
             // buttonLBRACKET
             // 
             buttonLBRACKET.BackColor = Color.FromArgb(62, 80, 91);
+            buttonLBRACKET.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonLBRACKET.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonLBRACKET.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLBRACKET.ForeColor = Color.White;
@@ -461,6 +512,7 @@ namespace Calculater
             // buttonRBRACKET
             // 
             buttonRBRACKET.BackColor = Color.FromArgb(62, 80, 91);
+            buttonRBRACKET.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonRBRACKET.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonRBRACKET.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonRBRACKET.ForeColor = Color.White;
@@ -475,6 +527,7 @@ namespace Calculater
             // buttonDEL
             // 
             buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
+            buttonDEL.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonDEL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonDEL.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDEL.ForeColor = Color.White;
@@ -489,6 +542,7 @@ namespace Calculater
             // buttonCLEAR
             // 
             buttonCLEAR.BackColor = Color.FromArgb(204, 80, 91);
+            buttonCLEAR.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonCLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonCLEAR.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCLEAR.ForeColor = Color.White;
@@ -504,6 +558,7 @@ namespace Calculater
             // 
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            inputMath.Cursor = System.Windows.Forms.Cursors.No;
             inputMath.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             inputMath.Location = new Point(482, 0);
             inputMath.Multiline = true;
@@ -517,6 +572,7 @@ namespace Calculater
             // 
             history1.BackColor = Color.FromArgb(60, 80, 83);
             history1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history1.Cursor = System.Windows.Forms.Cursors.No;
             history1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history1.Location = new Point(482, 132);
             history1.Multiline = true;
@@ -524,10 +580,12 @@ namespace Calculater
             history1.ReadOnly = true;
             history1.Size = new Size(468, 70);
             history1.TabIndex = 32;
+            history1.TextChanged += changeVis;
             // 
             // buttonMOD
             // 
             buttonMOD.BackColor = Color.FromArgb(50, 73, 60);
+            buttonMOD.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonMOD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonMOD.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMOD.ForeColor = Color.White;
@@ -542,6 +600,7 @@ namespace Calculater
             // buttonROOT3
             // 
             buttonROOT3.BackColor = Color.FromArgb(50, 73, 60);
+            buttonROOT3.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonROOT3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonROOT3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT3.ForeColor = Color.White;
@@ -556,6 +615,7 @@ namespace Calculater
             // buttonROOT4
             // 
             buttonROOT4.BackColor = Color.FromArgb(50, 73, 60);
+            buttonROOT4.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonROOT4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonROOT4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT4.ForeColor = Color.White;
@@ -570,6 +630,7 @@ namespace Calculater
             // buttonEXP4
             // 
             buttonEXP4.BackColor = Color.FromArgb(50, 73, 60);
+            buttonEXP4.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonEXP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonEXP4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP4.ForeColor = Color.White;
@@ -584,6 +645,7 @@ namespace Calculater
             // buttonEXP3
             // 
             buttonEXP3.BackColor = Color.FromArgb(50, 73, 60);
+            buttonEXP3.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonEXP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonEXP3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP3.ForeColor = Color.White;
@@ -598,6 +660,7 @@ namespace Calculater
             // buttonASIN
             // 
             buttonASIN.BackColor = Color.FromArgb(50, 73, 60);
+            buttonASIN.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonASIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonASIN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonASIN.ForeColor = Color.White;
@@ -612,6 +675,7 @@ namespace Calculater
             // buttonACOS
             // 
             buttonACOS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonACOS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonACOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonACOS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonACOS.ForeColor = Color.White;
@@ -626,6 +690,7 @@ namespace Calculater
             // buttonANS
             // 
             buttonANS.BackColor = Color.FromArgb(62, 80, 91);
+            buttonANS.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonANS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonANS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonANS.ForeColor = Color.White;
@@ -640,6 +705,7 @@ namespace Calculater
             // buttonHELP
             // 
             buttonHELP.BackColor = Color.FromArgb(22, 46, 42);
+            buttonHELP.Cursor = System.Windows.Forms.Cursors.Hand;
             buttonHELP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             buttonHELP.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonHELP.ForeColor = Color.White;
@@ -655,6 +721,7 @@ namespace Calculater
             // 
             history2.BackColor = Color.FromArgb(60, 80, 83);
             history2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history2.Cursor = System.Windows.Forms.Cursors.No;
             history2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history2.Location = new Point(482, 208);
             history2.Multiline = true;
@@ -662,11 +729,13 @@ namespace Calculater
             history2.ReadOnly = true;
             history2.Size = new Size(468, 70);
             history2.TabIndex = 42;
+            history2.TextChanged += changeVis;
             // 
             // history4
             // 
             history4.BackColor = Color.FromArgb(60, 80, 83);
             history4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history4.Cursor = System.Windows.Forms.Cursors.No;
             history4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history4.Location = new Point(482, 360);
             history4.Multiline = true;
@@ -674,11 +743,13 @@ namespace Calculater
             history4.ReadOnly = true;
             history4.Size = new Size(468, 70);
             history4.TabIndex = 44;
+            history4.TextChanged += changeVis;
             // 
             // history3
             // 
             history3.BackColor = Color.FromArgb(60, 80, 83);
             history3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history3.Cursor = System.Windows.Forms.Cursors.No;
             history3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history3.Location = new Point(482, 284);
             history3.Multiline = true;
@@ -686,11 +757,13 @@ namespace Calculater
             history3.ReadOnly = true;
             history3.Size = new Size(468, 70);
             history3.TabIndex = 43;
+            history3.TextChanged += changeVis;
             // 
             // history6
             // 
             history6.BackColor = Color.FromArgb(60, 80, 83);
             history6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history6.Cursor = System.Windows.Forms.Cursors.No;
             history6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history6.Location = new Point(482, 512);
             history6.Multiline = true;
@@ -698,11 +771,13 @@ namespace Calculater
             history6.ReadOnly = true;
             history6.Size = new Size(468, 70);
             history6.TabIndex = 46;
+            history6.TextChanged += changeVis;
             // 
             // history5
             // 
             history5.BackColor = Color.FromArgb(60, 80, 83);
             history5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            history5.Cursor = System.Windows.Forms.Cursors.No;
             history5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             history5.Location = new Point(482, 436);
             history5.Multiline = true;
@@ -710,24 +785,169 @@ namespace Calculater
             history5.ReadOnly = true;
             history5.Size = new Size(468, 70);
             history5.TabIndex = 45;
+            history5.TextChanged += changeVis;
             // 
-            // label1
+            // labelhistory
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(482, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 32);
-            label1.TabIndex = 47;
-            label1.Text = "Historie";
+            labelhistory.AutoSize = true;
+            labelhistory.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            labelhistory.ForeColor = Color.White;
+            labelhistory.Location = new Point(482, 96);
+            labelhistory.Name = "labelhistory";
+            labelhistory.Size = new Size(96, 32);
+            labelhistory.TabIndex = 47;
+            labelhistory.Text = "Historie";
+            // 
+            // paneldel2
+            // 
+            paneldel2.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel2.Controls.Add(delButton2);
+            paneldel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel2.Location = new Point(884, 219);
+            paneldel2.Name = "paneldel2";
+            paneldel2.Size = new Size(50, 50);
+            paneldel2.TabIndex = 49;
+            // 
+            // delButton2
+            // 
+            delButton2.BackColor = Color.FromArgb(60, 80, 83);
+            delButton2.Image = Properties.Resources.trash;
+            delButton2.Location = new Point(0, 0);
+            delButton2.Name = "delButton2";
+            delButton2.Size = new Size(50, 50);
+            delButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton2.TabIndex = 0;
+            delButton2.TabStop = false;
+            delButton2.Visible = false;
+            delButton2.Click += deleteButton;
+            // 
+            // paneldel3
+            // 
+            paneldel3.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel3.Controls.Add(delButton3);
+            paneldel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel3.Location = new Point(884, 294);
+            paneldel3.Name = "paneldel3";
+            paneldel3.Size = new Size(50, 50);
+            paneldel3.TabIndex = 50;
+            // 
+            // delButton3
+            // 
+            delButton3.BackColor = Color.FromArgb(60, 80, 83);
+            delButton3.Image = Properties.Resources.trash;
+            delButton3.Location = new Point(0, 0);
+            delButton3.Name = "delButton3";
+            delButton3.Size = new Size(50, 50);
+            delButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton3.TabIndex = 0;
+            delButton3.TabStop = false;
+            delButton3.Visible = false;
+            delButton3.Click += deleteButton;
+            // 
+            // paneldel1
+            // 
+            paneldel1.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel1.Controls.Add(delButton1);
+            paneldel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel1.Location = new Point(884, 142);
+            paneldel1.Name = "paneldel1";
+            paneldel1.Size = new Size(50, 50);
+            paneldel1.TabIndex = 51;
+            paneldel1.Visible = false;
+            // 
+            // delButton1
+            // 
+            delButton1.BackColor = Color.FromArgb(60, 80, 83);
+            delButton1.Image = Properties.Resources.trash;
+            delButton1.Location = new Point(0, 0);
+            delButton1.Name = "delButton1";
+            delButton1.Size = new Size(50, 50);
+            delButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton1.TabIndex = 0;
+            delButton1.TabStop = false;
+            delButton1.Click += deleteButton;
+            // 
+            // paneldel4
+            // 
+            paneldel4.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel4.Controls.Add(delButton4);
+            paneldel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel4.Location = new Point(884, 370);
+            paneldel4.Name = "paneldel4";
+            paneldel4.Size = new Size(50, 50);
+            paneldel4.TabIndex = 51;
+            // 
+            // delButton4
+            // 
+            delButton4.BackColor = Color.FromArgb(60, 80, 83);
+            delButton4.Image = Properties.Resources.trash;
+            delButton4.Location = new Point(0, 0);
+            delButton4.Name = "delButton4";
+            delButton4.Size = new Size(50, 50);
+            delButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton4.TabIndex = 0;
+            delButton4.TabStop = false;
+            delButton4.Visible = false;
+            delButton4.Click += deleteButton;
+            // 
+            // paneldel5
+            // 
+            paneldel5.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel5.Controls.Add(delButton5);
+            paneldel5.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel5.Location = new Point(884, 448);
+            paneldel5.Name = "paneldel5";
+            paneldel5.Size = new Size(50, 50);
+            paneldel5.TabIndex = 51;
+            // 
+            // delButton5
+            // 
+            delButton5.BackColor = Color.FromArgb(60, 80, 83);
+            delButton5.Image = Properties.Resources.trash;
+            delButton5.Location = new Point(0, 0);
+            delButton5.Name = "delButton5";
+            delButton5.Size = new Size(50, 50);
+            delButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton5.TabIndex = 0;
+            delButton5.TabStop = false;
+            delButton5.Visible = false;
+            delButton5.Click += deleteButton;
+            // 
+            // paneldel6
+            // 
+            paneldel6.BackColor = Color.FromArgb(60, 80, 83);
+            paneldel6.Controls.Add(delButton6);
+            paneldel6.Cursor = System.Windows.Forms.Cursors.Hand;
+            paneldel6.Location = new Point(884, 522);
+            paneldel6.Name = "paneldel6";
+            paneldel6.Size = new Size(50, 50);
+            paneldel6.TabIndex = 51;
+            // 
+            // delButton6
+            // 
+            delButton6.BackColor = Color.FromArgb(60, 80, 83);
+            delButton6.Image = Properties.Resources.trash;
+            delButton6.Location = new Point(0, 0);
+            delButton6.Name = "delButton6";
+            delButton6.Size = new Size(50, 50);
+            delButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            delButton6.TabIndex = 0;
+            delButton6.TabStop = false;
+            delButton6.Visible = false;
+            delButton6.Click += deleteButton;
             // 
             // standard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            Controls.Add(label1);
+            Controls.Add(paneldel6);
+            Controls.Add(paneldel5);
+            Controls.Add(paneldel4);
+            Controls.Add(paneldel1);
+            Controls.Add(paneldel3);
+            Controls.Add(paneldel2);
+            Controls.Add(labelhistory);
             Controls.Add(history6);
             Controls.Add(history5);
             Controls.Add(history4);
@@ -776,6 +996,18 @@ namespace Calculater
             Controls.Add(button1);
             Name = "standard";
             Size = new Size(950, 591);
+            paneldel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton2).EndInit();
+            paneldel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton3).EndInit();
+            paneldel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton1).EndInit();
+            paneldel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton4).EndInit();
+            paneldel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton5).EndInit();
+            paneldel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)delButton6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -827,6 +1059,18 @@ namespace Calculater
         private System.Windows.Forms.TextBox history3;
         private System.Windows.Forms.TextBox history6;
         private System.Windows.Forms.TextBox history5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelhistory;
+        private System.Windows.Forms.Panel paneldel2;
+        private System.Windows.Forms.PictureBox delButton2;
+        private System.Windows.Forms.Panel paneldel3;
+        private System.Windows.Forms.PictureBox delButton3;
+        private System.Windows.Forms.Panel paneldel1;
+        private System.Windows.Forms.PictureBox delButton1;
+        private System.Windows.Forms.Panel paneldel4;
+        private System.Windows.Forms.PictureBox delButton4;
+        private System.Windows.Forms.Panel paneldel5;
+        private System.Windows.Forms.PictureBox delButton5;
+        private System.Windows.Forms.Panel paneldel6;
+        private System.Windows.Forms.PictureBox delButton6;
     }
 }

@@ -37,14 +37,14 @@ namespace Calculater
             prevodnik1 = new prevodnik();
             binary1 = new binary();
             menuBar = new System.Windows.Forms.FlowLayoutPanel();
-            panel2 = new System.Windows.Forms.Panel();
+            panelMenu = new System.Windows.Forms.Panel();
             menuButton = new System.Windows.Forms.PictureBox();
             standardButton = new RoundedButton();
             PrevodnikButton = new RoundedButton();
             binaryButton = new RoundedButton();
             barTimer = new System.Windows.Forms.Timer(components);
             menuBar.SuspendLayout();
-            panel2.SuspendLayout();
+            panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)menuButton).BeginInit();
             SuspendLayout();
             // 
@@ -75,7 +75,7 @@ namespace Calculater
             // menuBar
             // 
             menuBar.BackColor = Color.FromArgb(3, 18, 14);
-            menuBar.Controls.Add(panel2);
+            menuBar.Controls.Add(panelMenu);
             menuBar.Controls.Add(standardButton);
             menuBar.Controls.Add(PrevodnikButton);
             menuBar.Controls.Add(binaryButton);
@@ -86,17 +86,18 @@ namespace Calculater
             menuBar.Size = new Size(60, 60);
             menuBar.TabIndex = 30;
             // 
-            // panel2
+            // panelMenu
             // 
-            panel2.Controls.Add(menuButton);
-            panel2.Location = new Point(3, 3);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(167, 56);
-            panel2.TabIndex = 1;
+            panelMenu.Controls.Add(menuButton);
+            panelMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            panelMenu.Location = new Point(3, 3);
+            panelMenu.Name = "panelMenu";
+            panelMenu.Size = new Size(57, 56);
+            panelMenu.TabIndex = 1;
             // 
             // menuButton
             // 
-            menuButton.Image = (Image)resources.GetObject("menuButton.Image");
+            menuButton.Image = Properties.Resources.menu_bars;
             menuButton.Location = new Point(0, 3);
             menuButton.Name = "menuButton";
             menuButton.Size = new Size(54, 50);
@@ -108,6 +109,7 @@ namespace Calculater
             // standardButton
             // 
             standardButton.BackColor = Color.FromArgb(50, 73, 60);
+            standardButton.Cursor = System.Windows.Forms.Cursors.Hand;
             standardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             standardButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             standardButton.ForeColor = Color.White;
@@ -122,6 +124,7 @@ namespace Calculater
             // PrevodnikButton
             // 
             PrevodnikButton.BackColor = Color.FromArgb(50, 73, 60);
+            PrevodnikButton.Cursor = System.Windows.Forms.Cursors.Hand;
             PrevodnikButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             PrevodnikButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             PrevodnikButton.ForeColor = Color.White;
@@ -136,6 +139,7 @@ namespace Calculater
             // binaryButton
             // 
             binaryButton.BackColor = Color.FromArgb(50, 73, 60);
+            binaryButton.Cursor = System.Windows.Forms.Cursors.Hand;
             binaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             binaryButton.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
             binaryButton.ForeColor = Color.White;
@@ -173,7 +177,7 @@ namespace Calculater
             Load += Form1_Load;
             KeyDown += pressed;
             menuBar.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)menuButton).EndInit();
             ResumeLayout(false);
         }
@@ -185,7 +189,7 @@ namespace Calculater
         private binary binary1;
         private System.Windows.Forms.FlowLayoutPanel menuBar;
         private RoundedButton standardButton;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.PictureBox menuButton;
         private RoundedButton PrevodnikButton;
         private RoundedButton binaryButton;
