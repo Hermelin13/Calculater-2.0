@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Author:  Adam Dalibor Jurčík xjurci08
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -432,9 +435,6 @@ namespace Calculater
                     break;
                 case Keys.E:
                     buttonEULER.PerformClick();
-                    break;
-                case Keys.H:
-                    buttonHELP.PerformClick();
                     break;
             }
         }

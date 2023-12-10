@@ -1,4 +1,6 @@
-﻿
+﻿/* Author:  Adam Dalibor Jurčík xjurci08         
+ */
+
 using System.Drawing;
 
 namespace Calculater

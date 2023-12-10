@@ -1,4 +1,6 @@
-﻿
+﻿/* Author:  David Zahálka       xzahal03
+ */
+
 using System.Drawing;
 using System.Windows.Forms;
 

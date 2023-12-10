@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Author:  Antonín Štoll       xstoll01
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

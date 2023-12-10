@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Author:  David Zahálka       xzahal03
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Drawing;

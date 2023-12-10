@@ -1,4 +1,8 @@
-﻿using System;
+﻿/* Author:  Adam Dalibor Jurčík xjurci08         
+ *          David Zahálka       xzahal03
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Drawing.Drawing2D;
 using System.Drawing;
@@ -30,11 +34,15 @@ namespace Calculater
             // Top right arc
             GraphPath.AddArc(Rect.X + Rect.Width - radius, Rect.Y, radius, radius, 270, 90);
             // Right border
-            GraphPath.AddLine(Rect.Width, Rect.Y + r2, Rect.Width, Rect.Height);
+            GraphPath.AddLine(Rect.Width, Rect.Y + r2, Rect.Width, Rect.Height - r2);
+            // Bottom right arc
+            GraphPath.AddArc(Rect.X + Rect.Width - radius, Rect.Y + Rect.Height - radius, radius, radius, 0, 90);
             // Bottom border
-            GraphPath.AddLine(Rect.Width, Rect.Height, Rect.X, Rect.Height);
+            GraphPath.AddLine(Rect.Width - r2, Rect.Height, Rect.X + r2, Rect.Height);
+            // Bottom left arc
+            GraphPath.AddArc(Rect.X, Rect.Y + Rect.Height - radius, radius, radius, 90, 90);
             // Left border
-            GraphPath.AddLine(Rect.X, Rect.Height, Rect.X, Rect.Y + r2);
+            GraphPath.AddLine(Rect.X, Rect.Height - r2, Rect.X, Rect.Y + r2);
 
             GraphPath.CloseFigure();
             return GraphPath;

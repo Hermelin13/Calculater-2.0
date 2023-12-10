@@ -1,4 +1,9 @@
-﻿using System;
+﻿/* Author:  Adam Dalibor Jurčík xjurci08         
+ *          David Zahálka       xzahal03
+ *          Antonín Štoll       xstoll01
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -1,4 +1,6 @@
-﻿
+﻿/* Author:  Antonín Štoll       xstoll01
+ */
+
 using System.Drawing;
 using System.Windows.Forms;
 
