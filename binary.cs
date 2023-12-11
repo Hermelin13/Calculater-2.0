@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,24 +26,42 @@ namespace Calculater
             InitializeComponent();
         }
 
-        public string computeBinaryExpression(string binaryExpression)
+
+        public string computeExpression(string myExpression, int myBase)
         {
             try
             {
                 StringBuilder decimalExpression = new StringBuilder();
                 StringBuilder currentNumber = new StringBuilder();
 
-                foreach (char c in binaryExpression)
+                foreach (char c in myExpression)
                 {
-                    if (c == '0' || c == '1')
+                    if(myBase == 2)
                     {
-                        currentNumber.Append(c);
+                        if (c == '0' || c == '1')
+                        {
+                            currentNumber.Append(c);
+                        }
                     }
-                    else if (c == '+' || c == '-' || c == '*' || c == '/')
+                    else if(myBase == 8)
+                    {
+                        if(c >= '0' && c <= '7')
+                        {
+                            currentNumber.Append(c);
+                        }
+                    }
+                    else if(myBase == 16)
+                    {
+                        if (Char.IsDigit(c) || "abcdefABCDEF".Contains(c))
+                        {
+                            currentNumber.Append(c);
+                        }
+                    }
+                    if (c == '+' || c == '-' || c == '*' || c == '/')
                     {
                         if (currentNumber.Length > 0)
                         {
-                            int decimalNumber = Convert.ToInt32(currentNumber.ToString(), 2);
+                            int decimalNumber = Convert.ToInt32(currentNumber.ToString(), myBase);
                             decimalExpression.Append(decimalNumber);
                             currentNumber.Clear();
                         }
@@ -52,18 +71,93 @@ namespace Calculater
 
                 if (currentNumber.Length > 0)
                 {
-                    int lastDecimalNumber = Convert.ToInt32(currentNumber.ToString(), 2);
+                    int lastDecimalNumber = Convert.ToInt32(currentNumber.ToString(), myBase);
                     decimalExpression.Append(lastDecimalNumber);
                 }
 
                 var result = new DataTable().Compute(decimalExpression.ToString(), null);
 
-                return Convert.ToString(Convert.ToInt32(result), 2);
+                return Convert.ToString(Convert.ToInt32(result), myBase);
+ 
             }
             catch
             {
                 return "Error: Invalid Input";
             }
+        }
+
+        private static bool isBitwiseOperator(string op)
+        {
+            return op.ToUpper() == "AND" || op.ToUpper() == "OR" ||
+                   op.ToUpper() == "NOT" || op.ToUpper() == "XOR" ||
+                   op.ToUpper() == "NAND" || op.ToUpper() == "NOR";
+        }
+
+        private static int PerformBitwiseOperation(int left, int right, string op)
+        {
+            switch (op.ToUpper())
+            {
+                case "AND":
+                    return left & right;
+                case "OR":
+                    return left | right;
+                case "NOT":
+                    return ~left;
+                case "XOR":
+                    return left ^ right;
+                case "NAND":
+                    return ~(left & right);
+                case "NOR":
+                    return ~(left | right);
+                default:
+                    throw new ArgumentException($"Unsupported bitwise operator: {op}");
+            }
+        }
+        public string splitExpression(string myExpression, int myBase)
+        {
+            /* TODO NEFUNGUJE VICE BITWISE OPERATORU V JEDNOM EXPRESSIONU */
+            string[] tokens = myExpression.Split(' ');
+            string[] tmp_result = new string[tokens.Length];
+            int i = 0;
+
+            // First step: Evaluate basic arithmetic expressions
+            foreach (string token in tokens)
+            {
+                if (isBitwiseOperator(token))
+                {
+                    tmp_result[i] = token;
+                }
+                else
+                {
+                    tmp_result[i] = computeExpression(token, myBase);
+                }
+                i++;
+            }
+
+            // Second step: Combine the computed results with bitwise operators
+            string resultExpression = string.Join(" ", tmp_result.Where(token => token != null));
+
+            // Third step: Evaluate bitwise operations
+            string[] finalTokens = resultExpression.Split(' ');
+            i = 0;
+            while (i < finalTokens.Length)
+            {
+                if (isBitwiseOperator(finalTokens[i]))
+                {
+                    int left = Convert.ToInt32(finalTokens[i - 1], myBase);
+                    int right = Convert.ToInt32(finalTokens[i + 1], myBase);
+                    int result = PerformBitwiseOperation(left, right, finalTokens[i]);
+                    finalTokens[i + 1] = result.ToString();
+                    finalTokens[i - 1] = finalTokens[i] = string.Empty;  // Clear used tokens
+                }
+
+                i++;
+            }
+
+            // Join the result tokens to form the final expression
+            string finalResult = string.Join(" ", finalTokens.Where(token => !string.IsNullOrEmpty(token)));
+
+            return finalResult;
         }
 
         public static string decimalToBinary(string decimalNumber)
@@ -106,15 +200,25 @@ namespace Calculater
                     inputMath.Text = "";
                     break;
                 case "buttonEQ":
-                    if (dec == true)
+                    if (dec)
                     {
                         var result = new DataTable().Compute(inputMath.Text, null);
-                        history.Text = result.ToString();
+                        history.Text = inputMath.Text + "=" + result.ToString();
                     }
-                    else if (bin == true)
+                    else if (bin)
                     {
-                        var result = computeBinaryExpression(inputMath.Text);
-                        history.Text = result.ToString();
+                        var result = splitExpression(inputMath.Text, 2);
+                        history.Text = inputMath.Text + "=" + result.ToString();
+                    }
+                    else if (hex)
+                    {
+                        var result = computeExpression(inputMath.Text, 16);
+                        history.Text = inputMath.Text + "=" + result.ToString();
+                    }
+                    else if(oct)
+                    {
+                        var result = computeExpression(inputMath.Text, 8);
+                        history.Text = inputMath.Text + "=" + result.ToString();
                     }
                     break;
                 case "buttonPLUS":
@@ -125,13 +229,15 @@ namespace Calculater
                 case "buttonBSL":
                 case "buttonLB":
                 case "buttonRB":
+                    inputMath.Text = inputMath.Text + buttonPRESSED.Text;
+                    break;
                 case "buttonAND":
                 case "buttonOR":
                 case "buttonNOT":
                 case "buttonNAND":
                 case "buttonNOR":
                 case "buttonXOR":
-                    inputMath.Text = inputMath.Text + buttonPRESSED.Text;
+                    inputMath.Text = inputMath.Text + " " + buttonPRESSED.Text + " ";
                     break;
                 case "buttonHEX":
                     dec = false;
@@ -295,20 +401,108 @@ namespace Calculater
         {
             switch (e.KeyCode)
             {
+                case Keys.D0:
                 case Keys.NumPad0:
                     button0.PerformClick();
                     break;
+                case Keys.D1:
                 case Keys.NumPad1:
                     button1.PerformClick();
                     break;
+                case Keys.D2:
                 case Keys.NumPad2:
                     button2.PerformClick();
                     break;
+                case Keys.D3:
                 case Keys.NumPad3:
                     button3.PerformClick();
                     break;
+                case Keys.D4:
                 case Keys.NumPad4:
                     button4.PerformClick();
+                    break;
+                case Keys.D5:
+                case Keys.NumPad5:
+                    button5.PerformClick();
+                    break;
+                case Keys.D6:
+                case Keys.NumPad6:
+                    button6.PerformClick();
+                    break;
+                case Keys.D7:
+                case Keys.NumPad7:
+                    button7.PerformClick();
+                    break;
+                case Keys.D8:
+                case Keys.NumPad8:
+                    button8.PerformClick();
+                    break;
+                case Keys.D9:
+                case Keys.NumPad9:
+                    button9.PerformClick();
+                    break;
+                case Keys.Back:
+                case Keys.Delete:
+                    buttonDEL.PerformClick();
+                    break;
+                case Keys.A:
+                    if(hex)
+                    {
+                        buttonA.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.B:
+                    if (hex)
+                    {
+                        buttonB.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.C:
+                    if (hex)
+                    {
+                        buttonC.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.D:
+                    if (hex)
+                    {
+                        buttonD.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.E:
+                    if (hex)
+                    {
+                        buttonE.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.F:
+                    if (hex)
+                    {
+                        buttonF.PerformClick();
+                        break;
+                    }
+                    break;
+                case Keys.Enter:
+                case Keys.Oemplus: // =
+                    buttonEQ.PerformClick();
+                    break;
+                case Keys.Add:
+                    buttonPLUS.PerformClick();
+                    break;
+                case Keys.Subtract:
+                case Keys.OemMinus:
+                    buttonMINUS.PerformClick();
+                    break;
+                case Keys.Multiply:
+                    buttonMULT.PerformClick();
+                    break;
+                case Keys.Divide:
+                    buttonDIV.PerformClick();
                     break;
             }
         }
