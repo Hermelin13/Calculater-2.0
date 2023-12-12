@@ -120,7 +120,6 @@ namespace Calculater
             string[] tmp_result = new string[tokens.Length];
             int i = 0;
 
-            // First step: Evaluate basic arithmetic expressions
             foreach (string token in tokens)
             {
                 if (isBitwiseOperator(token))
@@ -134,10 +133,8 @@ namespace Calculater
                 i++;
             }
 
-            // Second step: Combine the computed results with bitwise operators
             string resultExpression = string.Join(" ", tmp_result.Where(token => token != null));
 
-            // Third step: Evaluate bitwise operations
             string[] finalTokens = resultExpression.Split(' ');
             i = 0;
             while (i < finalTokens.Length)
@@ -148,13 +145,12 @@ namespace Calculater
                     int right = Convert.ToInt32(finalTokens[i + 1], myBase);
                     int result = PerformBitwiseOperation(left, right, finalTokens[i]);
                     finalTokens[i + 1] = result.ToString();
-                    finalTokens[i - 1] = finalTokens[i] = string.Empty;  // Clear used tokens
+                    finalTokens[i - 1] = finalTokens[i] = string.Empty;
                 }
 
                 i++;
             }
 
-            // Join the result tokens to form the final expression
             string finalResult = string.Join(" ", finalTokens.Where(token => !string.IsNullOrEmpty(token)));
 
             return finalResult;
