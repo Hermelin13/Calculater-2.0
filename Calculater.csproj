@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="UnitsNet" Version="5.38.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="MathParser.org-mXparser">
       <HintPath>Properties\MathParser.org-mXparser.dll</HintPath>
     </Reference>

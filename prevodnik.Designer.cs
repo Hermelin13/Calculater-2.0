@@ -53,33 +53,26 @@ namespace Calculater
             buttonPLUS = new RoundedButton();
             buttonRB = new RoundedButton();
             buttonLB = new RoundedButton();
-            buttonHmotnost = new RoundedButton();
-            buttonDelka = new RoundedButton();
-            buttonPlocha = new RoundedButton();
-            buttonObjem = new RoundedButton();
             inputMath = new RoundedTextBox();
             roundedButton42 = new RoundedButton();
-            roundedTextBox1 = new RoundedTextBox();
-            roundedTextBox2 = new RoundedTextBox();
+            resultTextBox = new RoundedTextBox();
             tableLayoutPanel1 = new TableLayoutPanel();
-            roundedTextBox3 = new RoundedTextBox();
+            unitsFrom = new ComboBox();
+            unitsTo = new ComboBox();
             history = new RoundedTextBox();
-            roundedButton1 = new RoundedButton();
-            tableLayoutPanel2 = new TableLayoutPanel();
-            buttonData = new RoundedButton();
-            buttonMena = new RoundedButton();
-            buttonTeplota = new RoundedButton();
-            buttonCas = new RoundedButton();
+            buttonDot = new RoundedButton();
+            quantitySelector = new FlowLayoutPanel();
+            panel1 = new Panel();
             tableLayoutPanel1.SuspendLayout();
-            tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
             // button9
             // 
             button9.BackColor = Color.FromArgb(62, 80, 91);
+            button9.Cursor = Cursors.Hand;
             button9.FlatStyle = FlatStyle.Popup;
             button9.ForeColor = Color.White;
-            button9.Location = new Point(337, 133);
+            button9.Location = new Point(337, 146);
             button9.Name = "button9";
             button9.Size = new Size(60, 60);
             button9.TabIndex = 10;
@@ -90,9 +83,10 @@ namespace Calculater
             // button8
             // 
             button8.BackColor = Color.FromArgb(62, 80, 91);
+            button8.Cursor = Cursors.Hand;
             button8.FlatStyle = FlatStyle.Popup;
             button8.ForeColor = Color.White;
-            button8.Location = new Point(280, 133);
+            button8.Location = new Point(280, 146);
             button8.Name = "button8";
             button8.Size = new Size(60, 60);
             button8.TabIndex = 9;
@@ -103,9 +97,10 @@ namespace Calculater
             // button7
             // 
             button7.BackColor = Color.FromArgb(62, 80, 91);
+            button7.Cursor = Cursors.Hand;
             button7.FlatStyle = FlatStyle.Popup;
             button7.ForeColor = Color.White;
-            button7.Location = new Point(223, 133);
+            button7.Location = new Point(223, 146);
             button7.Name = "button7";
             button7.Size = new Size(60, 60);
             button7.TabIndex = 8;
@@ -116,9 +111,10 @@ namespace Calculater
             // buttonDEL
             // 
             buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
+            buttonDEL.Cursor = Cursors.Hand;
             buttonDEL.FlatStyle = FlatStyle.Popup;
             buttonDEL.ForeColor = Color.White;
-            buttonDEL.Location = new Point(337, 76);
+            buttonDEL.Location = new Point(337, 89);
             buttonDEL.Margin = new Padding(0);
             buttonDEL.Name = "buttonDEL";
             buttonDEL.Size = new Size(60, 60);
@@ -130,9 +126,10 @@ namespace Calculater
             // button0
             // 
             button0.BackColor = Color.FromArgb(62, 80, 91);
+            button0.Cursor = Cursors.Hand;
             button0.FlatStyle = FlatStyle.Popup;
             button0.ForeColor = Color.White;
-            button0.Location = new Point(280, 304);
+            button0.Location = new Point(280, 317);
             button0.Name = "button0";
             button0.Size = new Size(117, 60);
             button0.TabIndex = 18;
@@ -143,9 +140,10 @@ namespace Calculater
             // buttonAC
             // 
             buttonAC.BackColor = Color.FromArgb(204, 80, 91);
+            buttonAC.Cursor = Cursors.Hand;
             buttonAC.FlatStyle = FlatStyle.Popup;
             buttonAC.ForeColor = Color.White;
-            buttonAC.Location = new Point(280, 76);
+            buttonAC.Location = new Point(280, 89);
             buttonAC.Name = "buttonAC";
             buttonAC.Size = new Size(60, 60);
             buttonAC.TabIndex = 17;
@@ -156,10 +154,11 @@ namespace Calculater
             // button3
             // 
             button3.BackColor = Color.FromArgb(62, 80, 91);
+            button3.Cursor = Cursors.Hand;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Popup;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(337, 247);
+            button3.Location = new Point(337, 260);
             button3.Name = "button3";
             button3.Size = new Size(60, 60);
             button3.TabIndex = 16;
@@ -172,7 +171,7 @@ namespace Calculater
             button2.BackColor = Color.FromArgb(62, 80, 91);
             button2.FlatStyle = FlatStyle.Popup;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(280, 247);
+            button2.Location = new Point(280, 260);
             button2.Name = "button2";
             button2.Size = new Size(60, 60);
             button2.TabIndex = 15;
@@ -183,9 +182,10 @@ namespace Calculater
             // button1
             // 
             button1.BackColor = Color.FromArgb(62, 80, 91);
+            button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(223, 247);
+            button1.Location = new Point(223, 260);
             button1.Name = "button1";
             button1.Size = new Size(60, 60);
             button1.TabIndex = 14;
@@ -196,9 +196,10 @@ namespace Calculater
             // button6
             // 
             button6.BackColor = Color.FromArgb(62, 80, 91);
+            button6.Cursor = Cursors.Hand;
             button6.FlatStyle = FlatStyle.Popup;
             button6.ForeColor = Color.White;
-            button6.Location = new Point(337, 190);
+            button6.Location = new Point(337, 203);
             button6.Name = "button6";
             button6.RightToLeft = RightToLeft.No;
             button6.Size = new Size(60, 60);
@@ -210,9 +211,10 @@ namespace Calculater
             // button5
             // 
             button5.BackColor = Color.FromArgb(62, 80, 91);
+            button5.Cursor = Cursors.Hand;
             button5.FlatStyle = FlatStyle.Popup;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(280, 190);
+            button5.Location = new Point(280, 203);
             button5.Name = "button5";
             button5.Size = new Size(60, 60);
             button5.TabIndex = 12;
@@ -223,9 +225,10 @@ namespace Calculater
             // button4
             // 
             button4.BackColor = Color.FromArgb(62, 80, 91);
+            button4.Cursor = Cursors.Hand;
             button4.FlatStyle = FlatStyle.Popup;
             button4.ForeColor = Color.White;
-            button4.Location = new Point(223, 190);
+            button4.Location = new Point(223, 203);
             button4.Name = "button4";
             button4.Size = new Size(60, 60);
             button4.TabIndex = 11;
@@ -236,10 +239,11 @@ namespace Calculater
             // buttonEQ
             // 
             buttonEQ.BackColor = Color.FromArgb(2, 101, 82);
+            buttonEQ.Cursor = Cursors.Hand;
             buttonEQ.FlatStyle = FlatStyle.Popup;
             buttonEQ.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEQ.ForeColor = Color.White;
-            buttonEQ.Location = new Point(280, 361);
+            buttonEQ.Location = new Point(280, 374);
             buttonEQ.Name = "buttonEQ";
             buttonEQ.Size = new Size(117, 60);
             buttonEQ.TabIndex = 26;
@@ -250,9 +254,10 @@ namespace Calculater
             // buttonDIV
             // 
             buttonDIV.BackColor = Color.FromArgb(50, 73, 60);
+            buttonDIV.Cursor = Cursors.Hand;
             buttonDIV.FlatStyle = FlatStyle.Popup;
             buttonDIV.ForeColor = Color.White;
-            buttonDIV.Location = new Point(166, 304);
+            buttonDIV.Location = new Point(166, 317);
             buttonDIV.Name = "buttonDIV";
             buttonDIV.Size = new Size(60, 60);
             buttonDIV.TabIndex = 30;
@@ -263,9 +268,10 @@ namespace Calculater
             // buttonMULT
             // 
             buttonMULT.BackColor = Color.FromArgb(50, 73, 60);
+            buttonMULT.Cursor = Cursors.Hand;
             buttonMULT.FlatStyle = FlatStyle.Popup;
             buttonMULT.ForeColor = Color.White;
-            buttonMULT.Location = new Point(166, 247);
+            buttonMULT.Location = new Point(166, 260);
             buttonMULT.Name = "buttonMULT";
             buttonMULT.Size = new Size(60, 60);
             buttonMULT.TabIndex = 29;
@@ -276,9 +282,10 @@ namespace Calculater
             // buttonMINUS
             // 
             buttonMINUS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonMINUS.Cursor = Cursors.Hand;
             buttonMINUS.FlatStyle = FlatStyle.Popup;
             buttonMINUS.ForeColor = Color.White;
-            buttonMINUS.Location = new Point(166, 190);
+            buttonMINUS.Location = new Point(166, 203);
             buttonMINUS.Name = "buttonMINUS";
             buttonMINUS.Size = new Size(60, 60);
             buttonMINUS.TabIndex = 28;
@@ -289,9 +296,10 @@ namespace Calculater
             // buttonPLUS
             // 
             buttonPLUS.BackColor = Color.FromArgb(50, 73, 60);
+            buttonPLUS.Cursor = Cursors.Hand;
             buttonPLUS.FlatStyle = FlatStyle.Popup;
             buttonPLUS.ForeColor = Color.White;
-            buttonPLUS.Location = new Point(166, 133);
+            buttonPLUS.Location = new Point(166, 146);
             buttonPLUS.Name = "buttonPLUS";
             buttonPLUS.Size = new Size(60, 60);
             buttonPLUS.TabIndex = 27;
@@ -302,9 +310,10 @@ namespace Calculater
             // buttonRB
             // 
             buttonRB.BackColor = Color.FromArgb(50, 73, 60);
+            buttonRB.Cursor = Cursors.Hand;
             buttonRB.FlatStyle = FlatStyle.Popup;
             buttonRB.ForeColor = Color.White;
-            buttonRB.Location = new Point(223, 76);
+            buttonRB.Location = new Point(223, 89);
             buttonRB.Name = "buttonRB";
             buttonRB.Size = new Size(60, 60);
             buttonRB.TabIndex = 34;
@@ -315,9 +324,10 @@ namespace Calculater
             // buttonLB
             // 
             buttonLB.BackColor = Color.FromArgb(50, 73, 60);
+            buttonLB.Cursor = Cursors.Hand;
             buttonLB.FlatStyle = FlatStyle.Popup;
             buttonLB.ForeColor = Color.White;
-            buttonLB.Location = new Point(166, 76);
+            buttonLB.Location = new Point(166, 89);
             buttonLB.Name = "buttonLB";
             buttonLB.Size = new Size(60, 60);
             buttonLB.TabIndex = 33;
@@ -325,69 +335,17 @@ namespace Calculater
             buttonLB.UseVisualStyleBackColor = false;
             buttonLB.Click += clickButton;
             // 
-            // buttonHmotnost
-            // 
-            buttonHmotnost.BackColor = Color.FromArgb(50, 73, 60);
-            buttonHmotnost.FlatStyle = FlatStyle.Popup;
-            buttonHmotnost.ForeColor = Color.White;
-            buttonHmotnost.Location = new Point(3, 3);
-            buttonHmotnost.Name = "buttonHmotnost";
-            buttonHmotnost.Size = new Size(111, 60);
-            buttonHmotnost.TabIndex = 39;
-            buttonHmotnost.Text = "Hmotnost";
-            buttonHmotnost.UseVisualStyleBackColor = false;
-            buttonHmotnost.Click += clickButton;
-            // 
-            // buttonDelka
-            // 
-            buttonDelka.BackColor = Color.FromArgb(50, 73, 60);
-            buttonDelka.FlatStyle = FlatStyle.Popup;
-            buttonDelka.ForeColor = Color.White;
-            buttonDelka.Location = new Point(3, 69);
-            buttonDelka.Name = "buttonDelka";
-            buttonDelka.Size = new Size(111, 60);
-            buttonDelka.TabIndex = 40;
-            buttonDelka.Text = "Délka";
-            buttonDelka.UseVisualStyleBackColor = false;
-            buttonDelka.Click += clickButton;
-            // 
-            // buttonPlocha
-            // 
-            buttonPlocha.BackColor = Color.FromArgb(50, 73, 60);
-            buttonPlocha.FlatStyle = FlatStyle.Popup;
-            buttonPlocha.ForeColor = Color.White;
-            buttonPlocha.Location = new Point(3, 135);
-            buttonPlocha.Name = "buttonPlocha";
-            buttonPlocha.Size = new Size(111, 60);
-            buttonPlocha.TabIndex = 41;
-            buttonPlocha.Text = "Plocha";
-            buttonPlocha.UseVisualStyleBackColor = false;
-            buttonPlocha.Click += clickButton;
-            // 
-            // buttonObjem
-            // 
-            buttonObjem.BackColor = Color.FromArgb(50, 73, 60);
-            buttonObjem.FlatStyle = FlatStyle.Popup;
-            buttonObjem.ForeColor = Color.White;
-            buttonObjem.Location = new Point(3, 201);
-            buttonObjem.Name = "buttonObjem";
-            buttonObjem.Size = new Size(111, 60);
-            buttonObjem.TabIndex = 42;
-            buttonObjem.Text = "Objem";
-            buttonObjem.UseVisualStyleBackColor = false;
-            buttonObjem.Click += clickButton;
-            // 
             // inputMath
             // 
             inputMath.Anchor = AnchorStyles.None;
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderRadius = 30;
             inputMath.BorderStyle = BorderStyle.None;
-            inputMath.Location = new Point(3, 7);
+            inputMath.Location = new Point(3, 5);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
             inputMath.ReadOnly = true;
-            inputMath.Size = new Size(520, 60);
+            inputMath.Size = new Size(520, 39);
             inputMath.TabIndex = 43;
             // 
             // roundedButton42
@@ -403,41 +361,27 @@ namespace Calculater
             roundedButton42.Text = "Převodník";
             roundedButton42.UseVisualStyleBackColor = false;
             // 
-            // roundedTextBox1
+            // resultTextBox
             // 
-            roundedTextBox1.Anchor = AnchorStyles.Right;
-            roundedTextBox1.BackColor = Color.FromArgb(138, 176, 171);
-            roundedTextBox1.BorderRadius = 30;
-            roundedTextBox1.BorderStyle = BorderStyle.None;
-            roundedTextBox1.Location = new Point(363, 82);
-            roundedTextBox1.Multiline = true;
-            roundedTextBox1.Name = "roundedTextBox1";
-            roundedTextBox1.Size = new Size(160, 60);
-            roundedTextBox1.TabIndex = 46;
-            roundedTextBox1.Text = "g";
-            roundedTextBox1.TextAlign = HorizontalAlignment.Center;
-            // 
-            // roundedTextBox2
-            // 
-            roundedTextBox2.Anchor = AnchorStyles.None;
-            roundedTextBox2.BackColor = Color.FromArgb(138, 176, 171);
-            roundedTextBox2.BorderRadius = 30;
-            roundedTextBox2.BorderStyle = BorderStyle.None;
-            roundedTextBox2.Location = new Point(3, 157);
-            roundedTextBox2.Multiline = true;
-            roundedTextBox2.Name = "roundedTextBox2";
-            roundedTextBox2.ReadOnly = true;
-            roundedTextBox2.Size = new Size(520, 60);
-            roundedTextBox2.TabIndex = 47;
+            resultTextBox.Anchor = AnchorStyles.None;
+            resultTextBox.BackColor = Color.FromArgb(138, 176, 171);
+            resultTextBox.BorderRadius = 30;
+            resultTextBox.BorderStyle = BorderStyle.None;
+            resultTextBox.Location = new Point(3, 105);
+            resultTextBox.Multiline = true;
+            resultTextBox.Name = "resultTextBox";
+            resultTextBox.ReadOnly = true;
+            resultTextBox.Size = new Size(520, 39);
+            resultTextBox.TabIndex = 47;
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(roundedTextBox3, 0, 3);
             tableLayoutPanel1.Controls.Add(inputMath, 0, 0);
-            tableLayoutPanel1.Controls.Add(roundedTextBox1, 0, 1);
-            tableLayoutPanel1.Controls.Add(roundedTextBox2, 0, 2);
+            tableLayoutPanel1.Controls.Add(resultTextBox, 0, 2);
+            tableLayoutPanel1.Controls.Add(unitsFrom, 0, 1);
+            tableLayoutPanel1.Controls.Add(unitsTo, 0, 3);
             tableLayoutPanel1.Location = new Point(410, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 4;
@@ -445,129 +389,81 @@ namespace Calculater
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(526, 300);
+            tableLayoutPanel1.Size = new Size(526, 200);
             tableLayoutPanel1.TabIndex = 48;
             // 
-            // roundedTextBox3
+            // unitsFrom
             // 
-            roundedTextBox3.Anchor = AnchorStyles.Right;
-            roundedTextBox3.BackColor = Color.FromArgb(138, 176, 171);
-            roundedTextBox3.BorderRadius = 30;
-            roundedTextBox3.BorderStyle = BorderStyle.None;
-            roundedTextBox3.Location = new Point(363, 232);
-            roundedTextBox3.Multiline = true;
-            roundedTextBox3.Name = "roundedTextBox3";
-            roundedTextBox3.Size = new Size(160, 60);
-            roundedTextBox3.TabIndex = 48;
-            roundedTextBox3.Text = "kg";
-            roundedTextBox3.TextAlign = HorizontalAlignment.Center;
+            unitsFrom.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            unitsFrom.BackColor = Color.FromArgb(138, 176, 171);
+            unitsFrom.DropDownStyle = ComboBoxStyle.DropDownList;
+            unitsFrom.FlatStyle = FlatStyle.Flat;
+            unitsFrom.FormattingEnabled = true;
+            unitsFrom.Location = new Point(275, 53);
+            unitsFrom.Name = "unitsFrom";
+            unitsFrom.Size = new Size(248, 23);
+            unitsFrom.TabIndex = 48;
+            // 
+            // unitsTo
+            // 
+            unitsTo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            unitsTo.BackColor = Color.FromArgb(138, 176, 171);
+            unitsTo.DropDownStyle = ComboBoxStyle.DropDownList;
+            unitsTo.FlatStyle = FlatStyle.Flat;
+            unitsTo.FormattingEnabled = true;
+            unitsTo.Location = new Point(275, 153);
+            unitsTo.Name = "unitsTo";
+            unitsTo.Size = new Size(248, 23);
+            unitsTo.TabIndex = 49;
             // 
             // history
             // 
             history.BackColor = Color.FromArgb(60, 80, 83);
             history.BorderRadius = 30;
             history.BorderStyle = BorderStyle.None;
-            history.Location = new Point(410, 306);
+            history.Location = new Point(410, 206);
             history.Multiline = true;
             history.Name = "history";
             history.ReadOnly = true;
-            history.Size = new Size(526, 271);
+            history.Size = new Size(526, 371);
             history.TabIndex = 44;
             // 
-            // roundedButton1
+            // buttonDot
             // 
-            roundedButton1.BackColor = Color.FromArgb(50, 73, 60);
-            roundedButton1.FlatStyle = FlatStyle.Popup;
-            roundedButton1.ForeColor = Color.White;
-            roundedButton1.Location = new Point(223, 304);
-            roundedButton1.Name = "roundedButton1";
-            roundedButton1.Size = new Size(60, 60);
-            roundedButton1.TabIndex = 49;
-            roundedButton1.Text = ".";
-            roundedButton1.UseVisualStyleBackColor = false;
+            buttonDot.BackColor = Color.FromArgb(50, 73, 60);
+            buttonDot.Cursor = Cursors.Hand;
+            buttonDot.FlatStyle = FlatStyle.Popup;
+            buttonDot.ForeColor = Color.White;
+            buttonDot.Location = new Point(223, 317);
+            buttonDot.Name = "buttonDot";
+            buttonDot.Size = new Size(60, 60);
+            buttonDot.TabIndex = 49;
+            buttonDot.Text = ".";
+            buttonDot.UseVisualStyleBackColor = false;
             // 
-            // tableLayoutPanel2
+            // quantitySelector
             // 
-            tableLayoutPanel2.ColumnCount = 1;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Controls.Add(buttonData, 0, 7);
-            tableLayoutPanel2.Controls.Add(buttonHmotnost, 0, 0);
-            tableLayoutPanel2.Controls.Add(buttonDelka, 0, 1);
-            tableLayoutPanel2.Controls.Add(buttonPlocha, 0, 2);
-            tableLayoutPanel2.Controls.Add(buttonObjem, 0, 3);
-            tableLayoutPanel2.Controls.Add(buttonMena, 0, 4);
-            tableLayoutPanel2.Controls.Add(buttonTeplota, 0, 5);
-            tableLayoutPanel2.Controls.Add(buttonCas, 0, 6);
-            tableLayoutPanel2.Location = new Point(20, 61);
-            tableLayoutPanel2.Name = "tableLayoutPanel2";
-            tableLayoutPanel2.RowCount = 8;
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 12.5F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.Size = new Size(140, 530);
-            tableLayoutPanel2.TabIndex = 50;
+            quantitySelector.AutoScroll = true;
+            quantitySelector.Location = new Point(7, 89);
+            quantitySelector.Name = "quantitySelector";
+            quantitySelector.Size = new Size(156, 488);
+            quantitySelector.TabIndex = 52;
             // 
-            // buttonData
+            // panel1
             // 
-            buttonData.BackColor = Color.FromArgb(50, 73, 60);
-            buttonData.FlatStyle = FlatStyle.Popup;
-            buttonData.ForeColor = Color.White;
-            buttonData.Location = new Point(3, 465);
-            buttonData.Name = "buttonData";
-            buttonData.Size = new Size(111, 60);
-            buttonData.TabIndex = 46;
-            buttonData.Text = "Data";
-            buttonData.UseVisualStyleBackColor = false;
-            // 
-            // buttonMena
-            // 
-            buttonMena.BackColor = Color.FromArgb(50, 73, 60);
-            buttonMena.FlatStyle = FlatStyle.Popup;
-            buttonMena.ForeColor = Color.White;
-            buttonMena.Location = new Point(3, 267);
-            buttonMena.Name = "buttonMena";
-            buttonMena.Size = new Size(111, 60);
-            buttonMena.TabIndex = 43;
-            buttonMena.Text = "Měna";
-            buttonMena.UseVisualStyleBackColor = false;
-            // 
-            // buttonTeplota
-            // 
-            buttonTeplota.BackColor = Color.FromArgb(50, 73, 60);
-            buttonTeplota.FlatStyle = FlatStyle.Popup;
-            buttonTeplota.ForeColor = Color.White;
-            buttonTeplota.Location = new Point(3, 333);
-            buttonTeplota.Name = "buttonTeplota";
-            buttonTeplota.Size = new Size(111, 60);
-            buttonTeplota.TabIndex = 44;
-            buttonTeplota.Text = "Teplota";
-            buttonTeplota.UseVisualStyleBackColor = false;
-            // 
-            // buttonCas
-            // 
-            buttonCas.BackColor = Color.FromArgb(50, 73, 60);
-            buttonCas.FlatStyle = FlatStyle.Popup;
-            buttonCas.ForeColor = Color.White;
-            buttonCas.Location = new Point(3, 399);
-            buttonCas.Name = "buttonCas";
-            buttonCas.Size = new Size(111, 60);
-            buttonCas.TabIndex = 45;
-            buttonCas.Text = "Čas";
-            buttonCas.UseVisualStyleBackColor = false;
+            panel1.Location = new Point(141, 69);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(25, 524);
+            panel1.TabIndex = 53;
             // 
             // prevodnik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            Controls.Add(tableLayoutPanel2);
-            Controls.Add(roundedButton1);
+            Controls.Add(panel1);
+            Controls.Add(quantitySelector);
+            Controls.Add(buttonDot);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(roundedButton42);
             Controls.Add(history);
@@ -594,7 +490,6 @@ namespace Calculater
             Size = new Size(950, 591);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            tableLayoutPanel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -619,22 +514,15 @@ namespace Calculater
         private RoundedButton buttonPLUS;
         private RoundedButton buttonRB;
         private RoundedButton buttonLB;
-        private RoundedButton buttonHmotnost;
-        private RoundedButton buttonDelka;
-        private RoundedButton buttonPlocha;
-        private RoundedButton buttonObjem;
         private RoundedTextBox inputMath;
         private RoundedButton roundedButton42;
-        private RoundedTextBox roundedTextBox1;
-        private RoundedTextBox roundedTextBox2;
+        private RoundedTextBox resultTextBox;
         private TableLayoutPanel tableLayoutPanel1;
-        private RoundedTextBox roundedTextBox3;
         private RoundedTextBox history;
-        private RoundedButton roundedButton1;
-        private TableLayoutPanel tableLayoutPanel2;
-        private RoundedButton buttonData;
-        private RoundedButton buttonMena;
-        private RoundedButton buttonTeplota;
-        private RoundedButton buttonCas;
+        private RoundedButton buttonDot;
+        private ComboBox unitsFrom;
+        private ComboBox unitsTo;
+        private FlowLayoutPanel quantitySelector;
+        private Panel panel1;
     }
 }
