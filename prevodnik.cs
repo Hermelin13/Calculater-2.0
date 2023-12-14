@@ -17,7 +17,6 @@ namespace Calculater
 {
     public partial class prevodnik : UserControl
     {
-        bool number = false;
         QuantityInfo selectedQuantity;
 
         public prevodnik()
@@ -44,6 +43,7 @@ namespace Calculater
                 quantityButton.UseVisualStyleBackColor = false;
                 quantityButton.Cursor = Cursors.Hand;
                 quantityButton.Click += clickQuantityButton;
+
                 quantitySelector.Controls.Add(quantityButton);
             }
         }
@@ -92,10 +92,11 @@ namespace Calculater
                             result = UnitConverter.Convert(result,
                                 selectedQuantity.UnitInfos.FirstOrDefault(info => info.Name == unitsFrom.Text).Value,
                                 selectedQuantity.UnitInfos.FirstOrDefault(info => info.Name == unitsTo.Text).Value);
+
+                            saveToHistory(inputMath.Text, result.ToString().Replace(",", "."));
                         }
 
                         resultTextBox.Text = result.ToString().Replace(",", ".");
-                        history.Text = inputMath.Text + " = " + result;
                     }
                     break;
                 case "buttonPLUS":
@@ -106,10 +107,63 @@ namespace Calculater
                 case "buttonRB":
                 default:
                     inputMath.Text = inputMath.Text + buttonPRESSED.Text;
-                    number = true;
                     break;
 
             }
+        }
+
+        private void saveToHistory(string input, string result)
+        {
+            RoundedTextBox historyRow = new RoundedTextBox();
+            historyRow.BackColor = Color.FromArgb(60, 80, 83);
+            historyRow.BorderRadius = 0;
+            historyRow.Name = "historyTemplate";
+            historyRow.Anchor = AnchorStyles.None;
+            historyRow.BorderStyle = BorderStyle.None;
+            historyRow.Location = new Point(6, 3);
+            historyRow.Multiline = true;
+            historyRow.ReadOnly = true;
+            historyRow.Size = new Size(443, 44);
+            historyRow.TabIndex = 48;
+            historyRow.Cursor = Cursors.Arrow;
+            historyRow.Text = input + " " + unitsFrom.Text + " = " + result + " " + unitsTo.Text;
+
+            PictureBox deleteButton = new PictureBox();
+            deleteButton.Anchor = AnchorStyles.None;
+            deleteButton.Image = Properties.Resources.trash;
+            deleteButton.Location = new Point(462, 0);
+            deleteButton.Margin = new Padding(0);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(50, 50);
+            deleteButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            deleteButton.TabIndex = 49;
+            deleteButton.TabStop = false;
+            deleteButton.Cursor = Cursors.Hand;
+            deleteButton.Click += deleteHistoryRow;
+
+            TableLayoutPanel historyRowPanel = new TableLayoutPanel();
+            historyRowPanel.ColumnCount = 2;
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.5F));
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.5F));
+            historyRowPanel.Controls.Add(historyRow, 0, 0);
+            historyRowPanel.Controls.Add(deleteButton, 1, 0);
+            historyRowPanel.Location = new Point(3, 3);
+            historyRowPanel.Name = "historyRowPanel";
+            historyRowPanel.RowCount = 1;
+            historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            historyRowPanel.Size = new Size(500, 50);
+            historyRowPanel.TabIndex = 50;
+
+            history.Controls.Add(historyRowPanel);
+            history.Controls.SetChildIndex(historyRowPanel, 0);
+        }
+
+        private void deleteHistoryRow(object sender, EventArgs e)
+        {
+            PictureBox deleteButton = sender as PictureBox;
+
+            history.Controls.Remove(deleteButton.Parent);
         }
 
         public void keyPressed(KeyEventArgs e)

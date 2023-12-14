@@ -59,10 +59,10 @@ namespace Calculater
             tableLayoutPanel1 = new TableLayoutPanel();
             unitsFrom = new ComboBox();
             unitsTo = new ComboBox();
-            history = new RoundedTextBox();
             buttonDot = new RoundedButton();
             quantitySelector = new FlowLayoutPanel();
             panel1 = new Panel();
+            history = new FlowLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -416,18 +416,6 @@ namespace Calculater
             unitsTo.Size = new Size(248, 23);
             unitsTo.TabIndex = 49;
             // 
-            // history
-            // 
-            history.BackColor = Color.FromArgb(60, 80, 83);
-            history.BorderRadius = 30;
-            history.BorderStyle = BorderStyle.None;
-            history.Location = new Point(410, 206);
-            history.Multiline = true;
-            history.Name = "history";
-            history.ReadOnly = true;
-            history.Size = new Size(526, 371);
-            history.TabIndex = 44;
-            // 
             // buttonDot
             // 
             buttonDot.BackColor = Color.FromArgb(50, 73, 60);
@@ -456,17 +444,27 @@ namespace Calculater
             panel1.Size = new Size(25, 524);
             panel1.TabIndex = 53;
             // 
+            // history
+            // 
+            history.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            history.AutoScroll = true;
+            history.BackColor = Color.FromArgb(60, 80, 83);
+            history.Location = new Point(410, 206);
+            history.Name = "history";
+            history.Size = new Size(526, 371);
+            history.TabIndex = 54;
+            // 
             // prevodnik
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
+            Controls.Add(history);
             Controls.Add(panel1);
             Controls.Add(quantitySelector);
             Controls.Add(buttonDot);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(roundedButton42);
-            Controls.Add(history);
             Controls.Add(buttonRB);
             Controls.Add(buttonLB);
             Controls.Add(buttonDIV);
@@ -491,7 +489,6 @@ namespace Calculater
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -518,11 +515,11 @@ namespace Calculater
         private RoundedButton roundedButton42;
         private RoundedTextBox resultTextBox;
         private TableLayoutPanel tableLayoutPanel1;
-        private RoundedTextBox history;
         private RoundedButton buttonDot;
         private ComboBox unitsFrom;
         private ComboBox unitsTo;
         private FlowLayoutPanel quantitySelector;
         private Panel panel1;
+        private FlowLayoutPanel history;
     }
 }
