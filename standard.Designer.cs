@@ -64,7 +64,6 @@ namespace Calculater
             buttonDEL = new RoundedButton();
             buttonCLEAR = new RoundedButton();
             inputMath = new System.Windows.Forms.TextBox();
-            history1 = new System.Windows.Forms.TextBox();
             buttonMOD = new RoundedButton();
             buttonROOT3 = new RoundedButton();
             buttonROOT4 = new RoundedButton();
@@ -73,36 +72,8 @@ namespace Calculater
             buttonASIN = new RoundedButton();
             buttonACOS = new RoundedButton();
             buttonANS = new RoundedButton();
-            history2 = new System.Windows.Forms.TextBox();
-            history4 = new System.Windows.Forms.TextBox();
-            history3 = new System.Windows.Forms.TextBox();
-            history6 = new System.Windows.Forms.TextBox();
-            history5 = new System.Windows.Forms.TextBox();
             labelhistory = new System.Windows.Forms.Label();
-            delButton2 = new System.Windows.Forms.PictureBox();
-            delButton3 = new System.Windows.Forms.PictureBox();
-            delButton1 = new System.Windows.Forms.PictureBox();
-            delButton4 = new System.Windows.Forms.PictureBox();
-            delButton5 = new System.Windows.Forms.PictureBox();
-            delButton6 = new System.Windows.Forms.PictureBox();
-            panel1 = new System.Windows.Forms.Panel();
-            panel2 = new System.Windows.Forms.Panel();
-            panel3 = new System.Windows.Forms.Panel();
-            panel4 = new System.Windows.Forms.Panel();
-            panel5 = new System.Windows.Forms.Panel();
-            panel6 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)delButton2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)delButton3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)delButton1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)delButton4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)delButton5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)delButton6).BeginInit();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
-            panel6.SuspendLayout();
+            history = new System.Windows.Forms.FlowLayoutPanel();
             SuspendLayout();
             // 
             // button1
@@ -568,19 +539,6 @@ namespace Calculater
             inputMath.TabIndex = 31;
             inputMath.TabStop = false;
             // 
-            // history1
-            // 
-            history1.BackColor = Color.FromArgb(60, 80, 83);
-            history1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history1.Location = new Point(0, 0);
-            history1.Multiline = true;
-            history1.Name = "history1";
-            history1.ReadOnly = true;
-            history1.Size = new Size(415, 70);
-            history1.TabIndex = 32;
-            history1.TextChanged += changeVis;
-            // 
             // buttonMOD
             // 
             buttonMOD.BackColor = Color.FromArgb(50, 73, 60);
@@ -701,71 +659,6 @@ namespace Calculater
             buttonANS.UseVisualStyleBackColor = false;
             buttonANS.Click += clickButton;
             // 
-            // history2
-            // 
-            history2.BackColor = Color.FromArgb(60, 80, 83);
-            history2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history2.Location = new Point(0, 0);
-            history2.Multiline = true;
-            history2.Name = "history2";
-            history2.ReadOnly = true;
-            history2.Size = new Size(415, 70);
-            history2.TabIndex = 42;
-            history2.TextChanged += changeVis;
-            // 
-            // history4
-            // 
-            history4.BackColor = Color.FromArgb(60, 80, 83);
-            history4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history4.Location = new Point(0, 0);
-            history4.Multiline = true;
-            history4.Name = "history4";
-            history4.ReadOnly = true;
-            history4.Size = new Size(415, 70);
-            history4.TabIndex = 44;
-            history4.TextChanged += changeVis;
-            // 
-            // history3
-            // 
-            history3.BackColor = Color.FromArgb(60, 80, 83);
-            history3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history3.Location = new Point(0, 0);
-            history3.Multiline = true;
-            history3.Name = "history3";
-            history3.ReadOnly = true;
-            history3.Size = new Size(415, 70);
-            history3.TabIndex = 43;
-            history3.TextChanged += changeVis;
-            // 
-            // history6
-            // 
-            history6.BackColor = Color.FromArgb(60, 80, 83);
-            history6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history6.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history6.Location = new Point(-1, 0);
-            history6.Multiline = true;
-            history6.Name = "history6";
-            history6.ReadOnly = true;
-            history6.Size = new Size(415, 70);
-            history6.TabIndex = 46;
-            history6.TextChanged += changeVis;
-            // 
-            // history5
-            // 
-            history5.BackColor = Color.FromArgb(60, 80, 83);
-            history5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            history5.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            history5.Location = new Point(-1, 0);
-            history5.Multiline = true;
-            history5.Name = "history5";
-            history5.ReadOnly = true;
-            history5.Size = new Size(415, 70);
-            history5.TabIndex = 45;
-            history5.TextChanged += changeVis;
-            // 
             // labelhistory
             // 
             labelhistory.AutoSize = true;
@@ -777,161 +670,21 @@ namespace Calculater
             labelhistory.TabIndex = 47;
             labelhistory.Text = "Historie";
             // 
-            // delButton2
+            // history
             // 
-            delButton2.BackColor = Color.FromArgb(60, 80, 83);
-            delButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton2.Image = Properties.Resources.trash;
-            delButton2.Location = new Point(414, 10);
-            delButton2.Name = "delButton2";
-            delButton2.Size = new Size(50, 50);
-            delButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton2.TabIndex = 0;
-            delButton2.TabStop = false;
-            delButton2.Visible = false;
-            delButton2.Click += deleteButton;
-            // 
-            // delButton3
-            // 
-            delButton3.BackColor = Color.FromArgb(60, 80, 83);
-            delButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton3.Image = Properties.Resources.trash;
-            delButton3.Location = new Point(414, 10);
-            delButton3.Name = "delButton3";
-            delButton3.Size = new Size(50, 50);
-            delButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton3.TabIndex = 0;
-            delButton3.TabStop = false;
-            delButton3.Visible = false;
-            delButton3.Click += deleteButton;
-            // 
-            // delButton1
-            // 
-            delButton1.BackColor = Color.FromArgb(60, 80, 83);
-            delButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton1.Image = Properties.Resources.trash;
-            delButton1.Location = new Point(414, 10);
-            delButton1.Name = "delButton1";
-            delButton1.Size = new Size(50, 50);
-            delButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton1.TabIndex = 0;
-            delButton1.TabStop = false;
-            delButton1.Visible = false;
-            delButton1.Click += deleteButton;
-            // 
-            // delButton4
-            // 
-            delButton4.BackColor = Color.FromArgb(60, 80, 83);
-            delButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton4.Image = Properties.Resources.trash;
-            delButton4.Location = new Point(414, 10);
-            delButton4.Name = "delButton4";
-            delButton4.Size = new Size(50, 50);
-            delButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton4.TabIndex = 0;
-            delButton4.TabStop = false;
-            delButton4.Visible = false;
-            delButton4.Click += deleteButton;
-            // 
-            // delButton5
-            // 
-            delButton5.BackColor = Color.FromArgb(60, 80, 83);
-            delButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton5.Image = Properties.Resources.trash;
-            delButton5.Location = new Point(414, 10);
-            delButton5.Name = "delButton5";
-            delButton5.Size = new Size(50, 50);
-            delButton5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton5.TabIndex = 0;
-            delButton5.TabStop = false;
-            delButton5.Visible = false;
-            delButton5.Click += deleteButton;
-            // 
-            // delButton6
-            // 
-            delButton6.BackColor = Color.FromArgb(60, 80, 83);
-            delButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            delButton6.Image = Properties.Resources.trash;
-            delButton6.Location = new Point(414, 10);
-            delButton6.Name = "delButton6";
-            delButton6.Size = new Size(50, 50);
-            delButton6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            delButton6.TabIndex = 0;
-            delButton6.TabStop = false;
-            delButton6.Visible = false;
-            delButton6.Click += deleteButton;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(60, 80, 83);
-            panel1.Controls.Add(delButton1);
-            panel1.Controls.Add(history1);
-            panel1.Location = new Point(482, 131);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(470, 70);
-            panel1.TabIndex = 52;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(60, 80, 83);
-            panel2.Controls.Add(delButton2);
-            panel2.Controls.Add(history2);
-            panel2.Location = new Point(482, 208);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(470, 70);
-            panel2.TabIndex = 53;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(60, 80, 83);
-            panel3.Controls.Add(delButton3);
-            panel3.Controls.Add(history3);
-            panel3.Location = new Point(482, 284);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(470, 70);
-            panel3.TabIndex = 54;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.FromArgb(60, 80, 83);
-            panel4.Controls.Add(delButton4);
-            panel4.Controls.Add(history4);
-            panel4.Location = new Point(482, 360);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(470, 70);
-            panel4.TabIndex = 55;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(60, 80, 83);
-            panel5.Controls.Add(delButton5);
-            panel5.Controls.Add(history5);
-            panel5.Location = new Point(482, 436);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(470, 70);
-            panel5.TabIndex = 56;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.FromArgb(60, 80, 83);
-            panel6.Controls.Add(delButton6);
-            panel6.Controls.Add(history6);
-            panel6.Location = new Point(482, 512);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(470, 70);
-            panel6.TabIndex = 57;
+            history.AutoScroll = true;
+            history.BackColor = Color.FromArgb(60, 80, 83);
+            history.Location = new Point(482, 142);
+            history.Name = "history";
+            history.Size = new Size(468, 449);
+            history.TabIndex = 55;
             // 
             // standard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            Controls.Add(panel6);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(history);
             Controls.Add(labelhistory);
             Controls.Add(buttonANS);
             Controls.Add(buttonACOS);
@@ -974,31 +727,12 @@ namespace Calculater
             Controls.Add(button1);
             Name = "standard";
             Size = new Size(950, 591);
-            ((System.ComponentModel.ISupportInitialize)delButton2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)delButton3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)delButton1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)delButton4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)delButton5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)delButton6).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private System.Windows.Forms.TextBox inputMath;
-        private System.Windows.Forms.TextBox history1;
         private RoundedButton button1;
         private RoundedButton button2;
         private RoundedButton button3;
@@ -1037,23 +771,7 @@ namespace Calculater
         private RoundedButton buttonASIN;
         private RoundedButton buttonACOS;
         private RoundedButton buttonANS;
-        private System.Windows.Forms.TextBox history2;
-        private System.Windows.Forms.TextBox history4;
-        private System.Windows.Forms.TextBox history3;
-        private System.Windows.Forms.TextBox history6;
-        private System.Windows.Forms.TextBox history5;
         private System.Windows.Forms.Label labelhistory;
-        private System.Windows.Forms.PictureBox delButton2;
-        private System.Windows.Forms.PictureBox delButton3;
-        private System.Windows.Forms.PictureBox delButton1;
-        private System.Windows.Forms.PictureBox delButton4;
-        private System.Windows.Forms.PictureBox delButton5;
-        private System.Windows.Forms.PictureBox delButton6;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.FlowLayoutPanel history;
     }
 }

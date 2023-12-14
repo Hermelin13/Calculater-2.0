@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using org.mariuszgromada.math.mxparser;
+using org.mariuszgromada.math.mxparser.mathcollection;
 
 namespace Calculater
 {
@@ -28,6 +29,11 @@ namespace Calculater
         bool fact = false;
         int brackets = 0;
         string const_ANS;
+        private List<PictureBox> deleteButtons = new List<PictureBox>();
+        private FlowLayoutPanel historyPanel;
+        private List<Tuple<string, TextBox, PictureBox>> historyEntries = new List<Tuple<string, TextBox, PictureBox>>();
+        private TextBox historyTextBox;
+        private int historyEntryIndex = 0;
 
         public standard()
         {
@@ -72,12 +78,7 @@ namespace Calculater
                 case "buttonEQ":
                     Expression ex = new Expression(inputMath.Text);
                     var result = ex.calculate();
-                    history6.Text = history5.Text;
-                    history5.Text = history4.Text;
-                    history4.Text = history3.Text;
-                    history3.Text = history2.Text;
-                    history2.Text = history1.Text;
-                    history1.Text = inputMath.Text + "=" + result.ToString().Replace(",", ".");
+                    saveToHistory(inputMath.Text, result.ToString().Replace(",", "."));
                     const_ANS = result.ToString().Replace(",", ".");
                     inputMath.Text = "";
                     nullFunc();
@@ -248,7 +249,65 @@ namespace Calculater
             }
         }
 
-        private void changeVis(object sender, EventArgs e)
+        private PictureBox CreateDeleteButton(string historyEntry)
+        {
+            PictureBox deleteButton = new PictureBox
+            {
+                Image = Properties.Resources.trash,
+                Size = new Size(30, 30),
+                SizeMode = PictureBoxSizeMode.StretchImage,
+                Cursor = Cursors.Hand,
+            };
+            deleteButton.Click += (sender, e) => OnDeleteHistoryEntryClicked(deleteButton, historyEntry);
+            return deleteButton;
+        }
+
+        private void saveToHistory(string input, string result)
+        {
+            // Combine input, units, and result into a single line
+            string historyEntry = $"{input} = {result}";
+
+            // Create delete button for the entry
+            PictureBox deleteButton = CreateDeleteButton(historyEntry);
+
+            // Create a RichTextBox for displaying the history entry text
+            TextBox historyEntryTextBox = new TextBox
+            {
+                BackColor = Color.FromArgb(60, 200, 83),
+                ForeColor = Color.White,
+                BorderStyle = BorderStyle.None,
+                Multiline = true,
+                ReadOnly = true,
+                Size = new Size(400, 40),
+                Text = historyEntry,
+                Cursor = Cursors.Arrow,
+                Location = new Point(3, 3)
+            };
+
+            // Add the history entry, delete button, and TextBox to the list
+            historyEntries.Add(new Tuple<string, TextBox, PictureBox>(historyEntry, historyEntryTextBox, deleteButton));
+
+            // Add the controls to the FlowLayoutPanel
+            history.Controls.Add(historyEntryTextBox);
+            history.Controls.Add(deleteButton);
+        }
+
+        private void OnDeleteHistoryEntryClicked(PictureBox deleteButton, string historyEntry)
+        {
+            // Handle delete button click
+            // Remove the corresponding entry from the list
+            Tuple<string, TextBox, PictureBox> entryToDelete = historyEntries.Find(entry => entry.Item1 == historyEntry);
+            if (entryToDelete != null)
+            {
+                historyEntries.Remove(entryToDelete);
+
+                // Remove the controls from the FlowLayoutPanel
+                history.Controls.Remove(entryToDelete.Item2);
+                history.Controls.Remove(deleteButton);
+            }
+        }
+
+        /*private void changeVis(object sender, EventArgs e)
         {
             TextBox TextBoxHover = sender as TextBox;
             switch (TextBoxHover.Name)
@@ -314,9 +373,9 @@ namespace Calculater
                     }
                     break;
             }
-        }
+        }*/
 
-        private void deleteButton(object sender, EventArgs e)
+        /*private void deleteButton(object sender, EventArgs e)
         {
             PictureBox delButton = sender as PictureBox;
             switch (delButton.Name)
@@ -355,7 +414,7 @@ namespace Calculater
                     history6.Text = "";
                     break;
             }
-        }
+        }*/
 
         public void keyPressed(KeyEventArgs e)
         {
@@ -440,3 +499,4 @@ namespace Calculater
         }
     }
 }
+
