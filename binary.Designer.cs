@@ -623,7 +623,7 @@ namespace Calculater
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderRadius = 30;
             inputMath.BorderStyle = BorderStyle.None;
-            inputMath.Font = new Font("Arial", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            inputMath.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             inputMath.Location = new Point(410, 3);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
@@ -636,6 +636,7 @@ namespace Calculater
             history.BackColor = Color.FromArgb(60, 80, 83);
             history.BorderRadius = 30;
             history.BorderStyle = BorderStyle.None;
+            history.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             history.Location = new Point(410, 129);
             history.Multiline = true;
             history.Name = "history";

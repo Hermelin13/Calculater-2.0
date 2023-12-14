@@ -11,13 +11,15 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using org.mariuszgromada.math.mxparser;
 
 namespace Calculater
 {
     public partial class binary : UserControl
     {
-        bool hex = false;
-        bool dec = true;
+        bool hex = true;
+        bool dec = false;
         bool oct = false;
         bool bin = false;
 
@@ -26,135 +28,6 @@ namespace Calculater
             InitializeComponent();
         }
 
-
-        public string computeExpression(string myExpression, int myBase)
-        {
-            try
-            {
-                StringBuilder decimalExpression = new StringBuilder();
-                StringBuilder currentNumber = new StringBuilder();
-
-                foreach (char c in myExpression)
-                {
-                    if(myBase == 2)
-                    {
-                        if (c == '0' || c == '1')
-                        {
-                            currentNumber.Append(c);
-                        }
-                    }
-                    else if(myBase == 8)
-                    {
-                        if(c >= '0' && c <= '7')
-                        {
-                            currentNumber.Append(c);
-                        }
-                    }
-                    else if(myBase == 16)
-                    {
-                        if (Char.IsDigit(c) || "abcdefABCDEF".Contains(c))
-                        {
-                            currentNumber.Append(c);
-                        }
-                    }
-                    if (c == '+' || c == '-' || c == '*' || c == '/')
-                    {
-                        if (currentNumber.Length > 0)
-                        {
-                            int decimalNumber = Convert.ToInt32(currentNumber.ToString(), myBase);
-                            decimalExpression.Append(decimalNumber);
-                            currentNumber.Clear();
-                        }
-                        decimalExpression.Append($" {c} ");
-                    }
-                }
-
-                if (currentNumber.Length > 0)
-                {
-                    int lastDecimalNumber = Convert.ToInt32(currentNumber.ToString(), myBase);
-                    decimalExpression.Append(lastDecimalNumber);
-                }
-
-                var result = new DataTable().Compute(decimalExpression.ToString(), null);
-
-                return Convert.ToString(Convert.ToInt32(result), myBase);
- 
-            }
-            catch
-            {
-                return "Error: Invalid Input";
-            }
-        }
-
-        private static bool isBitwiseOperator(string op)
-        {
-            return op.ToUpper() == "AND" || op.ToUpper() == "OR" ||
-                   op.ToUpper() == "NOT" || op.ToUpper() == "XOR" ||
-                   op.ToUpper() == "NAND" || op.ToUpper() == "NOR";
-        }
-
-        private static int PerformBitwiseOperation(int left, int right, string op)
-        {
-            switch (op.ToUpper())
-            {
-                case "AND":
-                    return left & right;
-                case "OR":
-                    return left | right;
-                case "NOT":
-                    return ~left;
-                case "XOR":
-                    return left ^ right;
-                case "NAND":
-                    return ~(left & right);
-                case "NOR":
-                    return ~(left | right);
-                default:
-                    throw new ArgumentException($"Unsupported bitwise operator: {op}");
-            }
-        }
-        public string splitExpression(string myExpression, int myBase)
-        {
-            /* TODO NEFUNGUJE VICE BITWISE OPERATORU V JEDNOM EXPRESSIONU */
-            string[] tokens = myExpression.Split(' ');
-            string[] tmp_result = new string[tokens.Length];
-            int i = 0;
-
-            foreach (string token in tokens)
-            {
-                if (isBitwiseOperator(token))
-                {
-                    tmp_result[i] = token;
-                }
-                else
-                {
-                    tmp_result[i] = computeExpression(token, myBase);
-                }
-                i++;
-            }
-
-            string resultExpression = string.Join(" ", tmp_result.Where(token => token != null));
-
-            string[] finalTokens = resultExpression.Split(' ');
-            i = 0;
-            while (i < finalTokens.Length)
-            {
-                if (isBitwiseOperator(finalTokens[i]))
-                {
-                    int left = Convert.ToInt32(finalTokens[i - 1], myBase);
-                    int right = Convert.ToInt32(finalTokens[i + 1], myBase);
-                    int result = PerformBitwiseOperation(left, right, finalTokens[i]);
-                    finalTokens[i + 1] = result.ToString();
-                    finalTokens[i - 1] = finalTokens[i] = string.Empty;
-                }
-
-                i++;
-            }
-
-            string finalResult = string.Join(" ", finalTokens.Where(token => !string.IsNullOrEmpty(token)));
-
-            return finalResult;
-        }
 
         public static string decimalToBinary(string decimalNumber)
         {
@@ -179,10 +52,73 @@ namespace Calculater
             return binaryNumber.ToString();
         }
 
+        public string expressionProcess(string expression)
+        {
+            expression = Regex.Replace(expression, "AND", "@&");
+            expression = Regex.Replace(expression, "XOR", "@^");
+            expression = Regex.Replace(expression, "OR", "@|");
+            expression = Regex.Replace(expression, ">>", "@>>");
+            expression = Regex.Replace(expression, "<<", "@<<");
+
+            expression = Regex.Replace(expression, @"([^&|()]+)\s*NOT\b", "@~$1");
+
+            return expression;
+        }
+
+        static string ConvertBinary(string input, int Base)
+        {
+            string pattern = @"\b[01]+\b";
+            string result = Regex.Replace(input, pattern, match =>
+            {
+                string binaryNumber = match.Value;
+                int decimalNumber = Convert.ToInt32(binaryNumber, 2);
+                return Convert.ToString(decimalNumber, Base);
+            });
+
+            return result;
+        }
+
+        static string ConvertHexadecimal(string input, int Base)
+        {
+            string pattern = @"\b[0-9A-Fa-f]+\b";
+            string result = Regex.Replace(input, pattern, match =>
+            {
+                string hexNumber = match.Value;
+                int decimalNumber = Convert.ToInt32(hexNumber, 16);
+                return Convert.ToString(decimalNumber, Base);
+            });
+
+            return result;
+        }
+        static string ConvertOctal(string input, int Base)
+        {
+            string pattern = @"\b[0-7]+\b";
+            string result = Regex.Replace(input, pattern, match =>
+            {
+                string octalNumber = match.Value;
+                int decimalNumber = Convert.ToInt32(octalNumber, 8);
+                return Convert.ToString(decimalNumber, Base);
+            });
+
+            return result;
+        }
+        static string ConvertDecimal(string input, int Base)
+        {
+            string pattern = @"\b[0-9]+\b";
+            string result = Regex.Replace(input, pattern, match =>
+            {
+                string decNumber = match.Value;
+                int decimalNumber = Convert.ToInt32(decNumber, 10);
+                return Convert.ToString(decimalNumber, Base);
+            });
+
+            return result;
+        }
+
+
         private void clickButton(object sender, EventArgs e)
         {
             Button buttonPRESSED = sender as Button;
-
 
             switch (buttonPRESSED.Name)
             {
@@ -198,23 +134,38 @@ namespace Calculater
                 case "buttonEQ":
                     if (dec)
                     {
-                        var result = new DataTable().Compute(inputMath.Text, null);
+                        string tmp = expressionProcess(inputMath.Text);
+                        Expression ex = new Expression(tmp);
+                        var result = ex.calculate();
                         history.Text = inputMath.Text + "=" + result.ToString();
+                        inputMath.Text = result.ToString();
                     }
                     else if (bin)
                     {
-                        var result = splitExpression(inputMath.Text, 2);
-                        history.Text = inputMath.Text + "=" + result.ToString();
+                        string tmp = ConvertBinary(inputMath.Text, 10);
+                        string tmp1 = expressionProcess(tmp);
+                        Expression ex = new Expression(tmp1);
+                        var result = ex.calculate();
+                        history.Text = inputMath.Text + "=" + Convert.ToString((int)result, 2);
+                        inputMath.Text = Convert.ToString((int)result, 2);
                     }
                     else if (hex)
                     {
-                        var result = computeExpression(inputMath.Text, 16);
-                        history.Text = inputMath.Text + "=" + result.ToString();
+                        string tmp = expressionProcess(inputMath.Text);
+                        string tmp1 = ConvertHexadecimal(tmp, 10);
+                        Expression ex = new Expression(tmp1);
+                        var result = ex.calculate();
+                        history.Text = inputMath.Text + "=" + Convert.ToString((int)result, 16);
+                        inputMath.Text = Convert.ToString((int)result, 16);
                     }
-                    else if(oct)
+                    else if (oct)
                     {
-                        var result = computeExpression(inputMath.Text, 8);
-                        history.Text = inputMath.Text + "=" + result.ToString();
+                        string tmp = expressionProcess(inputMath.Text);
+                        string tmp1 = ConvertOctal(tmp, 10);
+                        Expression ex = new Expression(tmp1);
+                        var result = ex.calculate();
+                        history.Text = inputMath.Text + "=" + Convert.ToString((int)result, 8);
+                        inputMath.Text = Convert.ToString((int)result, 8);
                     }
                     break;
                 case "buttonPLUS":
@@ -236,6 +187,18 @@ namespace Calculater
                     inputMath.Text = inputMath.Text + " " + buttonPRESSED.Text + " ";
                     break;
                 case "buttonHEX":
+                    if (dec)
+                    {
+                        inputMath.Text = ConvertDecimal(inputMath.Text, 16);
+                    }
+                    else if (bin)
+                    {
+                        inputMath.Text = ConvertBinary(inputMath.Text, 16);
+                    }
+                    else if (oct)
+                    {
+                        inputMath.Text = ConvertOctal(inputMath.Text, 16);
+                    }
                     dec = false;
                     bin = false;
                     oct = false;
@@ -271,6 +234,18 @@ namespace Calculater
                     buttonF.Enabled = true;
                     break;
                 case "buttonDEC":
+                    if (bin)
+                    {
+                        inputMath.Text = ConvertBinary(inputMath.Text, 10);
+                    }
+                    else if (hex)
+                    {
+                        inputMath.Text = ConvertHexadecimal(inputMath.Text, 10);
+                    }
+                    else if (oct)
+                    {
+                        inputMath.Text = ConvertOctal(inputMath.Text, 10);
+                    }
                     dec = true;
                     bin = false;
                     oct = false;
@@ -307,6 +282,18 @@ namespace Calculater
                     buttonF.Enabled = false;
                     break;
                 case "buttonOCT":
+                    if (dec)
+                    {
+                        inputMath.Text = ConvertDecimal(inputMath.Text, 8);
+                    }
+                    else if (bin)
+                    {
+                        inputMath.Text = ConvertBinary(inputMath.Text, 8);
+                    }
+                    else if (hex)
+                    {
+                        inputMath.Text = ConvertHexadecimal(inputMath.Text, 8);
+                    }
                     dec = false;
                     bin = false;
                     oct = true;
@@ -343,9 +330,18 @@ namespace Calculater
                     buttonF.Enabled = false;
                     break;
                 case "buttonBIN":
-                    if (dec == true)
+                    if (dec)
                     {
-                        inputMath.Text = decimalToBinary(inputMath.Text);
+                        inputMath.Text = ConvertDecimal(inputMath.Text, 2);
+                    }
+
+                    else if (hex)
+                    {
+                        inputMath.Text = ConvertHexadecimal(inputMath.Text, 2);
+                    }
+                    else if (oct)
+                    {
+                        inputMath.Text = ConvertOctal(inputMath.Text, 2);
                     }
                     dec = false;
                     bin = true;
@@ -442,7 +438,7 @@ namespace Calculater
                     buttonDEL.PerformClick();
                     break;
                 case Keys.A:
-                    if(hex)
+                    if (hex)
                     {
                         buttonA.PerformClick();
                         break;
