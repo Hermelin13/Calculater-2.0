@@ -97,6 +97,7 @@ namespace Calculater
                         sqrt = false;
                         root = false;
                         fact = false;
+                        dot = false;
                     }
                     break;
                 case "buttonFACT":
@@ -119,6 +120,7 @@ namespace Calculater
                         nothing = true;
                         sqrt = false;
                         fact = false;
+                        dot = false;
                     }
                     break;
                 case "buttonEXP2":
