@@ -713,14 +713,13 @@ namespace Calculater
             // history
             // 
             history.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            history.AutoScroll = true;
             history.BackColor = Color.FromArgb(60, 80, 83);
-            history.Location = new Point(551, 189);
-            history.Margin = new Padding(3, 4, 3, 4);
-            history.MinimumSize = new Size(537, 595);
+            history.AutoScroll = true;
+            history.Location = new Point(550, 192);
+            history.MinimumSize = new Size(538, 596);
             history.Name = "history";
-            history.Size = new Size(537, 595);
-            history.TabIndex = 55;
+            history.Size = new Size(538, 596);
+            history.TabIndex = 48;
             // 
             // standard
             // 

@@ -246,14 +246,19 @@ namespace Calculater
 
         private void saveToHistory(string input, string result)
         {
-            RoundedTextBox historyRow = new RoundedTextBox();
+            // Create a new TableLayoutPanel
+            TableLayoutPanel historyRowPanel = new TableLayoutPanel();
+            historyRowPanel.ColumnCount = 2;
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.5F));
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.5F));
+
+            // Create a new RoundedTextBox
+            TextBox historyRow = new TextBox();
             historyRow.BackColor = Color.FromArgb(60, 80, 83);
-            historyRow.BorderRadius = 0;
             historyRow.Name = "historyTemplate";
             historyRow.Anchor = AnchorStyles.None;
             historyRow.BorderStyle = BorderStyle.None;
             historyRow.Location = new Point(6, 3);
-            historyRow.Multiline = true;
             historyRow.ReadOnly = true;
             historyRow.Size = new Size(443, 44);
             historyRow.TabIndex = 48;
@@ -261,6 +266,7 @@ namespace Calculater
             historyRow.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             historyRow.Text = input + " = " + result + " ";
 
+            // Create a new PictureBox for deletion
             PictureBox deleteButton = new PictureBox();
             deleteButton.Anchor = AnchorStyles.None;
             deleteButton.Image = Properties.Resources.trash;
@@ -274,12 +280,11 @@ namespace Calculater
             deleteButton.Cursor = Cursors.Hand;
             deleteButton.Click += deleteHistoryRow;
 
-            TableLayoutPanel historyRowPanel = new TableLayoutPanel();
-            historyRowPanel.ColumnCount = 2;
-            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.5F));
-            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.5F));
+            // Add the controls to the TableLayoutPanel
             historyRowPanel.Controls.Add(historyRow, 0, 0);
             historyRowPanel.Controls.Add(deleteButton, 1, 0);
+
+            // Set the location of the new TableLayoutPanel to the top
             historyRowPanel.Location = new Point(3, 3);
             historyRowPanel.Name = "historyRowPanel";
             historyRowPanel.RowCount = 1;
@@ -288,6 +293,13 @@ namespace Calculater
             historyRowPanel.Size = new Size(500, 50);
             historyRowPanel.TabIndex = 50;
 
+            // Shift existing controls down
+            foreach (Control control in history.Controls)
+            {
+                control.Location = new Point(control.Location.X, control.Location.Y + historyRowPanel.Height);
+            }
+
+            // Add the new TableLayoutPanel to the top of the history panel
             history.Controls.Add(historyRowPanel);
             history.Controls.SetChildIndex(historyRowPanel, 0);
         }
