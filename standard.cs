@@ -29,11 +29,6 @@ namespace Calculater
         bool fact = false;
         int brackets = 0;
         string const_ANS;
-        private List<PictureBox> deleteButtons = new List<PictureBox>();
-        private FlowLayoutPanel historyPanel;
-        private List<Tuple<string, TextBox, PictureBox>> historyEntries = new List<Tuple<string, TextBox, PictureBox>>();
-        private TextBox historyTextBox;
-        private int historyEntryIndex = 0;
 
         public standard()
         {
@@ -249,62 +244,59 @@ namespace Calculater
             }
         }
 
-        private PictureBox CreateDeleteButton(string historyEntry)
-        {
-            PictureBox deleteButton = new PictureBox
-            {
-                Image = Properties.Resources.trash,
-                Size = new Size(30, 30),
-                SizeMode = PictureBoxSizeMode.StretchImage,
-                Cursor = Cursors.Hand,
-            };
-            deleteButton.Click += (sender, e) => OnDeleteHistoryEntryClicked(deleteButton, historyEntry);
-            return deleteButton;
-        }
-
         private void saveToHistory(string input, string result)
         {
-            // Combine input, units, and result into a single line
-            string historyEntry = $"{input} = {result}";
+            RoundedTextBox historyRow = new RoundedTextBox();
+            historyRow.BackColor = Color.FromArgb(60, 80, 83);
+            historyRow.BorderRadius = 0;
+            historyRow.Name = "historyTemplate";
+            historyRow.Anchor = AnchorStyles.None;
+            historyRow.BorderStyle = BorderStyle.None;
+            historyRow.Location = new Point(6, 3);
+            historyRow.Multiline = true;
+            historyRow.ReadOnly = true;
+            historyRow.Size = new Size(443, 44);
+            historyRow.TabIndex = 48;
+            historyRow.Cursor = Cursors.Arrow;
+            historyRow.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            historyRow.Text = input + " = " + result + " ";
 
-            // Create delete button for the entry
-            PictureBox deleteButton = CreateDeleteButton(historyEntry);
+            PictureBox deleteButton = new PictureBox();
+            deleteButton.Anchor = AnchorStyles.None;
+            deleteButton.Image = Properties.Resources.trash;
+            deleteButton.Location = new Point(462, 0);
+            deleteButton.Margin = new Padding(0);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(50, 50);
+            deleteButton.SizeMode = PictureBoxSizeMode.StretchImage;
+            deleteButton.TabIndex = 49;
+            deleteButton.TabStop = false;
+            deleteButton.Cursor = Cursors.Hand;
+            deleteButton.Click += deleteHistoryRow;
 
-            // Create a RichTextBox for displaying the history entry text
-            TextBox historyEntryTextBox = new TextBox
-            {
-                BackColor = Color.FromArgb(60, 200, 83),
-                ForeColor = Color.White,
-                BorderStyle = BorderStyle.None,
-                Multiline = true,
-                ReadOnly = true,
-                Size = new Size(400, 40),
-                Text = historyEntry,
-                Cursor = Cursors.Arrow,
-                Location = new Point(3, 3)
-            };
+            TableLayoutPanel historyRowPanel = new TableLayoutPanel();
+            historyRowPanel.ColumnCount = 2;
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 87.5F));
+            historyRowPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12.5F));
+            historyRowPanel.Controls.Add(historyRow, 0, 0);
+            historyRowPanel.Controls.Add(deleteButton, 1, 0);
+            historyRowPanel.Location = new Point(3, 3);
+            historyRowPanel.Name = "historyRowPanel";
+            historyRowPanel.RowCount = 1;
+            historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            historyRowPanel.Size = new Size(500, 50);
+            historyRowPanel.TabIndex = 50;
 
-            // Add the history entry, delete button, and TextBox to the list
-            historyEntries.Add(new Tuple<string, TextBox, PictureBox>(historyEntry, historyEntryTextBox, deleteButton));
-
-            // Add the controls to the FlowLayoutPanel
-            history.Controls.Add(historyEntryTextBox);
-            history.Controls.Add(deleteButton);
+            history.Controls.Add(historyRowPanel);
+            history.Controls.SetChildIndex(historyRowPanel, 0);
         }
 
-        private void OnDeleteHistoryEntryClicked(PictureBox deleteButton, string historyEntry)
+        private void deleteHistoryRow(object sender, EventArgs e)
         {
-            // Handle delete button click
-            // Remove the corresponding entry from the list
-            Tuple<string, TextBox, PictureBox> entryToDelete = historyEntries.Find(entry => entry.Item1 == historyEntry);
-            if (entryToDelete != null)
-            {
-                historyEntries.Remove(entryToDelete);
+            PictureBox deleteButton = sender as PictureBox;
 
-                // Remove the controls from the FlowLayoutPanel
-                history.Controls.Remove(entryToDelete.Item2);
-                history.Controls.Remove(deleteButton);
-            }
+            history.Controls.Remove(deleteButton.Parent);
         }
 
         /*private void changeVis(object sender, EventArgs e)

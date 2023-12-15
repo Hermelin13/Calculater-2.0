@@ -2,6 +2,7 @@
  */
 
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Calculater
 {
@@ -63,7 +64,7 @@ namespace Calculater
             buttonRBRACKET = new RoundedButton();
             buttonDEL = new RoundedButton();
             buttonCLEAR = new RoundedButton();
-            inputMath = new System.Windows.Forms.TextBox();
+            inputMath = new TextBox();
             buttonMOD = new RoundedButton();
             buttonROOT3 = new RoundedButton();
             buttonROOT4 = new RoundedButton();
@@ -72,20 +73,21 @@ namespace Calculater
             buttonASIN = new RoundedButton();
             buttonACOS = new RoundedButton();
             buttonANS = new RoundedButton();
-            labelhistory = new System.Windows.Forms.Label();
-            history = new System.Windows.Forms.FlowLayoutPanel();
+            labelhistory = new Label();
+            history = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(62, 80, 91);
-            button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Popup;
             button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(235, 319);
+            button1.Location = new Point(269, 425);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(60, 60);
+            button1.Size = new Size(69, 80);
             button1.TabIndex = 0;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = false;
@@ -94,13 +96,14 @@ namespace Calculater
             // button2
             // 
             button2.BackColor = Color.FromArgb(62, 80, 91);
-            button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(294, 319);
+            button2.Location = new Point(336, 425);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(60, 60);
+            button2.Size = new Size(69, 80);
             button2.TabIndex = 1;
             button2.Text = "2";
             button2.UseVisualStyleBackColor = false;
@@ -109,13 +112,14 @@ namespace Calculater
             // button3
             // 
             button3.BackColor = Color.FromArgb(62, 80, 91);
-            button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button3.Cursor = Cursors.Hand;
+            button3.FlatStyle = FlatStyle.Popup;
             button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(353, 319);
+            button3.Location = new Point(403, 425);
+            button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(60, 60);
+            button3.Size = new Size(69, 80);
             button3.TabIndex = 2;
             button3.Text = "3";
             button3.UseVisualStyleBackColor = false;
@@ -124,13 +128,14 @@ namespace Calculater
             // button4
             // 
             button4.BackColor = Color.FromArgb(62, 80, 91);
-            button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button4.Cursor = Cursors.Hand;
+            button4.FlatStyle = FlatStyle.Popup;
             button4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(235, 260);
+            button4.Location = new Point(269, 347);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(60, 60);
+            button4.Size = new Size(69, 80);
             button4.TabIndex = 5;
             button4.Text = "4";
             button4.UseVisualStyleBackColor = false;
@@ -139,13 +144,14 @@ namespace Calculater
             // button5
             // 
             button5.BackColor = Color.FromArgb(62, 80, 91);
-            button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button5.Cursor = Cursors.Hand;
+            button5.FlatStyle = FlatStyle.Popup;
             button5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(294, 260);
+            button5.Location = new Point(336, 347);
+            button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(60, 60);
+            button5.Size = new Size(69, 80);
             button5.TabIndex = 4;
             button5.Text = "5";
             button5.UseVisualStyleBackColor = false;
@@ -154,13 +160,14 @@ namespace Calculater
             // button6
             // 
             button6.BackColor = Color.FromArgb(62, 80, 91);
-            button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button6.Cursor = Cursors.Hand;
+            button6.FlatStyle = FlatStyle.Popup;
             button6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(353, 260);
+            button6.Location = new Point(403, 347);
+            button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
-            button6.Size = new Size(60, 60);
+            button6.Size = new Size(69, 80);
             button6.TabIndex = 3;
             button6.Text = "6";
             button6.UseVisualStyleBackColor = false;
@@ -169,13 +176,14 @@ namespace Calculater
             // button7
             // 
             button7.BackColor = Color.FromArgb(62, 80, 91);
-            button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button7.Cursor = Cursors.Hand;
+            button7.FlatStyle = FlatStyle.Popup;
             button7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(235, 201);
+            button7.Location = new Point(269, 268);
+            button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(60, 60);
+            button7.Size = new Size(69, 80);
             button7.TabIndex = 8;
             button7.Text = "7";
             button7.UseVisualStyleBackColor = false;
@@ -184,13 +192,14 @@ namespace Calculater
             // button8
             // 
             button8.BackColor = Color.FromArgb(62, 80, 91);
-            button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button8.Cursor = Cursors.Hand;
+            button8.FlatStyle = FlatStyle.Popup;
             button8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(294, 201);
+            button8.Location = new Point(336, 268);
+            button8.Margin = new Padding(3, 4, 3, 4);
             button8.Name = "button8";
-            button8.Size = new Size(60, 60);
+            button8.Size = new Size(69, 80);
             button8.TabIndex = 7;
             button8.Text = "8";
             button8.UseVisualStyleBackColor = false;
@@ -199,13 +208,14 @@ namespace Calculater
             // button9
             // 
             button9.BackColor = Color.FromArgb(62, 80, 91);
-            button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button9.Cursor = Cursors.Hand;
+            button9.FlatStyle = FlatStyle.Popup;
             button9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
-            button9.Location = new Point(353, 201);
+            button9.Location = new Point(403, 268);
+            button9.Margin = new Padding(3, 4, 3, 4);
             button9.Name = "button9";
-            button9.Size = new Size(60, 60);
+            button9.Size = new Size(69, 80);
             button9.TabIndex = 6;
             button9.Text = "9";
             button9.UseVisualStyleBackColor = false;
@@ -214,13 +224,14 @@ namespace Calculater
             // button0
             // 
             button0.BackColor = Color.FromArgb(62, 80, 91);
-            button0.Cursor = System.Windows.Forms.Cursors.Hand;
-            button0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            button0.Cursor = Cursors.Hand;
+            button0.FlatStyle = FlatStyle.Popup;
             button0.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button0.ForeColor = Color.White;
-            button0.Location = new Point(294, 379);
+            button0.Location = new Point(336, 505);
+            button0.Margin = new Padding(3, 4, 3, 4);
             button0.Name = "button0";
-            button0.Size = new Size(119, 60);
+            button0.Size = new Size(136, 80);
             button0.TabIndex = 9;
             button0.Text = "0";
             button0.UseVisualStyleBackColor = false;
@@ -229,13 +240,14 @@ namespace Calculater
             // buttonDOT
             // 
             buttonDOT.BackColor = Color.FromArgb(62, 80, 91);
-            buttonDOT.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonDOT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonDOT.Cursor = Cursors.Hand;
+            buttonDOT.FlatStyle = FlatStyle.Popup;
             buttonDOT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDOT.ForeColor = Color.White;
-            buttonDOT.Location = new Point(235, 379);
+            buttonDOT.Location = new Point(269, 505);
+            buttonDOT.Margin = new Padding(3, 4, 3, 4);
             buttonDOT.Name = "buttonDOT";
-            buttonDOT.Size = new Size(60, 60);
+            buttonDOT.Size = new Size(69, 80);
             buttonDOT.TabIndex = 10;
             buttonDOT.Text = ".";
             buttonDOT.UseVisualStyleBackColor = false;
@@ -244,13 +256,14 @@ namespace Calculater
             // buttonPI
             // 
             buttonPI.BackColor = Color.FromArgb(50, 73, 60);
-            buttonPI.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonPI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonPI.Cursor = Cursors.Hand;
+            buttonPI.FlatStyle = FlatStyle.Popup;
             buttonPI.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPI.ForeColor = Color.White;
-            buttonPI.Location = new Point(176, 438);
+            buttonPI.Location = new Point(201, 584);
+            buttonPI.Margin = new Padding(3, 4, 3, 4);
             buttonPI.Name = "buttonPI";
-            buttonPI.Size = new Size(60, 60);
+            buttonPI.Size = new Size(69, 80);
             buttonPI.TabIndex = 21;
             buttonPI.Text = "π";
             buttonPI.UseVisualStyleBackColor = false;
@@ -259,13 +272,14 @@ namespace Calculater
             // buttonEULER
             // 
             buttonEULER.BackColor = Color.FromArgb(50, 73, 60);
-            buttonEULER.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonEULER.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonEULER.Cursor = Cursors.Hand;
+            buttonEULER.FlatStyle = FlatStyle.Popup;
             buttonEULER.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEULER.ForeColor = Color.White;
-            buttonEULER.Location = new Point(176, 379);
+            buttonEULER.Location = new Point(201, 505);
+            buttonEULER.Margin = new Padding(3, 4, 3, 4);
             buttonEULER.Name = "buttonEULER";
-            buttonEULER.Size = new Size(60, 60);
+            buttonEULER.Size = new Size(69, 80);
             buttonEULER.TabIndex = 20;
             buttonEULER.Text = "ℯ";
             buttonEULER.UseVisualStyleBackColor = false;
@@ -274,13 +288,14 @@ namespace Calculater
             // buttonMULTI
             // 
             buttonMULTI.BackColor = Color.FromArgb(50, 73, 60);
-            buttonMULTI.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonMULTI.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonMULTI.Cursor = Cursors.Hand;
+            buttonMULTI.FlatStyle = FlatStyle.Popup;
             buttonMULTI.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMULTI.ForeColor = Color.White;
-            buttonMULTI.Location = new Point(176, 201);
+            buttonMULTI.Location = new Point(201, 268);
+            buttonMULTI.Margin = new Padding(3, 4, 3, 4);
             buttonMULTI.Name = "buttonMULTI";
-            buttonMULTI.Size = new Size(60, 60);
+            buttonMULTI.Size = new Size(69, 80);
             buttonMULTI.TabIndex = 19;
             buttonMULTI.Text = "*";
             buttonMULTI.UseVisualStyleBackColor = false;
@@ -289,13 +304,14 @@ namespace Calculater
             // buttonDIV
             // 
             buttonDIV.BackColor = Color.FromArgb(50, 73, 60);
-            buttonDIV.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonDIV.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonDIV.Cursor = Cursors.Hand;
+            buttonDIV.FlatStyle = FlatStyle.Popup;
             buttonDIV.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDIV.ForeColor = Color.White;
-            buttonDIV.Location = new Point(176, 261);
+            buttonDIV.Location = new Point(201, 348);
+            buttonDIV.Margin = new Padding(3, 4, 3, 4);
             buttonDIV.Name = "buttonDIV";
-            buttonDIV.Size = new Size(60, 60);
+            buttonDIV.Size = new Size(69, 80);
             buttonDIV.TabIndex = 18;
             buttonDIV.Text = "/";
             buttonDIV.UseVisualStyleBackColor = false;
@@ -304,13 +320,14 @@ namespace Calculater
             // buttonCOS
             // 
             buttonCOS.BackColor = Color.FromArgb(50, 73, 60);
-            buttonCOS.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonCOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonCOS.Cursor = Cursors.Hand;
+            buttonCOS.FlatStyle = FlatStyle.Popup;
             buttonCOS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCOS.ForeColor = Color.White;
-            buttonCOS.Location = new Point(58, 142);
+            buttonCOS.Location = new Point(66, 189);
+            buttonCOS.Margin = new Padding(3, 4, 3, 4);
             buttonCOS.Name = "buttonCOS";
-            buttonCOS.Size = new Size(60, 60);
+            buttonCOS.Size = new Size(69, 80);
             buttonCOS.TabIndex = 17;
             buttonCOS.Text = "cos";
             buttonCOS.UseVisualStyleBackColor = false;
@@ -319,13 +336,14 @@ namespace Calculater
             // buttonEXP2
             // 
             buttonEXP2.BackColor = Color.FromArgb(50, 73, 60);
-            buttonEXP2.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonEXP2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonEXP2.Cursor = Cursors.Hand;
+            buttonEXP2.FlatStyle = FlatStyle.Popup;
             buttonEXP2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP2.ForeColor = Color.White;
-            buttonEXP2.Location = new Point(117, 83);
+            buttonEXP2.Location = new Point(134, 111);
+            buttonEXP2.Margin = new Padding(3, 4, 3, 4);
             buttonEXP2.Name = "buttonEXP2";
-            buttonEXP2.Size = new Size(60, 60);
+            buttonEXP2.Size = new Size(69, 80);
             buttonEXP2.TabIndex = 16;
             buttonEXP2.Text = "x²";
             buttonEXP2.UseVisualStyleBackColor = false;
@@ -334,13 +352,14 @@ namespace Calculater
             // buttonROOT2
             // 
             buttonROOT2.BackColor = Color.FromArgb(50, 73, 60);
-            buttonROOT2.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonROOT2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonROOT2.Cursor = Cursors.Hand;
+            buttonROOT2.FlatStyle = FlatStyle.Popup;
             buttonROOT2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT2.ForeColor = Color.White;
-            buttonROOT2.Location = new Point(117, 260);
+            buttonROOT2.Location = new Point(134, 347);
+            buttonROOT2.Margin = new Padding(3, 4, 3, 4);
             buttonROOT2.Name = "buttonROOT2";
-            buttonROOT2.Size = new Size(60, 60);
+            buttonROOT2.Size = new Size(69, 80);
             buttonROOT2.TabIndex = 15;
             buttonROOT2.Text = "√x";
             buttonROOT2.UseVisualStyleBackColor = false;
@@ -349,13 +368,14 @@ namespace Calculater
             // buttonTAN
             // 
             buttonTAN.BackColor = Color.FromArgb(50, 73, 60);
-            buttonTAN.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonTAN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonTAN.Cursor = Cursors.Hand;
+            buttonTAN.FlatStyle = FlatStyle.Popup;
             buttonTAN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonTAN.ForeColor = Color.White;
-            buttonTAN.Location = new Point(58, 201);
+            buttonTAN.Location = new Point(66, 268);
+            buttonTAN.Margin = new Padding(3, 4, 3, 4);
             buttonTAN.Name = "buttonTAN";
-            buttonTAN.Size = new Size(60, 60);
+            buttonTAN.Size = new Size(69, 80);
             buttonTAN.TabIndex = 14;
             buttonTAN.Text = "tan";
             buttonTAN.UseVisualStyleBackColor = false;
@@ -364,13 +384,14 @@ namespace Calculater
             // buttonLOG
             // 
             buttonLOG.BackColor = Color.FromArgb(50, 73, 60);
-            buttonLOG.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonLOG.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonLOG.Cursor = Cursors.Hand;
+            buttonLOG.FlatStyle = FlatStyle.Popup;
             buttonLOG.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLOG.ForeColor = Color.White;
-            buttonLOG.Location = new Point(58, 438);
+            buttonLOG.Location = new Point(66, 584);
+            buttonLOG.Margin = new Padding(3, 4, 3, 4);
             buttonLOG.Name = "buttonLOG";
-            buttonLOG.Size = new Size(60, 60);
+            buttonLOG.Size = new Size(69, 80);
             buttonLOG.TabIndex = 13;
             buttonLOG.Text = "ln";
             buttonLOG.UseVisualStyleBackColor = false;
@@ -379,13 +400,14 @@ namespace Calculater
             // buttonCOT
             // 
             buttonCOT.BackColor = Color.FromArgb(50, 73, 60);
-            buttonCOT.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonCOT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonCOT.Cursor = Cursors.Hand;
+            buttonCOT.FlatStyle = FlatStyle.Popup;
             buttonCOT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCOT.ForeColor = Color.White;
-            buttonCOT.Location = new Point(58, 260);
+            buttonCOT.Location = new Point(66, 347);
+            buttonCOT.Margin = new Padding(3, 4, 3, 4);
             buttonCOT.Name = "buttonCOT";
-            buttonCOT.Size = new Size(60, 60);
+            buttonCOT.Size = new Size(69, 80);
             buttonCOT.TabIndex = 12;
             buttonCOT.Text = "cot";
             buttonCOT.UseVisualStyleBackColor = false;
@@ -394,13 +416,14 @@ namespace Calculater
             // buttonFACT
             // 
             buttonFACT.BackColor = Color.FromArgb(50, 73, 60);
-            buttonFACT.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonFACT.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonFACT.Cursor = Cursors.Hand;
+            buttonFACT.FlatStyle = FlatStyle.Popup;
             buttonFACT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonFACT.ForeColor = Color.White;
-            buttonFACT.Location = new Point(117, 438);
+            buttonFACT.Location = new Point(134, 584);
+            buttonFACT.Margin = new Padding(3, 4, 3, 4);
             buttonFACT.Name = "buttonFACT";
-            buttonFACT.Size = new Size(60, 60);
+            buttonFACT.Size = new Size(69, 80);
             buttonFACT.TabIndex = 11;
             buttonFACT.Text = "x!";
             buttonFACT.UseVisualStyleBackColor = false;
@@ -409,13 +432,14 @@ namespace Calculater
             // buttonEQ
             // 
             buttonEQ.BackColor = Color.FromArgb(2, 101, 82);
-            buttonEQ.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonEQ.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonEQ.Cursor = Cursors.Hand;
+            buttonEQ.FlatStyle = FlatStyle.Popup;
             buttonEQ.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEQ.ForeColor = Color.White;
-            buttonEQ.Location = new Point(294, 438);
+            buttonEQ.Location = new Point(336, 584);
+            buttonEQ.Margin = new Padding(3, 4, 3, 4);
             buttonEQ.Name = "buttonEQ";
-            buttonEQ.Size = new Size(119, 60);
+            buttonEQ.Size = new Size(136, 80);
             buttonEQ.TabIndex = 22;
             buttonEQ.Text = "=";
             buttonEQ.UseVisualStyleBackColor = false;
@@ -424,13 +448,14 @@ namespace Calculater
             // buttonPLUS
             // 
             buttonPLUS.BackColor = Color.FromArgb(50, 73, 60);
-            buttonPLUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonPLUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonPLUS.Cursor = Cursors.Hand;
+            buttonPLUS.FlatStyle = FlatStyle.Popup;
             buttonPLUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPLUS.ForeColor = Color.White;
-            buttonPLUS.Location = new Point(176, 83);
+            buttonPLUS.Location = new Point(201, 111);
+            buttonPLUS.Margin = new Padding(3, 4, 3, 4);
             buttonPLUS.Name = "buttonPLUS";
-            buttonPLUS.Size = new Size(60, 60);
+            buttonPLUS.Size = new Size(69, 80);
             buttonPLUS.TabIndex = 28;
             buttonPLUS.Text = "+";
             buttonPLUS.UseVisualStyleBackColor = false;
@@ -439,13 +464,14 @@ namespace Calculater
             // buttonMINUS
             // 
             buttonMINUS.BackColor = Color.FromArgb(50, 73, 60);
-            buttonMINUS.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonMINUS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonMINUS.Cursor = Cursors.Hand;
+            buttonMINUS.FlatStyle = FlatStyle.Popup;
             buttonMINUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMINUS.ForeColor = Color.White;
-            buttonMINUS.Location = new Point(176, 142);
+            buttonMINUS.Location = new Point(201, 189);
+            buttonMINUS.Margin = new Padding(3, 4, 3, 4);
             buttonMINUS.Name = "buttonMINUS";
-            buttonMINUS.Size = new Size(60, 60);
+            buttonMINUS.Size = new Size(69, 80);
             buttonMINUS.TabIndex = 27;
             buttonMINUS.Text = "-";
             buttonMINUS.UseVisualStyleBackColor = false;
@@ -454,13 +480,14 @@ namespace Calculater
             // buttonSIN
             // 
             buttonSIN.BackColor = Color.FromArgb(50, 73, 60);
-            buttonSIN.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonSIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonSIN.Cursor = Cursors.Hand;
+            buttonSIN.FlatStyle = FlatStyle.Popup;
             buttonSIN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonSIN.ForeColor = Color.White;
-            buttonSIN.Location = new Point(58, 83);
+            buttonSIN.Location = new Point(66, 111);
+            buttonSIN.Margin = new Padding(3, 4, 3, 4);
             buttonSIN.Name = "buttonSIN";
-            buttonSIN.Size = new Size(60, 60);
+            buttonSIN.Size = new Size(69, 80);
             buttonSIN.TabIndex = 26;
             buttonSIN.Text = "sin";
             buttonSIN.UseVisualStyleBackColor = false;
@@ -469,13 +496,14 @@ namespace Calculater
             // buttonLBRACKET
             // 
             buttonLBRACKET.BackColor = Color.FromArgb(62, 80, 91);
-            buttonLBRACKET.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonLBRACKET.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonLBRACKET.Cursor = Cursors.Hand;
+            buttonLBRACKET.FlatStyle = FlatStyle.Popup;
             buttonLBRACKET.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLBRACKET.ForeColor = Color.White;
-            buttonLBRACKET.Location = new Point(294, 142);
+            buttonLBRACKET.Location = new Point(336, 189);
+            buttonLBRACKET.Margin = new Padding(3, 4, 3, 4);
             buttonLBRACKET.Name = "buttonLBRACKET";
-            buttonLBRACKET.Size = new Size(60, 60);
+            buttonLBRACKET.Size = new Size(69, 80);
             buttonLBRACKET.TabIndex = 25;
             buttonLBRACKET.Text = "(";
             buttonLBRACKET.UseVisualStyleBackColor = false;
@@ -484,13 +512,14 @@ namespace Calculater
             // buttonRBRACKET
             // 
             buttonRBRACKET.BackColor = Color.FromArgb(62, 80, 91);
-            buttonRBRACKET.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonRBRACKET.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonRBRACKET.Cursor = Cursors.Hand;
+            buttonRBRACKET.FlatStyle = FlatStyle.Popup;
             buttonRBRACKET.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonRBRACKET.ForeColor = Color.White;
-            buttonRBRACKET.Location = new Point(353, 142);
+            buttonRBRACKET.Location = new Point(403, 189);
+            buttonRBRACKET.Margin = new Padding(3, 4, 3, 4);
             buttonRBRACKET.Name = "buttonRBRACKET";
-            buttonRBRACKET.Size = new Size(60, 60);
+            buttonRBRACKET.Size = new Size(69, 80);
             buttonRBRACKET.TabIndex = 24;
             buttonRBRACKET.Text = ")";
             buttonRBRACKET.UseVisualStyleBackColor = false;
@@ -499,13 +528,14 @@ namespace Calculater
             // buttonDEL
             // 
             buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
-            buttonDEL.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonDEL.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonDEL.Cursor = Cursors.Hand;
+            buttonDEL.FlatStyle = FlatStyle.Popup;
             buttonDEL.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDEL.ForeColor = Color.White;
-            buttonDEL.Location = new Point(353, 83);
+            buttonDEL.Location = new Point(403, 111);
+            buttonDEL.Margin = new Padding(3, 4, 3, 4);
             buttonDEL.Name = "buttonDEL";
-            buttonDEL.Size = new Size(60, 60);
+            buttonDEL.Size = new Size(69, 80);
             buttonDEL.TabIndex = 23;
             buttonDEL.Text = "DEL";
             buttonDEL.UseVisualStyleBackColor = false;
@@ -514,13 +544,14 @@ namespace Calculater
             // buttonCLEAR
             // 
             buttonCLEAR.BackColor = Color.FromArgb(204, 80, 91);
-            buttonCLEAR.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonCLEAR.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonCLEAR.Cursor = Cursors.Hand;
+            buttonCLEAR.FlatStyle = FlatStyle.Popup;
             buttonCLEAR.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonCLEAR.ForeColor = Color.White;
-            buttonCLEAR.Location = new Point(294, 83);
+            buttonCLEAR.Location = new Point(336, 111);
+            buttonCLEAR.Margin = new Padding(3, 4, 3, 4);
             buttonCLEAR.Name = "buttonCLEAR";
-            buttonCLEAR.Size = new Size(60, 60);
+            buttonCLEAR.Size = new Size(69, 80);
             buttonCLEAR.TabIndex = 30;
             buttonCLEAR.Text = "AC";
             buttonCLEAR.UseVisualStyleBackColor = false;
@@ -529,26 +560,28 @@ namespace Calculater
             // inputMath
             // 
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
-            inputMath.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            inputMath.BorderStyle = BorderStyle.None;
             inputMath.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            inputMath.Location = new Point(482, 0);
+            inputMath.Location = new Point(551, 0);
+            inputMath.Margin = new Padding(3, 4, 3, 4);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
             inputMath.ReadOnly = true;
-            inputMath.Size = new Size(470, 70);
+            inputMath.Size = new Size(537, 93);
             inputMath.TabIndex = 31;
             inputMath.TabStop = false;
             // 
             // buttonMOD
             // 
             buttonMOD.BackColor = Color.FromArgb(50, 73, 60);
-            buttonMOD.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonMOD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonMOD.Cursor = Cursors.Hand;
+            buttonMOD.FlatStyle = FlatStyle.Popup;
             buttonMOD.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMOD.ForeColor = Color.White;
-            buttonMOD.Location = new Point(176, 320);
+            buttonMOD.Location = new Point(201, 427);
+            buttonMOD.Margin = new Padding(3, 4, 3, 4);
             buttonMOD.Name = "buttonMOD";
-            buttonMOD.Size = new Size(60, 60);
+            buttonMOD.Size = new Size(69, 80);
             buttonMOD.TabIndex = 33;
             buttonMOD.Text = "#";
             buttonMOD.UseVisualStyleBackColor = false;
@@ -557,13 +590,14 @@ namespace Calculater
             // buttonROOT3
             // 
             buttonROOT3.BackColor = Color.FromArgb(50, 73, 60);
-            buttonROOT3.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonROOT3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonROOT3.Cursor = Cursors.Hand;
+            buttonROOT3.FlatStyle = FlatStyle.Popup;
             buttonROOT3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT3.ForeColor = Color.White;
-            buttonROOT3.Location = new Point(117, 320);
+            buttonROOT3.Location = new Point(134, 427);
+            buttonROOT3.Margin = new Padding(3, 4, 3, 4);
             buttonROOT3.Name = "buttonROOT3";
-            buttonROOT3.Size = new Size(60, 60);
+            buttonROOT3.Size = new Size(69, 80);
             buttonROOT3.TabIndex = 34;
             buttonROOT3.Text = "∛x";
             buttonROOT3.UseVisualStyleBackColor = false;
@@ -572,13 +606,14 @@ namespace Calculater
             // buttonROOT4
             // 
             buttonROOT4.BackColor = Color.FromArgb(50, 73, 60);
-            buttonROOT4.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonROOT4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonROOT4.Cursor = Cursors.Hand;
+            buttonROOT4.FlatStyle = FlatStyle.Popup;
             buttonROOT4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonROOT4.ForeColor = Color.White;
-            buttonROOT4.Location = new Point(117, 379);
+            buttonROOT4.Location = new Point(134, 505);
+            buttonROOT4.Margin = new Padding(3, 4, 3, 4);
             buttonROOT4.Name = "buttonROOT4";
-            buttonROOT4.Size = new Size(60, 60);
+            buttonROOT4.Size = new Size(69, 80);
             buttonROOT4.TabIndex = 35;
             buttonROOT4.Text = "∜x";
             buttonROOT4.UseVisualStyleBackColor = false;
@@ -587,13 +622,14 @@ namespace Calculater
             // buttonEXP4
             // 
             buttonEXP4.BackColor = Color.FromArgb(50, 73, 60);
-            buttonEXP4.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonEXP4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonEXP4.Cursor = Cursors.Hand;
+            buttonEXP4.FlatStyle = FlatStyle.Popup;
             buttonEXP4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP4.ForeColor = Color.White;
-            buttonEXP4.Location = new Point(117, 201);
+            buttonEXP4.Location = new Point(134, 268);
+            buttonEXP4.Margin = new Padding(3, 4, 3, 4);
             buttonEXP4.Name = "buttonEXP4";
-            buttonEXP4.Size = new Size(60, 60);
+            buttonEXP4.Size = new Size(69, 80);
             buttonEXP4.TabIndex = 36;
             buttonEXP4.Text = "x⁴";
             buttonEXP4.UseVisualStyleBackColor = false;
@@ -602,13 +638,14 @@ namespace Calculater
             // buttonEXP3
             // 
             buttonEXP3.BackColor = Color.FromArgb(50, 73, 60);
-            buttonEXP3.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonEXP3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonEXP3.Cursor = Cursors.Hand;
+            buttonEXP3.FlatStyle = FlatStyle.Popup;
             buttonEXP3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEXP3.ForeColor = Color.White;
-            buttonEXP3.Location = new Point(117, 142);
+            buttonEXP3.Location = new Point(134, 189);
+            buttonEXP3.Margin = new Padding(3, 4, 3, 4);
             buttonEXP3.Name = "buttonEXP3";
-            buttonEXP3.Size = new Size(60, 60);
+            buttonEXP3.Size = new Size(69, 80);
             buttonEXP3.TabIndex = 37;
             buttonEXP3.Text = "x³";
             buttonEXP3.UseVisualStyleBackColor = false;
@@ -617,13 +654,14 @@ namespace Calculater
             // buttonASIN
             // 
             buttonASIN.BackColor = Color.FromArgb(50, 73, 60);
-            buttonASIN.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonASIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonASIN.Cursor = Cursors.Hand;
+            buttonASIN.FlatStyle = FlatStyle.Popup;
             buttonASIN.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonASIN.ForeColor = Color.White;
-            buttonASIN.Location = new Point(58, 320);
+            buttonASIN.Location = new Point(66, 427);
+            buttonASIN.Margin = new Padding(3, 4, 3, 4);
             buttonASIN.Name = "buttonASIN";
-            buttonASIN.Size = new Size(60, 60);
+            buttonASIN.Size = new Size(69, 80);
             buttonASIN.TabIndex = 38;
             buttonASIN.Text = "asin";
             buttonASIN.UseVisualStyleBackColor = false;
@@ -632,13 +670,14 @@ namespace Calculater
             // buttonACOS
             // 
             buttonACOS.BackColor = Color.FromArgb(50, 73, 60);
-            buttonACOS.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonACOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonACOS.Cursor = Cursors.Hand;
+            buttonACOS.FlatStyle = FlatStyle.Popup;
             buttonACOS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonACOS.ForeColor = Color.White;
-            buttonACOS.Location = new Point(58, 379);
+            buttonACOS.Location = new Point(66, 505);
+            buttonACOS.Margin = new Padding(3, 4, 3, 4);
             buttonACOS.Name = "buttonACOS";
-            buttonACOS.Size = new Size(60, 60);
+            buttonACOS.Size = new Size(69, 80);
             buttonACOS.TabIndex = 39;
             buttonACOS.Text = "acos";
             buttonACOS.UseVisualStyleBackColor = false;
@@ -647,13 +686,14 @@ namespace Calculater
             // buttonANS
             // 
             buttonANS.BackColor = Color.FromArgb(62, 80, 91);
-            buttonANS.Cursor = System.Windows.Forms.Cursors.Hand;
-            buttonANS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            buttonANS.Cursor = Cursors.Hand;
+            buttonANS.FlatStyle = FlatStyle.Popup;
             buttonANS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonANS.ForeColor = Color.White;
-            buttonANS.Location = new Point(235, 142);
+            buttonANS.Location = new Point(269, 189);
+            buttonANS.Margin = new Padding(3, 4, 3, 4);
             buttonANS.Name = "buttonANS";
-            buttonANS.Size = new Size(60, 60);
+            buttonANS.Size = new Size(69, 80);
             buttonANS.TabIndex = 40;
             buttonANS.Text = "Ans";
             buttonANS.UseVisualStyleBackColor = false;
@@ -664,25 +704,28 @@ namespace Calculater
             labelhistory.AutoSize = true;
             labelhistory.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             labelhistory.ForeColor = Color.White;
-            labelhistory.Location = new Point(482, 96);
+            labelhistory.Location = new Point(551, 128);
             labelhistory.Name = "labelhistory";
-            labelhistory.Size = new Size(96, 32);
+            labelhistory.Size = new Size(120, 41);
             labelhistory.TabIndex = 47;
             labelhistory.Text = "Historie";
             // 
             // history
             // 
+            history.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             history.AutoScroll = true;
             history.BackColor = Color.FromArgb(60, 80, 83);
-            history.Location = new Point(482, 142);
+            history.Location = new Point(551, 189);
+            history.Margin = new Padding(3, 4, 3, 4);
+            history.MinimumSize = new Size(537, 595);
             history.Name = "history";
-            history.Size = new Size(468, 449);
+            history.Size = new Size(537, 595);
             history.TabIndex = 55;
             // 
             // standard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
             Controls.Add(history);
             Controls.Add(labelhistory);
@@ -725,14 +768,15 @@ namespace Calculater
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "standard";
-            Size = new Size(950, 591);
+            Size = new Size(1086, 788);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.TextBox inputMath;
+        private TextBox inputMath;
         private RoundedButton button1;
         private RoundedButton button2;
         private RoundedButton button3;
@@ -771,7 +815,7 @@ namespace Calculater
         private RoundedButton buttonASIN;
         private RoundedButton buttonACOS;
         private RoundedButton buttonANS;
-        private System.Windows.Forms.Label labelhistory;
-        private System.Windows.Forms.FlowLayoutPanel history;
+        private Label labelhistory;
+        private FlowLayoutPanel history;
     }
 }
