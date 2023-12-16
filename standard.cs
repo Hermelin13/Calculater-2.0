@@ -53,7 +53,6 @@ namespace Calculater
         {
             Button buttonPRESSED = sender as Button;
 
-
             switch (buttonPRESSED.Name)
             {
                 case "buttonDEL":
@@ -106,7 +105,6 @@ namespace Calculater
                         inputMath.Text = inputMath.Text + "!";
                         number = false;
                         fact = true;
-
                     }
                     break;
                 case "buttonMULTI":
@@ -266,7 +264,7 @@ namespace Calculater
             historyRow.TabIndex = 48;
             historyRow.Cursor = Cursors.Arrow;
             historyRow.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            historyRow.Text = input + " = " + result + " ";
+            historyRow.Text = input + " = " + result;
 
             // Create a new PictureBox for deletion
             PictureBox deleteButton = new PictureBox();
@@ -312,115 +310,6 @@ namespace Calculater
 
             history.Controls.Remove(deleteButton.Parent);
         }
-
-        /*private void changeVis(object sender, EventArgs e)
-        {
-            TextBox TextBoxHover = sender as TextBox;
-            switch (TextBoxHover.Name)
-            {
-                case "history1":
-                    if (history1.Text != "")
-                    {
-                        delButton1.Visible = true;
-                    }
-                    else
-                    {
-                        delButton1.Visible = false;
-                    }
-                    break;
-                case "history2":
-                    if (history2.Text != "")
-                    {
-                        delButton2.Visible = true;
-                    }
-                    else
-                    {
-                        delButton2.Visible = false;
-                    }
-                    break;
-                case "history3":
-                    if (history3.Text != "")
-                    {
-                        delButton3.Visible = true;
-                    }
-                    else
-                    {
-                        delButton3.Visible = false;
-                    }
-                    break;
-                case "history4":
-                    if (history4.Text != "")
-                    {
-                        delButton4.Visible = true;
-                    }
-                    else
-                    {
-                        delButton4.Visible = false;
-                    }
-                    break;
-                case "history5":
-                    if (history5.Text != "")
-                    {
-                        delButton5.Visible = true;
-                    }
-                    else
-                    {
-                        delButton5.Visible = false;
-                    }
-                    break;
-                case "history6":
-                    if (history6.Text != "")
-                    {
-                        delButton6.Visible = true;
-                    }
-                    else
-                    {
-                        delButton6.Visible = false;
-                    }
-                    break;
-            }
-        }*/
-
-        /*private void deleteButton(object sender, EventArgs e)
-        {
-            PictureBox delButton = sender as PictureBox;
-            switch (delButton.Name)
-            {
-                case "delButton1":
-                    history1.Text = history2.Text;
-                    history2.Text = history3.Text;
-                    history3.Text = history4.Text;
-                    history4.Text = history5.Text;
-                    history5.Text = history6.Text;
-                    history6.Text = "";
-                    break;
-                case "delButton2":
-                    history2.Text = history3.Text;
-                    history3.Text = history4.Text;
-                    history4.Text = history5.Text;
-                    history5.Text = history6.Text;
-                    history6.Text = "";
-                    break;
-                case "delButton3":
-                    history3.Text = history4.Text;
-                    history4.Text = history5.Text;
-                    history5.Text = history6.Text;
-                    history6.Text = "";
-                    break;
-                case "delButton4":
-                    history4.Text = history5.Text;
-                    history5.Text = history6.Text;
-                    history6.Text = "";
-                    break;
-                case "delButton5":
-                    history5.Text = history6.Text;
-                    history6.Text = "";
-                    break;
-                case "delButton6":
-                    history6.Text = "";
-                    break;
-            }
-        }*/
 
         public void keyPressed(KeyEventArgs e)
         {
