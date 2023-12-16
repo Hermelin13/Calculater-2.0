@@ -67,25 +67,22 @@ namespace Calculater
             buttonPLUS = new RoundedButton();
             buttonRB = new RoundedButton();
             buttonLB = new RoundedButton();
-            buttonQWORD = new RoundedButton();
-            buttonDWORD = new RoundedButton();
-            buttonBYTE = new RoundedButton();
-            buttonWORD = new RoundedButton();
             buttonHEX = new RoundedButton();
             buttonDEC = new RoundedButton();
             buttonOCT = new RoundedButton();
             buttonBIN = new RoundedButton();
             inputMath = new RoundedTextBox();
-            history = new RoundedTextBox();
             roundedButton42 = new RoundedButton();
+            history = new FlowLayoutPanel();
             SuspendLayout();
             // 
             // buttonD
             // 
             buttonD.BackColor = Color.FromArgb(62, 80, 91);
             buttonD.FlatStyle = FlatStyle.Popup;
+            buttonD.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonD.ForeColor = Color.White;
-            buttonD.Location = new Point(100, 128);
+            buttonD.Location = new Point(102, 154);
             buttonD.Name = "buttonD";
             buttonD.Size = new Size(60, 60);
             buttonD.TabIndex = 2;
@@ -97,8 +94,9 @@ namespace Calculater
             // 
             buttonE.BackColor = Color.FromArgb(62, 80, 91);
             buttonE.FlatStyle = FlatStyle.Popup;
+            buttonE.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonE.ForeColor = Color.White;
-            buttonE.Location = new Point(157, 128);
+            buttonE.Location = new Point(159, 154);
             buttonE.Margin = new Padding(0);
             buttonE.Name = "buttonE";
             buttonE.Size = new Size(60, 60);
@@ -111,8 +109,9 @@ namespace Calculater
             // 
             buttonF.BackColor = Color.FromArgb(62, 80, 91);
             buttonF.FlatStyle = FlatStyle.Popup;
+            buttonF.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonF.ForeColor = Color.White;
-            buttonF.Location = new Point(214, 128);
+            buttonF.Location = new Point(216, 154);
             buttonF.Name = "buttonF";
             buttonF.Size = new Size(60, 60);
             buttonF.TabIndex = 4;
@@ -124,8 +123,9 @@ namespace Calculater
             // 
             buttonC.BackColor = Color.FromArgb(62, 80, 91);
             buttonC.FlatStyle = FlatStyle.Popup;
+            buttonC.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonC.ForeColor = Color.White;
-            buttonC.Location = new Point(214, 185);
+            buttonC.Location = new Point(216, 211);
             buttonC.Name = "buttonC";
             buttonC.Size = new Size(60, 60);
             buttonC.TabIndex = 7;
@@ -137,8 +137,9 @@ namespace Calculater
             // 
             buttonB.BackColor = Color.FromArgb(62, 80, 91);
             buttonB.FlatStyle = FlatStyle.Popup;
+            buttonB.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonB.ForeColor = Color.White;
-            buttonB.Location = new Point(157, 185);
+            buttonB.Location = new Point(159, 211);
             buttonB.Name = "buttonB";
             buttonB.Size = new Size(60, 60);
             buttonB.TabIndex = 6;
@@ -150,8 +151,9 @@ namespace Calculater
             // 
             buttonA.BackColor = Color.FromArgb(62, 80, 91);
             buttonA.FlatStyle = FlatStyle.Popup;
+            buttonA.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonA.ForeColor = Color.White;
-            buttonA.Location = new Point(100, 185);
+            buttonA.Location = new Point(102, 211);
             buttonA.Name = "buttonA";
             buttonA.Size = new Size(60, 60);
             buttonA.TabIndex = 5;
@@ -163,8 +165,9 @@ namespace Calculater
             // 
             button9.BackColor = Color.FromArgb(62, 80, 91);
             button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
-            button9.Location = new Point(214, 242);
+            button9.Location = new Point(216, 268);
             button9.Name = "button9";
             button9.Size = new Size(60, 60);
             button9.TabIndex = 10;
@@ -176,8 +179,9 @@ namespace Calculater
             // 
             button8.BackColor = Color.FromArgb(62, 80, 91);
             button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
-            button8.Location = new Point(157, 242);
+            button8.Location = new Point(159, 268);
             button8.Name = "button8";
             button8.Size = new Size(60, 60);
             button8.TabIndex = 9;
@@ -189,8 +193,9 @@ namespace Calculater
             // 
             button7.BackColor = Color.FromArgb(62, 80, 91);
             button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
-            button7.Location = new Point(100, 242);
+            button7.Location = new Point(102, 268);
             button7.Name = "button7";
             button7.Size = new Size(60, 60);
             button7.TabIndex = 8;
@@ -202,8 +207,9 @@ namespace Calculater
             // 
             buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
             buttonDEL.FlatStyle = FlatStyle.Popup;
+            buttonDEL.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDEL.ForeColor = Color.White;
-            buttonDEL.Location = new Point(214, 413);
+            buttonDEL.Location = new Point(216, 439);
             buttonDEL.Margin = new Padding(0);
             buttonDEL.Name = "buttonDEL";
             buttonDEL.Size = new Size(60, 60);
@@ -216,8 +222,9 @@ namespace Calculater
             // 
             button0.BackColor = Color.FromArgb(62, 80, 91);
             button0.FlatStyle = FlatStyle.Popup;
+            button0.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button0.ForeColor = Color.White;
-            button0.Location = new Point(157, 413);
+            button0.Location = new Point(159, 439);
             button0.Name = "button0";
             button0.Size = new Size(60, 60);
             button0.TabIndex = 18;
@@ -229,8 +236,9 @@ namespace Calculater
             // 
             buttonAC.BackColor = Color.FromArgb(204, 80, 91);
             buttonAC.FlatStyle = FlatStyle.Popup;
+            buttonAC.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAC.ForeColor = Color.White;
-            buttonAC.Location = new Point(100, 413);
+            buttonAC.Location = new Point(102, 439);
             buttonAC.Name = "buttonAC";
             buttonAC.Size = new Size(60, 60);
             buttonAC.TabIndex = 17;
@@ -243,8 +251,9 @@ namespace Calculater
             button3.BackColor = Color.FromArgb(62, 80, 91);
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(214, 356);
+            button3.Location = new Point(216, 382);
             button3.Name = "button3";
             button3.Size = new Size(60, 60);
             button3.TabIndex = 16;
@@ -256,8 +265,9 @@ namespace Calculater
             // 
             button2.BackColor = Color.FromArgb(62, 80, 91);
             button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(157, 356);
+            button2.Location = new Point(159, 382);
             button2.Name = "button2";
             button2.Size = new Size(60, 60);
             button2.TabIndex = 15;
@@ -269,8 +279,9 @@ namespace Calculater
             // 
             button1.BackColor = Color.FromArgb(62, 80, 91);
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(100, 356);
+            button1.Location = new Point(102, 382);
             button1.Name = "button1";
             button1.Size = new Size(60, 60);
             button1.TabIndex = 14;
@@ -282,8 +293,9 @@ namespace Calculater
             // 
             button6.BackColor = Color.FromArgb(62, 80, 91);
             button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
-            button6.Location = new Point(214, 299);
+            button6.Location = new Point(216, 325);
             button6.Name = "button6";
             button6.RightToLeft = RightToLeft.No;
             button6.Size = new Size(60, 60);
@@ -296,8 +308,9 @@ namespace Calculater
             // 
             button5.BackColor = Color.FromArgb(62, 80, 91);
             button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(157, 299);
+            button5.Location = new Point(159, 325);
             button5.Name = "button5";
             button5.Size = new Size(60, 60);
             button5.TabIndex = 12;
@@ -309,8 +322,9 @@ namespace Calculater
             // 
             button4.BackColor = Color.FromArgb(62, 80, 91);
             button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
-            button4.Location = new Point(100, 299);
+            button4.Location = new Point(102, 325);
             button4.Name = "button4";
             button4.Size = new Size(60, 60);
             button4.TabIndex = 11;
@@ -322,8 +336,9 @@ namespace Calculater
             // 
             buttonAND.BackColor = Color.FromArgb(50, 73, 60);
             buttonAND.FlatStyle = FlatStyle.Popup;
+            buttonAND.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAND.ForeColor = Color.White;
-            buttonAND.Location = new Point(287, 30);
+            buttonAND.Location = new Point(282, 89);
             buttonAND.Name = "buttonAND";
             buttonAND.Size = new Size(60, 60);
             buttonAND.TabIndex = 20;
@@ -335,8 +350,9 @@ namespace Calculater
             // 
             buttonOR.BackColor = Color.FromArgb(50, 73, 60);
             buttonOR.FlatStyle = FlatStyle.Popup;
+            buttonOR.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonOR.ForeColor = Color.White;
-            buttonOR.Location = new Point(344, 30);
+            buttonOR.Location = new Point(339, 89);
             buttonOR.Name = "buttonOR";
             buttonOR.Size = new Size(60, 60);
             buttonOR.TabIndex = 21;
@@ -348,8 +364,9 @@ namespace Calculater
             // 
             buttonNAND.BackColor = Color.FromArgb(50, 73, 60);
             buttonNAND.FlatStyle = FlatStyle.Popup;
+            buttonNAND.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonNAND.ForeColor = Color.White;
-            buttonNAND.Location = new Point(344, 87);
+            buttonNAND.Location = new Point(339, 146);
             buttonNAND.Name = "buttonNAND";
             buttonNAND.Size = new Size(60, 60);
             buttonNAND.TabIndex = 23;
@@ -361,8 +378,9 @@ namespace Calculater
             // 
             buttonNOT.BackColor = Color.FromArgb(50, 73, 60);
             buttonNOT.FlatStyle = FlatStyle.Popup;
+            buttonNOT.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonNOT.ForeColor = Color.White;
-            buttonNOT.Location = new Point(287, 87);
+            buttonNOT.Location = new Point(282, 146);
             buttonNOT.Name = "buttonNOT";
             buttonNOT.Size = new Size(60, 60);
             buttonNOT.TabIndex = 22;
@@ -374,8 +392,9 @@ namespace Calculater
             // 
             buttonXOR.BackColor = Color.FromArgb(50, 73, 60);
             buttonXOR.FlatStyle = FlatStyle.Popup;
+            buttonXOR.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonXOR.ForeColor = Color.White;
-            buttonXOR.Location = new Point(344, 144);
+            buttonXOR.Location = new Point(339, 203);
             buttonXOR.Name = "buttonXOR";
             buttonXOR.Size = new Size(60, 60);
             buttonXOR.TabIndex = 25;
@@ -387,8 +406,9 @@ namespace Calculater
             // 
             buttonNOR.BackColor = Color.FromArgb(50, 73, 60);
             buttonNOR.FlatStyle = FlatStyle.Popup;
+            buttonNOR.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonNOR.ForeColor = Color.White;
-            buttonNOR.Location = new Point(287, 144);
+            buttonNOR.Location = new Point(282, 203);
             buttonNOR.Name = "buttonNOR";
             buttonNOR.Size = new Size(60, 60);
             buttonNOR.TabIndex = 24;
@@ -400,9 +420,9 @@ namespace Calculater
             // 
             buttonEQ.BackColor = Color.FromArgb(2, 101, 82);
             buttonEQ.FlatStyle = FlatStyle.Popup;
-            buttonEQ.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonEQ.Font = new Font("Arial Narrow", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonEQ.ForeColor = Color.White;
-            buttonEQ.Location = new Point(287, 202);
+            buttonEQ.Location = new Point(282, 261);
             buttonEQ.Name = "buttonEQ";
             buttonEQ.Size = new Size(117, 60);
             buttonEQ.TabIndex = 26;
@@ -414,8 +434,9 @@ namespace Calculater
             // 
             buttonBSL.BackColor = Color.FromArgb(50, 73, 60);
             buttonBSL.FlatStyle = FlatStyle.Popup;
+            buttonBSL.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonBSL.ForeColor = Color.White;
-            buttonBSL.Location = new Point(344, 373);
+            buttonBSL.Location = new Point(339, 432);
             buttonBSL.Name = "buttonBSL";
             buttonBSL.Size = new Size(60, 60);
             buttonBSL.TabIndex = 32;
@@ -427,8 +448,9 @@ namespace Calculater
             // 
             buttonBSR.BackColor = Color.FromArgb(50, 73, 60);
             buttonBSR.FlatStyle = FlatStyle.Popup;
+            buttonBSR.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonBSR.ForeColor = Color.White;
-            buttonBSR.Location = new Point(287, 373);
+            buttonBSR.Location = new Point(282, 432);
             buttonBSR.Name = "buttonBSR";
             buttonBSR.Size = new Size(60, 60);
             buttonBSR.TabIndex = 31;
@@ -440,8 +462,9 @@ namespace Calculater
             // 
             buttonDIV.BackColor = Color.FromArgb(50, 73, 60);
             buttonDIV.FlatStyle = FlatStyle.Popup;
+            buttonDIV.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDIV.ForeColor = Color.White;
-            buttonDIV.Location = new Point(344, 316);
+            buttonDIV.Location = new Point(339, 375);
             buttonDIV.Name = "buttonDIV";
             buttonDIV.Size = new Size(60, 60);
             buttonDIV.TabIndex = 30;
@@ -453,8 +476,9 @@ namespace Calculater
             // 
             buttonMULT.BackColor = Color.FromArgb(50, 73, 60);
             buttonMULT.FlatStyle = FlatStyle.Popup;
+            buttonMULT.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonMULT.ForeColor = Color.White;
-            buttonMULT.Location = new Point(287, 316);
+            buttonMULT.Location = new Point(282, 375);
             buttonMULT.Name = "buttonMULT";
             buttonMULT.Size = new Size(60, 60);
             buttonMULT.TabIndex = 29;
@@ -466,8 +490,9 @@ namespace Calculater
             // 
             buttonMINUS.BackColor = Color.FromArgb(50, 73, 60);
             buttonMINUS.FlatStyle = FlatStyle.Popup;
+            buttonMINUS.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonMINUS.ForeColor = Color.White;
-            buttonMINUS.Location = new Point(344, 259);
+            buttonMINUS.Location = new Point(339, 318);
             buttonMINUS.Name = "buttonMINUS";
             buttonMINUS.Size = new Size(60, 60);
             buttonMINUS.TabIndex = 28;
@@ -479,8 +504,9 @@ namespace Calculater
             // 
             buttonPLUS.BackColor = Color.FromArgb(50, 73, 60);
             buttonPLUS.FlatStyle = FlatStyle.Popup;
+            buttonPLUS.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonPLUS.ForeColor = Color.White;
-            buttonPLUS.Location = new Point(287, 259);
+            buttonPLUS.Location = new Point(282, 318);
             buttonPLUS.Name = "buttonPLUS";
             buttonPLUS.Size = new Size(60, 60);
             buttonPLUS.TabIndex = 27;
@@ -492,8 +518,9 @@ namespace Calculater
             // 
             buttonRB.BackColor = Color.FromArgb(50, 73, 60);
             buttonRB.FlatStyle = FlatStyle.Popup;
+            buttonRB.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonRB.ForeColor = Color.White;
-            buttonRB.Location = new Point(344, 430);
+            buttonRB.Location = new Point(339, 489);
             buttonRB.Name = "buttonRB";
             buttonRB.Size = new Size(60, 60);
             buttonRB.TabIndex = 34;
@@ -505,8 +532,9 @@ namespace Calculater
             // 
             buttonLB.BackColor = Color.FromArgb(50, 73, 60);
             buttonLB.FlatStyle = FlatStyle.Popup;
+            buttonLB.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonLB.ForeColor = Color.White;
-            buttonLB.Location = new Point(287, 430);
+            buttonLB.Location = new Point(282, 489);
             buttonLB.Name = "buttonLB";
             buttonLB.Size = new Size(60, 60);
             buttonLB.TabIndex = 33;
@@ -514,64 +542,13 @@ namespace Calculater
             buttonLB.UseVisualStyleBackColor = false;
             buttonLB.Click += clickButton;
             // 
-            // buttonQWORD
-            // 
-            buttonQWORD.BackColor = Color.FromArgb(50, 73, 60);
-            buttonQWORD.FlatStyle = FlatStyle.Popup;
-            buttonQWORD.ForeColor = Color.White;
-            buttonQWORD.Location = new Point(7, 496);
-            buttonQWORD.Name = "buttonQWORD";
-            buttonQWORD.Size = new Size(100, 60);
-            buttonQWORD.TabIndex = 35;
-            buttonQWORD.Text = "QWORD";
-            buttonQWORD.UseVisualStyleBackColor = false;
-            buttonQWORD.Click += clickButton;
-            // 
-            // buttonDWORD
-            // 
-            buttonDWORD.BackColor = Color.FromArgb(50, 73, 60);
-            buttonDWORD.FlatStyle = FlatStyle.Popup;
-            buttonDWORD.ForeColor = Color.White;
-            buttonDWORD.Location = new Point(105, 496);
-            buttonDWORD.Name = "buttonDWORD";
-            buttonDWORD.Size = new Size(100, 60);
-            buttonDWORD.TabIndex = 36;
-            buttonDWORD.Text = "DWORD";
-            buttonDWORD.UseVisualStyleBackColor = false;
-            buttonDWORD.Click += clickButton;
-            // 
-            // buttonBYTE
-            // 
-            buttonBYTE.BackColor = Color.FromArgb(50, 73, 60);
-            buttonBYTE.FlatStyle = FlatStyle.Popup;
-            buttonBYTE.ForeColor = Color.White;
-            buttonBYTE.Location = new Point(301, 496);
-            buttonBYTE.Name = "buttonBYTE";
-            buttonBYTE.Size = new Size(100, 60);
-            buttonBYTE.TabIndex = 38;
-            buttonBYTE.Text = "BYTE";
-            buttonBYTE.UseVisualStyleBackColor = false;
-            buttonBYTE.Click += clickButton;
-            // 
-            // buttonWORD
-            // 
-            buttonWORD.BackColor = Color.FromArgb(50, 73, 60);
-            buttonWORD.FlatStyle = FlatStyle.Popup;
-            buttonWORD.ForeColor = Color.White;
-            buttonWORD.Location = new Point(203, 496);
-            buttonWORD.Name = "buttonWORD";
-            buttonWORD.Size = new Size(100, 60);
-            buttonWORD.TabIndex = 37;
-            buttonWORD.Text = "WORD";
-            buttonWORD.UseVisualStyleBackColor = false;
-            buttonWORD.Click += clickButton;
-            // 
             // buttonHEX
             // 
             buttonHEX.BackColor = Color.FromArgb(50, 73, 60);
             buttonHEX.FlatStyle = FlatStyle.Popup;
+            buttonHEX.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonHEX.ForeColor = Color.White;
-            buttonHEX.Location = new Point(7, 185);
+            buttonHEX.Location = new Point(14, 211);
             buttonHEX.Name = "buttonHEX";
             buttonHEX.Size = new Size(80, 60);
             buttonHEX.TabIndex = 39;
@@ -583,8 +560,9 @@ namespace Calculater
             // 
             buttonDEC.BackColor = Color.FromArgb(50, 73, 60);
             buttonDEC.FlatStyle = FlatStyle.Popup;
+            buttonDEC.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDEC.ForeColor = Color.White;
-            buttonDEC.Location = new Point(7, 242);
+            buttonDEC.Location = new Point(14, 268);
             buttonDEC.Name = "buttonDEC";
             buttonDEC.Size = new Size(80, 60);
             buttonDEC.TabIndex = 40;
@@ -596,8 +574,9 @@ namespace Calculater
             // 
             buttonOCT.BackColor = Color.FromArgb(50, 73, 60);
             buttonOCT.FlatStyle = FlatStyle.Popup;
+            buttonOCT.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonOCT.ForeColor = Color.White;
-            buttonOCT.Location = new Point(7, 299);
+            buttonOCT.Location = new Point(14, 325);
             buttonOCT.Name = "buttonOCT";
             buttonOCT.Size = new Size(80, 60);
             buttonOCT.TabIndex = 41;
@@ -609,8 +588,9 @@ namespace Calculater
             // 
             buttonBIN.BackColor = Color.FromArgb(50, 73, 60);
             buttonBIN.FlatStyle = FlatStyle.Popup;
+            buttonBIN.Font = new Font("Arial Narrow", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             buttonBIN.ForeColor = Color.White;
-            buttonBIN.Location = new Point(7, 356);
+            buttonBIN.Location = new Point(14, 382);
             buttonBIN.Name = "buttonBIN";
             buttonBIN.Size = new Size(80, 60);
             buttonBIN.TabIndex = 42;
@@ -631,24 +611,11 @@ namespace Calculater
             inputMath.Size = new Size(526, 120);
             inputMath.TabIndex = 43;
             // 
-            // history
-            // 
-            history.BackColor = Color.FromArgb(60, 80, 83);
-            history.BorderRadius = 30;
-            history.BorderStyle = BorderStyle.None;
-            history.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            history.Location = new Point(410, 129);
-            history.Multiline = true;
-            history.Name = "history";
-            history.ReadOnly = true;
-            history.Size = new Size(526, 448);
-            history.TabIndex = 44;
-            // 
             // roundedButton42
             // 
             roundedButton42.BackColor = Color.FromArgb(50, 73, 60);
             roundedButton42.FlatStyle = FlatStyle.Popup;
-            roundedButton42.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            roundedButton42.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point);
             roundedButton42.ForeColor = Color.White;
             roundedButton42.Location = new Point(66, 3);
             roundedButton42.Name = "roundedButton42";
@@ -657,22 +624,27 @@ namespace Calculater
             roundedButton42.Text = "Programátorská";
             roundedButton42.UseVisualStyleBackColor = false;
             // 
+            // history
+            // 
+            history.AutoScroll = true;
+            history.BackColor = Color.FromArgb(60, 80, 83);
+            history.Location = new Point(410, 128);
+            history.Name = "history";
+            history.Size = new Size(526, 445);
+            history.TabIndex = 46;
+            // 
             // binary
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
-            Controls.Add(roundedButton42);
             Controls.Add(history);
+            Controls.Add(roundedButton42);
             Controls.Add(inputMath);
             Controls.Add(buttonBIN);
             Controls.Add(buttonOCT);
             Controls.Add(buttonDEC);
             Controls.Add(buttonHEX);
-            Controls.Add(buttonBYTE);
-            Controls.Add(buttonWORD);
-            Controls.Add(buttonDWORD);
-            Controls.Add(buttonQWORD);
             Controls.Add(buttonRB);
             Controls.Add(buttonLB);
             Controls.Add(buttonBSL);
@@ -708,6 +680,7 @@ namespace Calculater
             Controls.Add(buttonD);
             Name = "binary";
             Size = new Size(950, 591);
+            Load += binary_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -746,16 +719,12 @@ namespace Calculater
         private RoundedButton buttonPLUS;
         private RoundedButton buttonRB;
         private RoundedButton buttonLB;
-        private RoundedButton buttonQWORD;
-        private RoundedButton buttonDWORD;
-        private RoundedButton buttonBYTE;
-        private RoundedButton buttonWORD;
         private RoundedButton buttonHEX;
         private RoundedButton buttonDEC;
         private RoundedButton buttonOCT;
         private RoundedButton buttonBIN;
         private RoundedTextBox inputMath;
-        private RoundedTextBox history;
         private RoundedButton roundedButton42;
+        private FlowLayoutPanel history;
     }
 }
