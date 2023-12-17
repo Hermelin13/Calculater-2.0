@@ -34,7 +34,6 @@ namespace Calculater
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FITCalculator));
             standard1 = new standard();
             prevodnik1 = new prevodnik();
             binary1 = new binary();
@@ -170,7 +169,6 @@ namespace Calculater
             Controls.Add(binary1);
             Controls.Add(prevodnik1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
             MaximizeBox = false;
             Name = "FITCalculator";
