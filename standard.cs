@@ -319,6 +319,7 @@ namespace Calculater
             historyRow.Cursor = Cursors.Arrow;
             historyRow.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             historyRow.Text = input + " = " + result;
+            historyRow.Click += change;
 
             // Create a new PictureBox for deletion
             PictureBox deleteButton = new PictureBox();
@@ -363,6 +364,13 @@ namespace Calculater
             PictureBox deleteButton = sender as PictureBox;
 
             history.Controls.Remove(deleteButton.Parent);
+        }
+
+        private void change(object sender, EventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            string[] expr = textBox.Text.Split(" = ");
+            inputMath.Text = expr[0];
         }
 
         public void keyPressed(KeyEventArgs e)
