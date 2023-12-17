@@ -75,6 +75,7 @@ namespace Calculater
             buttonANS = new RoundedButton();
             labelhistory = new Label();
             history = new FlowLayoutPanel();
+            roundedButton42 = new RoundedButton();
             SuspendLayout();
             // 
             // button1
@@ -683,11 +684,25 @@ namespace Calculater
             history.Size = new Size(471, 447);
             history.TabIndex = 48;
             // 
+            // roundedButton42
+            // 
+            roundedButton42.BackColor = Color.FromArgb(50, 73, 60);
+            roundedButton42.FlatStyle = FlatStyle.Popup;
+            roundedButton42.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            roundedButton42.ForeColor = Color.White;
+            roundedButton42.Location = new Point(66, 3);
+            roundedButton42.Name = "roundedButton42";
+            roundedButton42.Size = new Size(219, 60);
+            roundedButton42.TabIndex = 49;
+            roundedButton42.Text = "Standard";
+            roundedButton42.UseVisualStyleBackColor = false;
+            // 
             // standard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(3, 18, 14);
+            Controls.Add(roundedButton42);
             Controls.Add(history);
             Controls.Add(labelhistory);
             Controls.Add(buttonANS);
@@ -777,5 +792,6 @@ namespace Calculater
         private RoundedButton buttonANS;
         private Label labelhistory;
         private FlowLayoutPanel history;
+        private RoundedButton roundedButton42;
     }
 }
