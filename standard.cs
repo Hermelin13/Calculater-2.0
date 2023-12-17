@@ -10,9 +10,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Microsoft.VisualBasic;
 using org.mariuszgromada.math.mxparser;
 using org.mariuszgromada.math.mxparser.mathcollection;
+using System.IO;
 
 namespace Calculater
 {
@@ -33,6 +35,7 @@ namespace Calculater
         public standard()
         {
             InitializeComponent();
+            LoadHistory();
         }
 
         private void nullFunc()
@@ -241,6 +244,57 @@ namespace Calculater
                         root = false;
                     }
                     break;
+            }
+        }
+
+        public void HistoryToXml(object sender, EventArgs e)
+        {
+            XmlDocument document = new XmlDocument();
+            XmlElement rootElement = document.CreateElement("root");
+            XmlElement standard = document.CreateElement("standard");
+
+            foreach (var historyRow in history.Controls)
+            {
+                TextBox historyTextBox = (historyRow as TableLayoutPanel).Controls.Find("historyTemplate", true)[0] as TextBox;
+
+                XmlElement xmlHistoryRow = document.CreateElement("historyRow");
+                xmlHistoryRow.InnerText = historyTextBox.Text;
+                standard.AppendChild(xmlHistoryRow);
+            }
+
+            rootElement.AppendChild(standard);
+            document.AppendChild(rootElement);
+
+            document.Save("standardHistory.xml");
+        }
+
+        private void LoadHistory()
+        {
+            if (File.Exists("standardHistory.xml"))
+            {
+                try
+                {
+                    XmlDocument document = new XmlDocument();
+                    document.Load("standardHistory.xml");
+
+                    var historyRows = document.SelectNodes("/root/standard/historyRow");
+                    List<XmlNode> reversedHistoryRows = new List<XmlNode>();
+
+                    foreach (XmlNode historyRow in historyRows)
+                    {
+                        reversedHistoryRows.Insert(0, historyRow);
+                    }
+
+                    foreach (XmlNode historyRow in reversedHistoryRows)
+                    {
+                        string[] inputResult = historyRow.InnerText.Split(" = ");
+                        saveToHistory(inputResult[0], inputResult[1]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading from XML: {ex.Message}");
+                }
             }
         }
 
