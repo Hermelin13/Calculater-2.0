@@ -33,8 +33,12 @@ namespace Calculater
             InitializeComponent();
             historyFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, historyFileName);
             LoadHistoryFromFile();
+            SetSelectedButton(buttonHEX);
         }
 
+        /** 
+         * prebarveni aktualne zvoleneho tlacitka s ciselnymi soustavami
+         */
         private void SetSelectedButton(Button selectedButton)
         {
             buttonHEX.BackColor = Color.FromArgb(50, 73, 60);
@@ -42,9 +46,12 @@ namespace Calculater
             buttonBIN.BackColor = Color.FromArgb(50, 73, 60);
             buttonDEC.BackColor = Color.FromArgb(50, 73, 60);
 
-            selectedButton.BackColor = Color.FromArgb(50, 93, 60);
+            selectedButton.BackColor = Color.FromArgb(2, 101, 82);
         }
 
+        /**
+         * zmena tlacitek pro praci s ciselnou soustavou
+         */
         private void ChangeNumericSystem(string sys)
         {
             if (sys == "dec")
@@ -198,29 +205,10 @@ namespace Calculater
                 buttonF.Enabled = true;
             }
         }
-        public static string decimalToBinary(string decimalNumber)
-        {
-            if (!int.TryParse(decimalNumber, out int decimalInt))
-            {
-                return "Nefunguje kdyz tam mam operatory";
-            }
 
-            if (decimalInt == 0)
-            {
-                return "0";
-            }
-
-            StringBuilder binaryNumber = new StringBuilder();
-            while (decimalInt > 0)
-            {
-                int tmp = decimalInt % 2;
-                binaryNumber.Insert(0, tmp);
-                decimalInt /= 2;
-            }
-
-            return binaryNumber.ToString();
-        }
-
+        /**
+         * zpracovani bitovych operatoru
+         */
         public string expressionProcess(string expression)
         {
             expression = Regex.Replace(expression, "AND", "@&");
@@ -234,6 +222,9 @@ namespace Calculater
             return expression;
         }
 
+        /**
+         * ctyri funkce na prevedeni do dane soustavy
+         */
         static string ConvertBinary(string input, int Base)
         {
             string pattern = @"\b[01]+\b";
@@ -283,6 +274,11 @@ namespace Calculater
 
             return result;
         }
+        /** ========================================================== */
+
+        /**
+         * nacitani ze souboru do historie
+         */
         private void LoadHistoryFromFile()
         {
             if (File.Exists(historyFilePath))
@@ -313,14 +309,17 @@ namespace Calculater
             }
         }
 
-        private void SaveToHistory(string input, string result, string numericSystem)
+        /**
+         * ukladani historie do souboru
+         */
+        private async void SaveToHistory(string input, string result, string numericSystem)
         {
             CreateInput(input, result);
 
             //string newEntry = $"{input} = {result}";
             HistoryEntry newEntry = new HistoryEntry
             {
-                Input = input,
+                Input = input.Trim(),
                 Result = result.Trim(),
                 NumericSystem = numericSystem
             };
@@ -328,6 +327,9 @@ namespace Calculater
             File.AppendAllText(historyFilePath, $"{input} = {result} [{numericSystem}]" + Environment.NewLine);
         }
 
+        /**
+         * vytvoreni UI zobrazeni historie pro uzivatele
+         */
         private void CreateInput(string input, string result)
         {
             TableLayoutPanel historyRowPanel = new TableLayoutPanel
@@ -370,6 +372,7 @@ namespace Calculater
             historyRowPanel.Controls.Add(historyRow, 0, 0);
             historyRowPanel.Controls.Add(deleteButton, 1, 0);
 
+            /* moznost nacist priklad z historie pro upravy */
             historyRow.Click += (sender, e) =>
             {
                 string[] clickedExpression = historyRow.Text.Split('=');
@@ -386,6 +389,9 @@ namespace Calculater
             history.Controls.SetChildIndex(historyRowPanel, 0);
         }
 
+        /**
+         * smazani polozky z historie
+         */
         private void DeleteHistoryRow(object sender, EventArgs e)
         {
             PictureBox deleteButton = sender as PictureBox;
@@ -404,7 +410,6 @@ namespace Calculater
                 TextBox clickedTextBox = (TextBox)historyRowPanel.Controls[0];
                 string[] clickedExpression = clickedTextBox.Text.Split("=");
 
-                // Find the corresponding HistoryEntry in the list
                 HistoryEntry historyEntry = historyList
                     .FirstOrDefault(entry =>
                         entry.Input.Trim() == clickedExpression[0].Trim() &&
@@ -412,26 +417,25 @@ namespace Calculater
 
                 if (historyEntry != null)
                 {
-                    // Remove the entry from the list
                     historyList.Remove(historyEntry);
-
-                    // Read all lines from the file
                     string[] fileLines = File.ReadAllLines(historyFilePath);
 
-                    // Remove the corresponding line from the file content
-                    string lineToRemove = $"{historyEntry.Input} = {historyEntry.Result}[{historyEntry.NumericSystem}]";
+                    string lineToRemove = $"{historyEntry.Input.Trim()} = {historyEntry.Result.Trim()} [{historyEntry.NumericSystem}]";
                     fileLines = fileLines.Where(line => line != lineToRemove).ToArray();
-
-                    // Update the file content
                     File.WriteAllLines(historyFilePath, fileLines);
+
                 }
                 history.Controls.Remove(historyRowPanel);
             }
         }
 
+        /**
+         * funkce na zpracovani jednotlivych tlacitek z UI
+         */
         private void clickButton(object sender, EventArgs e)
         {
             Button buttonPRESSED = sender as Button;
+            List<string> operatorsToRemove = new List<string> { " AND ", " OR ", " NOT ", " XOR ", " NAND ", " NOR " };
             string sys;
 
             switch (buttonPRESSED.Name)
@@ -439,6 +443,15 @@ namespace Calculater
                 case "buttonDEL":
                     if (inputMath.Text.Length > 0)
                     {
+                        foreach (string op in operatorsToRemove)
+                        {
+                            if (inputMath.Text.EndsWith(op))
+                            {
+                                inputMath.Text = inputMath.Text.Substring(0, inputMath.Text.Length - op.Length);
+                                return;
+                            }
+                        }
+
                         inputMath.Text = inputMath.Text.Substring(0, inputMath.Text.Length - 1);
                     }
                     break;
@@ -452,8 +465,7 @@ namespace Calculater
                         Expression ex = new Expression(tmp);
                         var result = ex.calculate();
                         sys = "dec";
-                        //history.Text += inputMath.Text + " = " + result.ToString() + Environment.NewLine;  
-                        SaveToHistory(inputMath.Text, result.ToString().Trim(), sys);
+                        SaveToHistory(inputMath.Text.Trim(), result.ToString().Trim(), sys);
                         inputMath.Text = result.ToString();
                     }
                     else if (bin)
@@ -463,8 +475,7 @@ namespace Calculater
                         Expression ex = new Expression(tmp1);
                         var result = ex.calculate();
                         sys = "bin";
-                        //history.Text = inputMath.Text + " = " + Convert.ToString((int)result, 2);
-                        SaveToHistory(inputMath.Text, Convert.ToString((int)result, 2).Trim(), sys);
+                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 2).Trim(), sys);
                         inputMath.Text = Convert.ToString((int)result, 2);
                     }
                     else if (hex)
@@ -474,8 +485,7 @@ namespace Calculater
                         Expression ex = new Expression(tmp1);
                         var result = ex.calculate();
                         sys = "hex";
-                        //history.Text = inputMath.Text + " = " + Convert.ToString((int)result, 16);
-                        SaveToHistory(inputMath.Text, Convert.ToString((int)result, 16).Trim(), sys);
+                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 16).Trim(), sys);
                         inputMath.Text = Convert.ToString((int)result, 16);
                     }
                     else if (oct)
@@ -485,8 +495,7 @@ namespace Calculater
                         Expression ex = new Expression(tmp1);
                         var result = ex.calculate();
                         sys = "oct";
-                        //history.Text = inputMath.Text + " = " + Convert.ToString((int)result, 8);
-                        SaveToHistory(inputMath.Text, Convert.ToString((int)result, 8).Trim(), sys);
+                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 8).Trim(), sys);
                         inputMath.Text = Convert.ToString((int)result, 8);
                     }
                     break;
@@ -503,8 +512,6 @@ namespace Calculater
                 case "buttonAND":
                 case "buttonOR":
                 case "buttonNOT":
-                case "buttonNAND":
-                case "buttonNOR":
                 case "buttonXOR":
                     inputMath.Text = inputMath.Text + " " + buttonPRESSED.Text + " ";
                     break;
@@ -581,6 +588,9 @@ namespace Calculater
             }
         }
 
+        /**
+         * prevedeni stisknutí tlacitek klavesnice na vstup
+         */
         public void keyPressed(KeyEventArgs e)
         {
             switch (e.KeyCode)
@@ -690,12 +700,10 @@ namespace Calculater
                     break;
             }
         }
-
-        private void binary_Load(object sender, EventArgs e)
-        {
-
-        }
     }
+    /**
+     * trida pro zpracovani polozek, ktere se ukladaji do historie
+     */
     public class HistoryEntry
     {
         public string Input { get; set; }
