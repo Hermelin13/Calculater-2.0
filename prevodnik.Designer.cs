@@ -71,6 +71,7 @@ namespace Calculater
             button9.BackColor = Color.FromArgb(62, 80, 91);
             button9.Cursor = Cursors.Hand;
             button9.FlatStyle = FlatStyle.Popup;
+            button9.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button9.ForeColor = Color.White;
             button9.Location = new Point(337, 146);
             button9.Name = "button9";
@@ -85,6 +86,7 @@ namespace Calculater
             button8.BackColor = Color.FromArgb(62, 80, 91);
             button8.Cursor = Cursors.Hand;
             button8.FlatStyle = FlatStyle.Popup;
+            button8.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button8.ForeColor = Color.White;
             button8.Location = new Point(280, 146);
             button8.Name = "button8";
@@ -99,6 +101,7 @@ namespace Calculater
             button7.BackColor = Color.FromArgb(62, 80, 91);
             button7.Cursor = Cursors.Hand;
             button7.FlatStyle = FlatStyle.Popup;
+            button7.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button7.ForeColor = Color.White;
             button7.Location = new Point(223, 146);
             button7.Name = "button7";
@@ -113,6 +116,7 @@ namespace Calculater
             buttonDEL.BackColor = Color.FromArgb(204, 80, 91);
             buttonDEL.Cursor = Cursors.Hand;
             buttonDEL.FlatStyle = FlatStyle.Popup;
+            buttonDEL.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDEL.ForeColor = Color.White;
             buttonDEL.Location = new Point(337, 89);
             buttonDEL.Margin = new Padding(0);
@@ -128,6 +132,7 @@ namespace Calculater
             button0.BackColor = Color.FromArgb(62, 80, 91);
             button0.Cursor = Cursors.Hand;
             button0.FlatStyle = FlatStyle.Popup;
+            button0.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button0.ForeColor = Color.White;
             button0.Location = new Point(280, 317);
             button0.Name = "button0";
@@ -142,6 +147,7 @@ namespace Calculater
             buttonAC.BackColor = Color.FromArgb(204, 80, 91);
             buttonAC.Cursor = Cursors.Hand;
             buttonAC.FlatStyle = FlatStyle.Popup;
+            buttonAC.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonAC.ForeColor = Color.White;
             buttonAC.Location = new Point(280, 89);
             buttonAC.Name = "buttonAC";
@@ -157,6 +163,7 @@ namespace Calculater
             button3.Cursor = Cursors.Hand;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Popup;
+            button3.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
             button3.Location = new Point(337, 260);
             button3.Name = "button3";
@@ -170,6 +177,7 @@ namespace Calculater
             // 
             button2.BackColor = Color.FromArgb(62, 80, 91);
             button2.FlatStyle = FlatStyle.Popup;
+            button2.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.Location = new Point(280, 260);
             button2.Name = "button2";
@@ -184,6 +192,7 @@ namespace Calculater
             button1.BackColor = Color.FromArgb(62, 80, 91);
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.Location = new Point(223, 260);
             button1.Name = "button1";
@@ -198,6 +207,7 @@ namespace Calculater
             button6.BackColor = Color.FromArgb(62, 80, 91);
             button6.Cursor = Cursors.Hand;
             button6.FlatStyle = FlatStyle.Popup;
+            button6.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button6.ForeColor = Color.White;
             button6.Location = new Point(337, 203);
             button6.Name = "button6";
@@ -213,6 +223,7 @@ namespace Calculater
             button5.BackColor = Color.FromArgb(62, 80, 91);
             button5.Cursor = Cursors.Hand;
             button5.FlatStyle = FlatStyle.Popup;
+            button5.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button5.ForeColor = Color.White;
             button5.Location = new Point(280, 203);
             button5.Name = "button5";
@@ -227,6 +238,7 @@ namespace Calculater
             button4.BackColor = Color.FromArgb(62, 80, 91);
             button4.Cursor = Cursors.Hand;
             button4.FlatStyle = FlatStyle.Popup;
+            button4.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
             button4.Location = new Point(223, 203);
             button4.Name = "button4";
@@ -241,7 +253,7 @@ namespace Calculater
             buttonEQ.BackColor = Color.FromArgb(2, 101, 82);
             buttonEQ.Cursor = Cursors.Hand;
             buttonEQ.FlatStyle = FlatStyle.Popup;
-            buttonEQ.Font = new Font("Segoe UI", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            buttonEQ.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonEQ.ForeColor = Color.White;
             buttonEQ.Location = new Point(280, 374);
             buttonEQ.Name = "buttonEQ";
@@ -256,6 +268,7 @@ namespace Calculater
             buttonDIV.BackColor = Color.FromArgb(50, 73, 60);
             buttonDIV.Cursor = Cursors.Hand;
             buttonDIV.FlatStyle = FlatStyle.Popup;
+            buttonDIV.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDIV.ForeColor = Color.White;
             buttonDIV.Location = new Point(166, 317);
             buttonDIV.Name = "buttonDIV";
@@ -270,6 +283,7 @@ namespace Calculater
             buttonMULT.BackColor = Color.FromArgb(50, 73, 60);
             buttonMULT.Cursor = Cursors.Hand;
             buttonMULT.FlatStyle = FlatStyle.Popup;
+            buttonMULT.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMULT.ForeColor = Color.White;
             buttonMULT.Location = new Point(166, 260);
             buttonMULT.Name = "buttonMULT";
@@ -284,6 +298,7 @@ namespace Calculater
             buttonMINUS.BackColor = Color.FromArgb(50, 73, 60);
             buttonMINUS.Cursor = Cursors.Hand;
             buttonMINUS.FlatStyle = FlatStyle.Popup;
+            buttonMINUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonMINUS.ForeColor = Color.White;
             buttonMINUS.Location = new Point(166, 203);
             buttonMINUS.Name = "buttonMINUS";
@@ -298,6 +313,7 @@ namespace Calculater
             buttonPLUS.BackColor = Color.FromArgb(50, 73, 60);
             buttonPLUS.Cursor = Cursors.Hand;
             buttonPLUS.FlatStyle = FlatStyle.Popup;
+            buttonPLUS.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonPLUS.ForeColor = Color.White;
             buttonPLUS.Location = new Point(166, 146);
             buttonPLUS.Name = "buttonPLUS";
@@ -312,6 +328,7 @@ namespace Calculater
             buttonRB.BackColor = Color.FromArgb(50, 73, 60);
             buttonRB.Cursor = Cursors.Hand;
             buttonRB.FlatStyle = FlatStyle.Popup;
+            buttonRB.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonRB.ForeColor = Color.White;
             buttonRB.Location = new Point(223, 89);
             buttonRB.Name = "buttonRB";
@@ -326,6 +343,7 @@ namespace Calculater
             buttonLB.BackColor = Color.FromArgb(50, 73, 60);
             buttonLB.Cursor = Cursors.Hand;
             buttonLB.FlatStyle = FlatStyle.Popup;
+            buttonLB.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonLB.ForeColor = Color.White;
             buttonLB.Location = new Point(166, 89);
             buttonLB.Name = "buttonLB";
@@ -425,6 +443,7 @@ namespace Calculater
             buttonDot.BackColor = Color.FromArgb(50, 73, 60);
             buttonDot.Cursor = Cursors.Hand;
             buttonDot.FlatStyle = FlatStyle.Popup;
+            buttonDot.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             buttonDot.ForeColor = Color.White;
             buttonDot.Location = new Point(223, 317);
             buttonDot.Name = "buttonDot";

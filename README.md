@@ -11,16 +11,15 @@
 Projekt lze sestavit pøes Visual Studio
 Výsledný .exe soubor se pak nachází ve složce bin
 
-## Instalace
 
-?????
-
-## Spuštìní
-1. Pøes **Visual Studio**
-2.
+## Spuštìní pøes Visual studio
+1. Otevøít Calculater.sln ve visual studiu
+2. Spusit program pomocí zelené šipky nebo F5
 
 ## Vysvìtlivky
 * modulo - #
 * standardní kalkulaèka poèítá v radiánech
 
-		
+## Využíváné knihovny
+* UnitsNet - MIT licence (https://www.nuget.org/profiles/UnitsNet)
+* mXparser - https://www.nuget.org/packages/MathParser.org-mXparser/5.2.1/License
