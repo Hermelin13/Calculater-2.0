@@ -344,7 +344,7 @@ namespace Calculater
             historyRowPanel.RowCount = 1;
             historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             historyRowPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            historyRowPanel.Size = new Size(500, 50);
+            historyRowPanel.Size = new Size(450, 50);
             historyRowPanel.TabIndex = 50;
 
             // Shift existing controls down
