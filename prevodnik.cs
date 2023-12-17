@@ -140,6 +140,7 @@ namespace Calculater
 
             unitsFrom.Items.Clear();
             unitsTo.Items.Clear();
+            resultTextBox.Text = "";
             foreach (Enum unitValue in selectedQuantity.UnitInfos.Select(ui => ui.Value))
             {
                 unitsFrom.Items.Add(unitValue.ToString());
@@ -215,7 +216,7 @@ namespace Calculater
             historyRow.ReadOnly = true;
             historyRow.Size = new Size(443, 44);
             historyRow.TabIndex = 48;
-            historyRow.Cursor = Cursors.Arrow;
+            historyRow.Cursor = Cursors.Hand;
             historyRow.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             historyRow.Text = input + " " + unitsFrom + " = " + result + " " + unitsTo;
             historyRow.Controls.Add(quantityTextBox);
