@@ -39,6 +39,7 @@ namespace Calculater
                 quantityButton.FlatStyle = FlatStyle.Popup;
                 quantityButton.ForeColor = Color.White;
                 quantityButton.Location = new Point(262, 470);
+                quantityButton.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
                 quantityButton.Name = quantity;
                 quantityButton.Size = new Size(130, 60);
                 quantityButton.TabIndex = 51;

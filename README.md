@@ -11,13 +11,10 @@
 Projekt lze sestavit pøes Visual Studio
 Výsledný .exe soubor se pak nachází ve složce bin
 
-## Instalace
 
-?????
-
-## Spuštìní
-1. Pøes **Visual Studio**
-2.
+## Spuštìní pøes Visual studio
+1. Otevøít Calculater.sln ve visual studiu
+2. Spusit program pomocí zelené šipky nebo F5
 
 ## Vysvìtlivky
 * modulo - #
