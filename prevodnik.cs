@@ -53,6 +53,11 @@ namespace Calculater
             (quantitySelector.Controls[0] as Button).PerformClick();
         }
 
+        /**
+         * 
+         * Saving history to a file
+         * 
+         */
         public void HistoryToXml(object sender, EventArgs e)
         {
             XmlDocument document = new XmlDocument();
@@ -80,6 +85,11 @@ namespace Calculater
             document.Save("converterHistory.xml");
         }
 
+        /**
+         * 
+         * Loading history from a file
+         * 
+         */
         private void LoadHistory()
         {
             if (File.Exists("converterHistory.xml"))
@@ -112,6 +122,11 @@ namespace Calculater
             }
         }
 
+        /**
+         * 
+         * Loading an equation from history to the input
+         * 
+         */
         private void loadFromHistory(object sender, EventArgs e)
         {
             RoundedTextBox textBox = sender as RoundedTextBox;
@@ -125,6 +140,11 @@ namespace Calculater
             unitsTo.Text = historyText[4];
         }
 
+        /**
+         * 
+         * Changing quantity
+         * 
+         */
         private void clickQuantityButton(object sender, EventArgs e)
         {
             Button buttonPRESSED = sender as Button;
@@ -150,6 +170,11 @@ namespace Calculater
             }
         }
 
+        /**
+         * 
+         * Clicking calculater buttons.
+         * 
+         */
         private void clickButton(object sender, EventArgs e)
         {
             Button buttonPRESSED = sender as Button;
@@ -165,6 +190,7 @@ namespace Calculater
                     break;
                 case "buttonAC":
                     inputMath.Text = "";
+                    resultTextBox.Text = "";
                     break;
                 case "buttonEQ":
                     if (selectedQuantity != null)
@@ -197,6 +223,11 @@ namespace Calculater
             }
         }
 
+        /**
+         * 
+         * Saving equation to the history.
+         * 
+         */
         private void saveToHistory(string input, string unitsFrom, string result, string unitsTo, string quantity)
         {
             TextBox quantityTextBox = new TextBox
@@ -253,6 +284,11 @@ namespace Calculater
             history.Controls.SetChildIndex(historyRowPanel, 0);
         }
 
+        /**
+         * 
+         * Deleting equation from the history
+         * 
+         */
         private void deleteHistoryRow(object sender, EventArgs e)
         {
             PictureBox deleteButton = sender as PictureBox;
@@ -260,6 +296,11 @@ namespace Calculater
             history.Controls.Remove(deleteButton.Parent);
         }
 
+        /**
+         * 
+         * Parsing keys from keyboard.
+         * 
+         */
         public void keyPressed(KeyEventArgs e)
         {
             switch (e.KeyCode)
