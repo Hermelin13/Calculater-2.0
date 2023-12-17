@@ -218,6 +218,7 @@ namespace Calculater
             expression = Regex.Replace(expression, "<<", "@<<");
 
             expression = Regex.Replace(expression, @"([^&|()]+)\s*NOT\b", "@~$1");
+            expression = expression.Replace(",", ".");
 
             return expression;
         }
@@ -228,39 +229,60 @@ namespace Calculater
         static string ConvertBinary(string input, int Base)
         {
             string pattern = @"\b[01]+\b";
-            string result = Regex.Replace(input, pattern, match =>
+            try
             {
-                string binaryNumber = match.Value;
-                int decimalNumber = Convert.ToInt32(binaryNumber, 2);
-                return Convert.ToString(decimalNumber, Base);
-            });
+                string result = Regex.Replace(input, pattern, match =>
+                {
+                    string binaryNumber = match.Value;
+                    long decimalNumber = Convert.ToInt64(binaryNumber, 2);
+                    return Convert.ToString(decimalNumber, Base);
+                });
 
-            return result;
+                return result;
+            }
+            catch(Exception ex)
+            {
+                return "Error: number too large";
+            }
         }
 
         static string ConvertHexadecimal(string input, int Base)
         {
             string pattern = @"\b[0-9A-Fa-f]+\b";
-            string result = Regex.Replace(input, pattern, match =>
+            try
             {
-                string hexNumber = match.Value;
-                int decimalNumber = Convert.ToInt32(hexNumber, 16);
-                return Convert.ToString(decimalNumber, Base);
-            });
+                string result = Regex.Replace(input, pattern, match =>
+                {
+                    string hexNumber = match.Value;
+                    long decimalNumber = Convert.ToInt64(hexNumber, 16);
+                    return Convert.ToString(decimalNumber, Base);
+                });
 
-            return result;
+                return result;
+            }
+            catch( Exception ex)
+            {
+                return "Error: number too large";
+            }
         }
         static string ConvertOctal(string input, int Base)
         {
             string pattern = @"\b[0-7]+\b";
-            string result = Regex.Replace(input, pattern, match =>
+            try
             {
-                string octalNumber = match.Value;
-                int decimalNumber = Convert.ToInt32(octalNumber, 8);
-                return Convert.ToString(decimalNumber, Base);
-            });
+                string result = Regex.Replace(input, pattern, match =>
+                {
+                    string octalNumber = match.Value;
+                    long decimalNumber = Convert.ToInt64(octalNumber, 8);
+                    return Convert.ToString(decimalNumber, Base);
+                });
 
-            return result;
+                return result;
+            }
+            catch(Exception ex) 
+            {
+                return "Error: number too large";
+            }
         }
         static string ConvertDecimal(string input, int Base)
         {
@@ -268,7 +290,7 @@ namespace Calculater
             string result = Regex.Replace(input, pattern, match =>
             {
                 string decNumber = match.Value;
-                int decimalNumber = Convert.ToInt32(decNumber, 10);
+                long decimalNumber = Convert.ToInt64(decNumber, 10);
                 return Convert.ToString(decimalNumber, Base);
             });
 
@@ -316,7 +338,6 @@ namespace Calculater
         {
             CreateInput(input, result);
 
-            //string newEntry = $"{input} = {result}";
             HistoryEntry newEntry = new HistoryEntry
             {
                 Input = input.Trim(),
@@ -471,32 +492,55 @@ namespace Calculater
                     else if (bin)
                     {
                         string tmp = ConvertBinary(inputMath.Text, 10);
-                        string tmp1 = expressionProcess(tmp);
-                        Expression ex = new Expression(tmp1);
-                        var result = ex.calculate();
-                        sys = "bin";
-                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 2).Trim(), sys);
-                        inputMath.Text = Convert.ToString((int)result, 2);
+                        if(tmp.Contains("Error"))
+                        {
+                            inputMath.Text = tmp;
+                        }
+                        else
+                        {
+                            string tmp1 = expressionProcess(tmp);
+                            Expression ex = new Expression(tmp1);
+                            var result = ex.calculate();
+                            sys = "bin";
+                            SaveToHistory(inputMath.Text.Trim(), Convert.ToString((long)result, 2).Trim(), sys);
+                            inputMath.Text = Convert.ToString((long)result, 2);
+                        }
+                        
                     }
                     else if (hex)
                     {
                         string tmp = expressionProcess(inputMath.Text);
                         string tmp1 = ConvertHexadecimal(tmp, 10);
-                        Expression ex = new Expression(tmp1);
-                        var result = ex.calculate();
-                        sys = "hex";
-                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 16).Trim(), sys);
-                        inputMath.Text = Convert.ToString((int)result, 16);
+                        if (tmp1.Contains("Error"))
+                        {
+                            inputMath.Text = tmp1;
+                        }
+                        else
+                        {
+                            Expression ex = new Expression(tmp1);
+                            var result = ex.calculate();
+                            sys = "hex";
+                            SaveToHistory(inputMath.Text.Trim(), Convert.ToString((long)result, 16).Trim(), sys);
+                            inputMath.Text = Convert.ToString((long)result, 16);
+                        }
+                        
                     }
                     else if (oct)
                     {
                         string tmp = expressionProcess(inputMath.Text);
                         string tmp1 = ConvertOctal(tmp, 10);
-                        Expression ex = new Expression(tmp1);
-                        var result = ex.calculate();
-                        sys = "oct";
-                        SaveToHistory(inputMath.Text.Trim(), Convert.ToString((int)result, 8).Trim(), sys);
-                        inputMath.Text = Convert.ToString((int)result, 8);
+                        if (tmp1.Contains("Error"))
+                        {
+                            inputMath.Text = tmp1;
+                        }
+                        else
+                        {
+                            Expression ex = new Expression(tmp1);
+                            var result = ex.calculate();
+                            sys = "oct";
+                            SaveToHistory(inputMath.Text.Trim(), Convert.ToString((long)result, 8).Trim(), sys);
+                            inputMath.Text = Convert.ToString((long)result, 8);
+                        }             
                     }
                     break;
                 case "buttonPLUS":
@@ -518,7 +562,14 @@ namespace Calculater
                 case "buttonHEX":
                     if (dec)
                     {
-                        inputMath.Text = ConvertDecimal(inputMath.Text, 16);
+                        try
+                        {
+                            inputMath.Text = ConvertDecimal(inputMath.Text, 16);
+                        }
+                        catch 
+                        {
+                            inputMath.Text = "Error: number too large to convert";
+                        }
                     }
                     else if (bin)
                     {
@@ -550,7 +601,14 @@ namespace Calculater
                 case "buttonOCT":
                     if (dec)
                     {
-                        inputMath.Text = ConvertDecimal(inputMath.Text, 8);
+                        try
+                        {
+                            inputMath.Text = ConvertDecimal(inputMath.Text, 8);
+                        }
+                        catch
+                        {
+                            inputMath.Text = "Error: number too large to convert";
+                        }                  
                     }
                     else if (bin)
                     {
@@ -566,7 +624,14 @@ namespace Calculater
                 case "buttonBIN":
                     if (dec)
                     {
-                        inputMath.Text = ConvertDecimal(inputMath.Text, 2);
+                        try
+                        {
+                            inputMath.Text = ConvertDecimal(inputMath.Text, 2);
+                        }
+                        catch
+                        {
+                            inputMath.Text = "Error: number too large to convert";
+                        }
                     }
 
                     else if (hex)

@@ -591,7 +591,7 @@ namespace Calculater
             roundedButton42.Name = "roundedButton42";
             roundedButton42.Size = new Size(219, 60);
             roundedButton42.TabIndex = 45;
-            roundedButton42.Text = "Programátorská";
+            roundedButton42.Text = "Programmer";
             roundedButton42.UseVisualStyleBackColor = false;
             // 
             // history
