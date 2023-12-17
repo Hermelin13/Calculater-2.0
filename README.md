@@ -20,4 +20,6 @@ Výsledný .exe soubor se pak nachází ve složce bin
 * modulo - #
 * standardní kalkulaèka poèítá v radiánech
 
-		
+## Využíváné knihovny
+* UnitsNet - MIT licence (https://www.nuget.org/profiles/UnitsNet)
+* mXparser - https://www.nuget.org/packages/MathParser.org-mXparser/5.2.1/License
