@@ -119,7 +119,7 @@ namespace Calculater
             standardButton.Name = "standardButton";
             standardButton.Size = new Size(160, 41);
             standardButton.TabIndex = 0;
-            standardButton.Text = "Standardní";
+            standardButton.Text = "Standard";
             standardButton.UseVisualStyleBackColor = false;
             standardButton.Click += standardButton_Click;
             // 
@@ -134,7 +134,7 @@ namespace Calculater
             PrevodnikButton.Name = "PrevodnikButton";
             PrevodnikButton.Size = new Size(160, 41);
             PrevodnikButton.TabIndex = 0;
-            PrevodnikButton.Text = "Převodník";
+            PrevodnikButton.Text = "Converter";
             PrevodnikButton.UseVisualStyleBackColor = false;
             PrevodnikButton.Click += PrevodnikButton_Click;
             // 
@@ -149,7 +149,7 @@ namespace Calculater
             binaryButton.Name = "binaryButton";
             binaryButton.Size = new Size(160, 41);
             binaryButton.TabIndex = 0;
-            binaryButton.Text = "Programátorská";
+            binaryButton.Text = "Programmer";
             binaryButton.UseVisualStyleBackColor = false;
             binaryButton.Click += binaryButton_Click;
             // 

@@ -353,13 +353,13 @@ namespace Calculater
             // 
             roundedButton42.BackColor = Color.FromArgb(50, 73, 60);
             roundedButton42.FlatStyle = FlatStyle.Popup;
-            roundedButton42.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            roundedButton42.Font = new Font("Arial Narrow", 18F, FontStyle.Bold, GraphicsUnit.Point);
             roundedButton42.ForeColor = Color.White;
-            roundedButton42.Location = new Point(7, 3);
+            roundedButton42.Location = new Point(66, 3);
             roundedButton42.Name = "roundedButton42";
-            roundedButton42.Size = new Size(278, 60);
+            roundedButton42.Size = new Size(219, 60);
             roundedButton42.TabIndex = 45;
-            roundedButton42.Text = "Převodník";
+            roundedButton42.Text = "Converter";
             roundedButton42.UseVisualStyleBackColor = false;
             // 
             // resultTextBox

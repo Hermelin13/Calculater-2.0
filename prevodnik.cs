@@ -92,7 +92,7 @@ namespace Calculater
                     var historyRows = document.SelectNodes("/root/converter/historyRow");
                     List<XmlNode> reversedHistoryRows = new List<XmlNode>();
 
-                    foreach(XmlNode historyRow in historyRows)
+                    foreach (XmlNode historyRow in historyRows)
                     {
                         reversedHistoryRows.Insert(0, historyRow);
                     }
