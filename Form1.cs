@@ -21,6 +21,7 @@ namespace Calculater
         public FITCalculator()
         {
             InitializeComponent();
+            this.FormClosing += prevodnik1.HistoryToXml;
         }
 
         private void Form1_Load(object sender, EventArgs e)

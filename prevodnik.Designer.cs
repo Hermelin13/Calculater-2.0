@@ -341,11 +341,12 @@ namespace Calculater
             inputMath.BackColor = Color.FromArgb(138, 176, 171);
             inputMath.BorderRadius = 30;
             inputMath.BorderStyle = BorderStyle.None;
-            inputMath.Location = new Point(3, 5);
+            inputMath.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            inputMath.Location = new Point(3, 3);
             inputMath.Multiline = true;
             inputMath.Name = "inputMath";
             inputMath.ReadOnly = true;
-            inputMath.Size = new Size(520, 39);
+            inputMath.Size = new Size(520, 43);
             inputMath.TabIndex = 43;
             // 
             // roundedButton42
@@ -367,11 +368,12 @@ namespace Calculater
             resultTextBox.BackColor = Color.FromArgb(138, 176, 171);
             resultTextBox.BorderRadius = 30;
             resultTextBox.BorderStyle = BorderStyle.None;
-            resultTextBox.Location = new Point(3, 105);
+            resultTextBox.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            resultTextBox.Location = new Point(3, 103);
             resultTextBox.Multiline = true;
             resultTextBox.Name = "resultTextBox";
             resultTextBox.ReadOnly = true;
-            resultTextBox.Size = new Size(520, 39);
+            resultTextBox.Size = new Size(520, 43);
             resultTextBox.TabIndex = 47;
             // 
             // tableLayoutPanel1
@@ -398,10 +400,11 @@ namespace Calculater
             unitsFrom.BackColor = Color.FromArgb(138, 176, 171);
             unitsFrom.DropDownStyle = ComboBoxStyle.DropDownList;
             unitsFrom.FlatStyle = FlatStyle.Flat;
+            unitsFrom.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             unitsFrom.FormattingEnabled = true;
             unitsFrom.Location = new Point(275, 53);
             unitsFrom.Name = "unitsFrom";
-            unitsFrom.Size = new Size(248, 23);
+            unitsFrom.Size = new Size(248, 30);
             unitsFrom.TabIndex = 48;
             // 
             // unitsTo
@@ -410,10 +413,11 @@ namespace Calculater
             unitsTo.BackColor = Color.FromArgb(138, 176, 171);
             unitsTo.DropDownStyle = ComboBoxStyle.DropDownList;
             unitsTo.FlatStyle = FlatStyle.Flat;
+            unitsTo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             unitsTo.FormattingEnabled = true;
             unitsTo.Location = new Point(275, 153);
             unitsTo.Name = "unitsTo";
-            unitsTo.Size = new Size(248, 23);
+            unitsTo.Size = new Size(248, 30);
             unitsTo.TabIndex = 49;
             // 
             // buttonDot

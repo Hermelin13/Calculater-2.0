@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using UnitsNet;
 using org.mariuszgromada.math.mxparser;
+using System.Xml;
+using System.IO;
 
 namespace Calculater
 {
@@ -22,6 +24,7 @@ namespace Calculater
         public prevodnik()
         {
             InitializeComponent();
+            LoadHistory();
             selectedQuantity = null;
 
             string[] quantities = new string[] { "Mass", "Length", "Area",
@@ -46,6 +49,80 @@ namespace Calculater
 
                 quantitySelector.Controls.Add(quantityButton);
             }
+
+            (quantitySelector.Controls[0] as Button).PerformClick();
+        }
+
+        public void HistoryToXml(object sender, EventArgs e)
+        {
+            XmlDocument document = new XmlDocument();
+            XmlElement rootElement = document.CreateElement("root");
+            XmlElement converter = document.CreateElement("converter");
+
+            foreach (var historyRow in history.Controls)
+            {
+                RoundedTextBox historyTextBox = (historyRow as TableLayoutPanel).Controls.Find("historyTemplate", true)[0] as RoundedTextBox;
+                string quantity = historyTextBox.Controls[0].Name;
+
+                XmlElement xmlQuantity = document.CreateElement("quantity");
+                xmlQuantity.InnerText = quantity;
+
+                XmlElement xmlHistoryRow = document.CreateElement("historyRow");
+                xmlHistoryRow.InnerText = historyTextBox.Text;
+
+                xmlHistoryRow.AppendChild(xmlQuantity);
+                converter.AppendChild(xmlHistoryRow);
+            }
+
+            rootElement.AppendChild(converter);
+            document.AppendChild(rootElement);
+
+            document.Save("converterHistory.xml");
+        }
+
+        private void LoadHistory()
+        {
+            if (File.Exists("converterHistory.xml"))
+            {
+                try
+                {
+                    XmlDocument document = new XmlDocument();
+                    document.Load("converterHistory.xml");
+
+                    var historyRows = document.SelectNodes("/root/converter/historyRow");
+                    List<XmlNode> reversedHistoryRows = new List<XmlNode>();
+
+                    foreach(XmlNode historyRow in historyRows)
+                    {
+                        reversedHistoryRows.Insert(0, historyRow);
+                    }
+
+                    foreach (XmlNode historyRow in reversedHistoryRows)
+                    {
+                        string quantity = historyRow["quantity"].InnerText;
+                        historyRow.RemoveChild(historyRow.LastChild);
+                        string[] inputResult = historyRow.InnerText.Split(' ');
+                        saveToHistory(inputResult[0], inputResult[1], inputResult[3], inputResult[4], quantity);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error loading from XML: {ex.Message}");
+                }
+            }
+        }
+
+        private void loadFromHistory(object sender, EventArgs e)
+        {
+            RoundedTextBox textBox = sender as RoundedTextBox;
+            string[] historyText = textBox.Text.Split(' ');
+
+            (quantitySelector.Controls.Find(textBox.Controls[0].Name, true)[0] as RoundedButton).PerformClick();
+
+            inputMath.Text = historyText[0];
+            unitsFrom.Text = historyText[1];
+            resultTextBox.Text = historyText[3];
+            unitsTo.Text = historyText[4];
         }
 
         private void clickQuantityButton(object sender, EventArgs e)
@@ -53,6 +130,13 @@ namespace Calculater
             Button buttonPRESSED = sender as Button;
 
             selectedQuantity = Quantity.ByName[buttonPRESSED.Name];
+
+            foreach (Button button in quantitySelector.Controls)
+            {
+                button.BackColor = Color.FromArgb(50, 73, 60);
+            }
+
+            buttonPRESSED.BackColor = Color.FromArgb(2, 101, 82);
 
             unitsFrom.Items.Clear();
             unitsTo.Items.Clear();
@@ -93,7 +177,7 @@ namespace Calculater
                                 selectedQuantity.UnitInfos.FirstOrDefault(info => info.Name == unitsFrom.Text).Value,
                                 selectedQuantity.UnitInfos.FirstOrDefault(info => info.Name == unitsTo.Text).Value);
 
-                            saveToHistory(inputMath.Text, result.ToString().Replace(",", "."));
+                            saveToHistory(inputMath.Text, unitsFrom.Text, result.ToString().Replace(",", "."), unitsTo.Text, selectedQuantity.Name);
                         }
 
                         resultTextBox.Text = result.ToString().Replace(",", ".");
@@ -112,8 +196,14 @@ namespace Calculater
             }
         }
 
-        private void saveToHistory(string input, string result)
+        private void saveToHistory(string input, string unitsFrom, string result, string unitsTo, string quantity)
         {
+            TextBox quantityTextBox = new TextBox
+            {
+                Name = quantity,
+                Visible = false,
+            };
+
             RoundedTextBox historyRow = new RoundedTextBox();
             historyRow.BackColor = Color.FromArgb(60, 80, 83);
             historyRow.BorderRadius = 0;
@@ -126,7 +216,10 @@ namespace Calculater
             historyRow.Size = new Size(443, 44);
             historyRow.TabIndex = 48;
             historyRow.Cursor = Cursors.Arrow;
-            historyRow.Text = input + " " + unitsFrom.Text + " = " + result + " " + unitsTo.Text;
+            historyRow.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            historyRow.Text = input + " " + unitsFrom + " = " + result + " " + unitsTo;
+            historyRow.Controls.Add(quantityTextBox);
+            historyRow.Click += loadFromHistory;
 
             PictureBox deleteButton = new PictureBox();
             deleteButton.Anchor = AnchorStyles.None;
