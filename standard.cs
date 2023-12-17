@@ -371,6 +371,8 @@ namespace Calculater
             TextBox textBox = sender as TextBox;
             string[] expr = textBox.Text.Split(" = ");
             inputMath.Text = expr[0];
+            number = true;
+            nothing = false;
         }
 
         public void keyPressed(KeyEventArgs e)
